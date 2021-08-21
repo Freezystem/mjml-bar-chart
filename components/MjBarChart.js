@@ -42,6 +42,7 @@ export default class MjBarChart extends BodyComponent {
   }
 
   #getChartBar(value, color) {
+    value = value > 0 ? value : 0;
     const plainPartHeight = Math.round(value / this.higherValue * this.chartHeight);
     const emptyPartHeight = this.chartHeight - plainPartHeight;
     
@@ -129,13 +130,13 @@ export default class MjBarChart extends BodyComponent {
   
   #getChartLegend() {
     return `
-      <table align="center" style="border-collapse:collapse;">
+      <table ${this.htmlAttributes({ style: "chartLegendWrapper" })}>
         <tr>
           <td style="padding:0;height:10px;"></td>
         </tr>
         <tr>
           <td style="padding:0;">
-            <p ${this.htmlAttributes({ style: "legends" })}>
+            <p ${this.htmlAttributes({ style: "chartLegend" })}>
               ${this.groups.map((g, i) => this.#getLegend(g, this.colors[i]))}
             </p>
           </td>
@@ -145,39 +146,18 @@ export default class MjBarChart extends BodyComponent {
   }
   
   #getScale() {
-  	/* const scale = document.createElement("table");
-    scale.style.borderCollapse = "collapse";
-  	const top = document.createElement("tr");
-    const topOffset = document.createElement("td");
-    topOffset.style.padding = "0 5px 0 0";
-    topOffset.style.height = "50px";
-    topOffset.style.verticalAlign = "bottom";
-    topOffset.style.textAlign = "right";
-    topOffset.style.color = this.axisColor;
-    topOffset.append(`${this.higherValue}`);
-    top.append(topOffset);
-    
-    
-  	const middle = document.createElement("tr");
-    const middleOffset = document.createElement("td");
-    middleOffset.style.padding = "0 5px 0 0";
-    middleOffset.style.height = `${this.height + 2}px`;
-    middleOffset.style.verticalAlign = "bottom";
-    middleOffset.style.textAlign = "right";
-    middleOffset.style.color = this.axisColor;
-    middleOffset.append("0");
-    middle.append(middleOffset);
-    
-    const bottom = document.createElement("tr");
-    const bottomOffset = document.createElement("td");
-    bottomOffset.style.padding = "0";
-    bottomOffset.style.height = `${20 * this.metrics.length + 60}px`;
-    bottom.append(bottomOffset);
-    
-    scale.append(top, middle, bottom); */
-    
     return `
-      <table style="border-collapse:collapse;"></table>
+      <table style="border-collapse:collapse;">
+        <tr>
+          <td ${this.htmlAttributes({ style: "scaleTop" })}>${this.higherValue}</td>
+        </tr>
+        <tr>
+          <td ${this.htmlAttributes({ style: "scaleMiddle" })}>${Math.trunc(this.higherValue/2)}</td>
+        </tr>
+        <tr>
+          <td ${this.htmlAttributes({ style: "scaleBottom" })}>0</td>
+        </tr>
+      </table>
     `;
   }
 
@@ -222,12 +202,40 @@ export default class MjBarChart extends BodyComponent {
         "min-width": `${this.barWidth * this.groups.length}px`,
         "max-width": `${this.barWidth * this.groups.length}px`
       },
-      legends: {
+      chartLegendWrapper: {
+        "border-collapse": "collapse",
+        "width": "100%"
+      },
+      chartLegend: {
         "margin": "0",
         "padding": "0",
         "max-width": `${this.chartWidth}px`,
         "line-height": "20px",
         "text-align": "center"
+      },
+      scaleTop: {
+        "padding": "0 5px 0 0",
+        "height": "50px",
+        "vertical-align": "bottom",
+        "text-align": "right",
+        "font-size": "14px",
+        "color": this.axisColor
+      },
+      scaleMiddle: {
+        "padding": "0 5px 0 0",
+        "height": `${(this.chartHeight + 2)/2}px`,
+        "vertical-align": "bottom",
+        "text-align": "right",
+        "font-size": "14px",
+        "color": this.axisColor
+      },
+      scaleBottom: {
+        "padding": "0 5px 0 0",
+        "height": `${(this.chartHeight + 2)/2}px`,
+        "vertical-align": "bottom",
+        "text-align": "right",
+        "font-size": "14px",
+        "color": this.axisColor
       }
     }
   }
@@ -252,10 +260,12 @@ export default class MjBarChart extends BodyComponent {
       (this.barWidth * this.datasets.length * this.groups.length);
 
     return `
-      <table style="border-collapse:collapse;">
+      <table style="border-collapse:collapse;margin:0 auto;">
         <tr>
-          <td style="padding:0;">
+          <td style="padding:0;vertical-align:top;">
             ${this.#getScale()}
+          </td>
+          <td style="padding:0;">
             <table style="border-collapse:collapse;">
               <tr>
                 <td style="padding:0;">
