@@ -1,12 +1,13 @@
 {
   "name": "test",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build",
-    "lint": "eslint components"
+    "preprepare": "eslint components",
+    "prepare": "gulp build",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +24,8 @@
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "jest": "^27.0.6"
   },
   "dependencies": {
     "lodash": "^4.17.15",
