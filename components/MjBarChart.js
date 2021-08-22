@@ -10,7 +10,7 @@ export default class MjBarChart extends BodyComponent {
 
   static allowedAttributes = {
     "title": "string",
-    "datasets-label": "string",
+    "dataset-labels": "string",
     "datasets": "string",
     "groups": "string",
     "colors": "string",
@@ -260,7 +260,7 @@ export default class MjBarChart extends BodyComponent {
       (this.barWidth * this.datasets.length * this.groups.length);
 
     return `
-      <table style="border-collapse:collapse;margin:0 auto;">
+      <table id="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
         <tr>
           <td style="padding:0;vertical-align:top;">
             ${this.#getScale()}
