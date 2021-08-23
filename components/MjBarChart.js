@@ -11,6 +11,7 @@ export default class MjBarChart extends BodyComponent {
     this.chartHeight = parseInt(this.getAttribute('height'), 10);
     this.barWidth = parseInt(this.getAttribute('bar-width'), 10);
     this.separatorWidth = parseInt(this.getAttribute('separator-width'), 10);
+    this.stepCount = parseInt(this.getAttribute('step-count'), 10);
 
     this.datasetValues = this.getAttribute('datasets')
       .split(',')
@@ -49,6 +50,7 @@ export default class MjBarChart extends BodyComponent {
     height: 'unit(px)',
     'bar-width': 'unit(px)',
     'separator-width': 'unit(px)',
+    'step-count': 'enum(0,2,3,4,5,6,7,8)',
   }
 
   static defaultAttributes = {
@@ -56,6 +58,7 @@ export default class MjBarChart extends BodyComponent {
     height: '200',
     'bar-width': '30',
     'separator-width': '30',
+    'step-count': '5',
   }
 
   #getChartTitle() {
@@ -174,17 +177,22 @@ export default class MjBarChart extends BodyComponent {
   }
 
   #getScale() {
+    const steps = [];
+
+    for (let i = this.stepCount; i > 0; i -= 1) {
+      const value = Math.trunc((this.higherValue / (this.stepCount - 1)) * (i - 1));
+      const style = i === this.stepCount ? 'firstStep' : 'otherStep';
+
+      steps.push(`
+        <tr>
+          <td ${this.htmlAttributes({ style })}>${value}</td>
+        </tr>
+      `)
+    }
+
     return `
       <table style="border-collapse:collapse;">
-        <tr>
-          <td ${this.htmlAttributes({ style: 'scaleTop' })}>${this.higherValue}</td>
-        </tr>
-        <tr>
-          <td ${this.htmlAttributes({ style: 'scaleMiddle' })}>${Math.trunc(this.higherValue / 2)}</td>
-        </tr>
-        <tr>
-          <td ${this.htmlAttributes({ style: 'scaleBottom' })}>0</td>
-        </tr>
+        ${steps.join('\n')}
       </table>
     `;
   }
@@ -241,7 +249,7 @@ export default class MjBarChart extends BodyComponent {
         'line-height': '20px',
         'text-align': 'center',
       },
-      scaleTop: {
+      firstStep: {
         padding: '0 5px 0 0',
         height: '50px',
         'vertical-align': 'bottom',
@@ -249,17 +257,9 @@ export default class MjBarChart extends BodyComponent {
         'font-size': '14px',
         color: this.axisColor,
       },
-      scaleMiddle: {
+      otherStep: {
         padding: '0 5px 0 0',
-        height: `${(this.chartHeight + 2) / 2}px`,
-        'vertical-align': 'bottom',
-        'text-align': 'right',
-        'font-size': '14px',
-        color: this.axisColor,
-      },
-      scaleBottom: {
-        padding: '0 5px 0 0',
-        height: `${(this.chartHeight + 2) / 2}px`,
+        height: `${(this.chartHeight + 2) / (this.stepCount - 1)}px`,
         'vertical-align': 'bottom',
         'text-align': 'right',
         'font-size': '14px',
@@ -269,12 +269,13 @@ export default class MjBarChart extends BodyComponent {
   }
 
   render() {
+    const scale = this.stepCount > 2
+      ? `<td style="padding:0;vertical-align:top;">${this.#getScale()}</td>` : '';
+
     return `
       <table id="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
         <tr>
-          <td style="padding:0;vertical-align:top;">
-            ${this.#getScale()}
-          </td>
+          ${scale}
           <td style="padding:0;">
             <table style="border-collapse:collapse;">
               <tr>
