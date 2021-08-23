@@ -12,6 +12,7 @@ export default class MjBarChart extends BodyComponent {
     this.barWidth = parseInt(this.getAttribute('bar-width'), 10);
     this.separatorWidth = parseInt(this.getAttribute('separator-width'), 10);
     this.stepCount = parseInt(this.getAttribute('step-count'), 10);
+    this.showValues = this.getAttribute('show-values');
 
     this.datasetValues = this.getAttribute('datasets')
       .split(',')
@@ -51,6 +52,7 @@ export default class MjBarChart extends BodyComponent {
     'bar-width': 'unit(px)',
     'separator-width': 'unit(px)',
     'step-count': 'enum(0,2,3,4,5,6,7,8)',
+    'show-values': 'boolean',
   }
 
   static defaultAttributes = {
@@ -59,6 +61,7 @@ export default class MjBarChart extends BodyComponent {
     'bar-width': '30',
     'separator-width': '30',
     'step-count': '5',
+    'show-values': true,
   }
 
   #getChartTitle() {
@@ -78,11 +81,15 @@ export default class MjBarChart extends BodyComponent {
   #getChartBar(value, color) {
     const v = value > 0 ? value : 0;
     const plainPartHeight = Math.round((v / this.higherValue) * this.chartHeight);
-    const emptyPartHeight = this.chartHeight - plainPartHeight;
+    const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
     const emptyCellStyle = {
       padding: '0',
       height: `${emptyPartHeight}px`,
+      'font-size': '12px',
+      'vertical-align': 'bottom',
+      'text-align': 'center',
+      'line-height': '16px',
     }
 
     const plainCellStyle = {
@@ -95,7 +102,7 @@ export default class MjBarChart extends BodyComponent {
       <td style="padding:0">
         <table ${this.htmlAttributes({ style: 'chartBarWrapper' })}>
           <tr>
-            <td ${this.htmlAttributes({ style: emptyCellStyle })}></td>
+            <td ${this.htmlAttributes({ style: emptyCellStyle })}>${this.showValues ? value : ''}</td>
           </tr>
           <tr>
             <td ${this.htmlAttributes({ style: plainCellStyle })}></td>
@@ -117,9 +124,6 @@ export default class MjBarChart extends BodyComponent {
 
     return `
       <table ${this.htmlAttributes({ style: 'barChart' })}>
-        <tr>
-          <td style="padding:0;height:10px;"></td>
-        </tr>
         <tr>
           ${bars.join('\n')}
         </tr>
@@ -251,7 +255,7 @@ export default class MjBarChart extends BodyComponent {
       },
       firstStep: {
         padding: '0 5px 0 0',
-        height: '50px',
+        height: '56px',
         'vertical-align': 'bottom',
         'text-align': 'right',
         'font-size': '14px',
