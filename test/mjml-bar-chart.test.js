@@ -3,15 +3,13 @@ import { registerComponent } from 'mjml-core'
 import MjBarChart from '../components/MjBarChart'
 
 function toHtml(mjml) {
-  const conversion = mjml2html(mjml)
-
-  const errors = conversion.errors
+  const {html, errors} = mjml2html(mjml)
 
   if (errors.length > 0) {
     return errors
   }
 
-  return conversion.html
+  return html
 }
 
 describe('mjml-bar-chart', () => {
