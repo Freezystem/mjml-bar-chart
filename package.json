@@ -1,7 +1,7 @@
 {
   "name": "test",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple component to make static bar charts in MJML",
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
@@ -28,7 +28,7 @@
     "jest": "^27.0.6"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "mjml": "^4.7.1"
+    "mjml": "^4.10.2",
+    "mjml-core": "^4.10.2"
   }
 }
