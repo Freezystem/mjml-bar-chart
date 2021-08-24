@@ -65,16 +65,18 @@ export default class MjBarChart extends BodyComponent {
   }
 
   #getChartTitle() {
-    if (!this.title) {
-      return null;
-    }
+    if (!this.title) { return ''; }
 
     return `
-      <table ${this.htmlAttributes({ style: 'chartTitleWrapper' })}>
-        <tr>
-          <td ${this.htmlAttributes({ style: 'chartTitle' })}>${this.title}</td>
-        </tr>
-      </table>
+      <tr>
+        <td style="padding:0;">
+          <table ${this.htmlAttributes({ style: 'chartTitleWrapper' })}>
+            <tr>
+              <td ${this.htmlAttributes({ style: 'chartTitle' })}>${this.title}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
     `;
   }
 
@@ -114,7 +116,7 @@ export default class MjBarChart extends BodyComponent {
 
   #getChartBarSeparator = () => `<td ${this.htmlAttributes({ style: 'chartBarSeparator' })}></td>`;
 
-  #getChart() {
+  #getChartBars() {
     const bars = [this.#getChartBarSeparator()];
 
     this.datasets.forEach((dataset) => {
@@ -123,11 +125,15 @@ export default class MjBarChart extends BodyComponent {
     })
 
     return `
-      <table ${this.htmlAttributes({ style: 'barChart' })}>
-        <tr>
-          ${bars.join('\n')}
-        </tr>
-      </table>
+      <tr>
+        <td style="padding:0;">
+          <table ${this.htmlAttributes({ style: 'barChart' })}>
+            <tr>
+              ${bars.join('\n')}
+            </tr>
+          </table>
+        </td>
+      </tr>
     `;
   }
 
@@ -142,11 +148,15 @@ export default class MjBarChart extends BodyComponent {
     })
 
     return `
-      <table ${this.htmlAttributes({ style: 'chartLabelWrapper' })}>
-        <tr>
-          ${labels.join('\n')}
-        </tr>
-      </table>
+      <tr>
+        <td style="padding:0;">
+          <table ${this.htmlAttributes({ style: 'chartLabelWrapper' })}>
+            <tr>
+              ${labels.join('\n')}
+            </tr>
+          </table>
+        </td>
+      </tr>
     `;
   }
 
@@ -165,22 +175,41 @@ export default class MjBarChart extends BodyComponent {
 
   #getChartLegend() {
     return `
-      <table ${this.htmlAttributes({ style: 'chartLegendWrapper' })}>
-        <tr>
-          <td style="padding:0;height:10px;"></td>
-        </tr>
-        <tr>
-          <td style="padding:0;">
-            <p ${this.htmlAttributes({ style: 'chartLegend' })}>
-              ${this.groups.map((g, i) => this.#getLegend(g, this.colors[i]))}
-            </p>
-          </td>
-        </tr>
-      </table>
+      <tr>
+        <td style="padding:0;">
+          <table ${this.htmlAttributes({ style: 'chartLegendWrapper' })}>
+            <tr>
+              <td style="padding:0;height:10px;"></td>
+            </tr>
+            <tr>
+              <td style="padding:0;">
+                <p ${this.htmlAttributes({ style: 'chartLegend' })}>
+                  ${this.groups.map((g, i) => this.#getLegend(g, this.colors[i]))}
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    `;
+  }
+
+  #getChart() {
+    return `
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;">
+          ${this.#getChartTitle()}
+          ${this.#getChartBars()}
+          ${this.#getChartLabels()}
+          ${this.#getChartLegend()}
+        </table>
+      </td>
     `;
   }
 
   #getScale() {
+    if (this.stepCount < 2) { return ''; }
+
     const steps = [];
 
     for (let i = this.stepCount; i > 0; i -= 1) {
@@ -195,9 +224,11 @@ export default class MjBarChart extends BodyComponent {
     }
 
     return `
-      <table style="border-collapse:collapse;">
-        ${steps.join('\n')}
-      </table>
+      <td style="padding:0;vertical-align:top;">
+        <table style="border-collapse:collapse;">
+          ${steps.join('\n')}
+        </table>
+      </td>
     `;
   }
 
@@ -273,37 +304,11 @@ export default class MjBarChart extends BodyComponent {
   }
 
   render() {
-    const scale = this.stepCount > 2
-      ? `<td style="padding:0;vertical-align:top;">${this.#getScale()}</td>` : '';
-
     return `
       <table id="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
         <tr>
-          ${scale}
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="padding:0;">
-                  ${this.#getChartTitle()}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:0;">
-                  ${this.#getChart()}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:0;">
-                  ${this.#getChartLabels()}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:0;">
-                  ${this.#getChartLegend()}
-                </td>
-              </tr>
-            </table>
-          </td>
+          ${this.#getScale()}
+          ${this.#getChart()}
         </tr>
       </table>
     `;
