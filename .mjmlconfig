@@ -1,5 +1,5 @@
 {
   "packages": [
-    "./lib/MjBarChart.js"
+    "./lib/index.js"
   ]
 }

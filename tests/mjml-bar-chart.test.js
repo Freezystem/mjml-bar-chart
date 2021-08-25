@@ -1,6 +1,6 @@
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
-import MjBarChart from '../components/MjBarChart'
+import MjBarChart from '../components'
 
 function toHtml(mjml) {
   const {html, errors} = mjml2html(mjml)
