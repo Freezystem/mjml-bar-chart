@@ -1,37 +1,48 @@
-# mjml-component-boilerplate
-
-A boilerplate to quickly get started when creating your own component.  
-
-3 examples can be found in */components*. Each of them introduce new features, so they should be checked in this order : MjBasicComponent, MjImageText, MjLayout.
-
-For more complex examples, have a look at standard MJML components code such as [mj-carousel](https://github.com/mjmlio/mjml/tree/master/packages/mjml-accordion).
+# MJML Bar Chart
 
 ## Getting started
 
-A step-by-step tutorial is available [here](https://medium.com/mjml-making-responsive-email-easy/tutorial-creating-your-own-component-with-mjml-4-1c0e84e97b36).
+First you'll have to install `mjml-bar-chart` in your project.
 
-* Clone the repo
-* `npm install` inside
-* Add your component inside `components` folder
-* Add your component to the registrations in gulpfile.babel.js
-* Use your own component in `index.mjml`
-* `npm run build` to build, or `npm start` if you want to watch recompile on change you make (to your component or to `index.mjml`)
-* The result will be outputted in `index.html`
-
-
-## Later use of your component
-
-### In Node.js
-```js
-import mjml2html from 'mjml'
-import { registerComponent } from 'mjml-core'
-import MyComponent from './components/MyComponent'
-
-registerComponent(MyComponent)
-
-const { html, errors } = mjml2html(mjmlString)
+```
+npm i -S @freezystem/mjml-bar-chart
 ```
 
-### With the cli
+Then just add the component to your MJML templates:
 
-Using custom components with the CLI is not ready yet.
+```xml
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-bar-chart
+          title="Sum of Requests by Department"
+          dataset-labels="January,February,March" 
+          datasets="33 14 27,18 66 42,7 15 21"
+          groups="Support,Sales,Tech"
+          colors="#d8f3dc,#95d5b2,#52b788"/>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+```
+
+You're all set !
+
+![Basic mjml-bar-chart rendering](https://repository-images.githubusercontent.com/398511647/a3509d00-707c-48e4-9686-7c1281b2af10)
+
+## Customize
+
+| attribute         | required | default   | description                                                                  |
+| :---              | :---:    | :---:     | :---                                                                         |
+| `title`           | ✖️        | `null`    | Chart title, if null will not display                                        |
+| `dataset-labels`  | ✔️        | `null`    | Comma separated labels of each dataset                                       |
+| `datasets`        | ✔️        | `null`    | Comma separated values of each dataset, must contain space separted integers |
+| `groups`          | ✔️        | `null`    | Comma separated data group names                                             |
+| `colors`          | ✔️        | `null`    | Comma separated CSS colors of each group                                     |
+| `axis-color`      | ✖️        | `#d4d4d4` | CSS color of axis and scale numbers                                          |
+| `height`          | ✖️        | `200`     | Chart height in pixel                                                        |
+| `bar-width`       | ✖️        | `30`      | Bar width in pixel                                                           |
+| `separator-width` | ✖️        | `30`      | Separator width in pixel between datasets                                    |
+| `step-count`      | ✖️        | `5`       | Step number on the chart scale, below 2 no steps will be displayed           |
+| `show-values`     | ✖️        | `true`    | Whether or not it should display values above each bar                       |

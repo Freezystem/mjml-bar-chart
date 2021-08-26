@@ -1,16 +1,22 @@
 {
-  "name": "test",
+  "name": "@freezystem/mjml-bar-chart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Freezystem/mjml-bar-chart.git"
+  },
   "version": "0.0.1",
   "description": "A simple component to make static bar charts in MJML",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "gulp watch",
     "preprepare": "eslint components",
     "prepare": "gulp build",
-    "test": "jest"
+    "test": "jest tests",
+    "release": "scripts/release.sh"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "freezystem",
+  "homepage": "https://github.com/Freezystem/mjml-bar-chart",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
