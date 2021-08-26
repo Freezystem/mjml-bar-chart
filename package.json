@@ -6,7 +6,7 @@
   },
   "version": "0.0.1",
   "description": "A simple component to make static bar charts in MJML",
-  "main": "components/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "gulp watch",
     "preprepare": "eslint components",

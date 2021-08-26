@@ -13,8 +13,8 @@
           title="Sum of Requests by Department"
           dataset-labels="January,February,March" 
           datasets="33 14 27,18 66 42,7 15 21"
-          groups="support,sales,tech"
-          colors="#ffe5ec,#ffb3c6,#fb6f92"/>
+          groups="Support,Sales,Tech"
+          colors="#d8f3dc,#95d5b2,#52b788"/>
       </mj-column>
     </mj-section>
   </mj-body>
