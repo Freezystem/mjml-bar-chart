@@ -8,7 +8,17 @@ First you'll have to install `mjml-bar-chart` in your project.
 npm i -S @freezystem/mjml-bar-chart
 ```
 
-Then just add the component to your MJML templates:
+Then add the package to your .mjmlconfig:
+
+```json
+{
+  "packages": [
+    "mjml-bar-chart/lib/index.js"
+  ]
+}
+```
+
+You can now use the `mjml-bar-chart` component in your MJML templates:
 
 ```xml
 <mjml>
@@ -27,7 +37,7 @@ Then just add the component to your MJML templates:
 </mjml>
 ```
 
-You're all set !
+A you're all set !
 
 ![Basic mjml-bar-chart rendering](https://repository-images.githubusercontent.com/398511647/a3509d00-707c-48e4-9686-7c1281b2af10)
 

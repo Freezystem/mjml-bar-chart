@@ -5,7 +5,7 @@
     "url": "https://github.com/Freezystem/mjml-bar-chart.git"
   },
   "version": "1.0.0",
-  "description": "A simple component to make static bar charts in MJML",
+  "description": "A simple MJML component to make static bar charts",
   "main": "lib/index.js",
   "scripts": {
     "start": "gulp watch",
