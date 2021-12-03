@@ -1,15 +1,10 @@
 import mjml2html from 'mjml'
-import { registerComponent } from 'mjml-core'
-import MjBarChart from '../components'
+import {registerComponent} from 'mjml-core'
+import MjBarChart from '../index'
 
-function toHtml(mjml) {
+function toHtml(mjml: string): string {
   const {html, errors} = mjml2html(mjml)
-
-  if (errors.length > 0) {
-    return errors
-  }
-
-  return html
+  return errors.length > 0 ? errors[0].message : html
 }
 
 describe('mjml-bar-chart', () => {

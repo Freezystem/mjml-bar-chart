@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 17",
+  "files": ["src/index.ts"],
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "module": "ESNext",
+    "target": "es2021",
+    "sourceMap": true,
+    "outDir": "./lib",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true
+  },
+  "moduleResolution": "node"
+}

@@ -1,4 +1,5 @@
 *.log
-lib
 index.html
+lib
 node_modules
+.parcel-cache
