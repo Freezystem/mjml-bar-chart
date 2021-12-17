@@ -16,10 +16,10 @@ jobs:
       - name: Setup Node and NPM
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version: '17.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install and Build
-        run: npm install
+        run: npm ci
       - name: Publish to NPM
         run: npm publish --access public
         env:
