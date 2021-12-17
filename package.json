@@ -11,7 +11,7 @@
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",
-    "test": "jest tests",
+    "test": "jest",
     "release": "scripts/release.sh"
   },
   "author": "freezystem",
