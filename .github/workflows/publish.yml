@@ -19,7 +19,7 @@ jobs:
           node-version: '17.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install and Build
-        run: npm install
+        run: npm ci
       - name: Publish to NPM
         run: npm publish --access public
         env:
