@@ -15,7 +15,11 @@
     "test": "jest",
     "release": "scripts/release.sh",
     "deps": "npm-check -u",
-    "postdeps": "npm audit fix"
+    "postdeps": "npm audit fix",
+    "preversion": "git reset && git switch main && git fetch -p && git pull",
+    "postversion": "npm run tag:push",
+    "tag:push": "git push && git push --tags",
+    "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
   },
   "author": "freezystem",
   "homepage": "https://github.com/Freezystem/mjml-bar-chart",
