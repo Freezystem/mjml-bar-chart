@@ -13,7 +13,6 @@
     "build": "tsc",
     "postinstall": "npm run build",
     "test": "jest",
-    "release": "scripts/release.sh",
     "deps": "npm-check -u",
     "postdeps": "npm audit fix",
     "preversion": "git reset && git switch main && git fetch -p && git pull",
