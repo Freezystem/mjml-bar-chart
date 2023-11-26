@@ -1,43 +1,45 @@
 {
-  "name": "@freezystem/mjml-bar-chart",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Freezystem/mjml-bar-chart.git"
-  },
-  "version": "1.1.1",
-  "description": "A simple MJML component to make static bar charts",
-  "source": "src/index.ts",
-  "main": "lib/index.js",
-  "scripts": {
-    "watch": "tsc --watch",
-    "build": "tsc",
-    "postinstall": "npm run build",
-    "test": "jest",
-    "deps": "npm-check -u",
-    "postdeps": "npm audit fix",
-    "preversion": "git reset && git switch main && git fetch -p && git pull",
-    "postversion": "npm run tag:push",
-    "tag:push": "git push && git push --tags",
-    "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
-  },
-  "author": "freezystem",
-  "homepage": "https://github.com/Freezystem/mjml-bar-chart",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^29.5.10",
-    "@types/mjml": "^4.7.4",
-    "@types/mjml-core": "^4.7.4",
-    "jest": "^29.7.0",
-    "npm-check": "^6.0.1",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.3.2"
-  },
-  "dependencies": {
-    "mjml": "^4.14.1",
-    "mjml-core": "^4.14.1"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/js-with-ts-esm",
-    "testEnvironment": "node"
-  }
+	"name": "@freezystem/mjml-bar-chart",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Freezystem/mjml-bar-chart.git"
+	},
+	"version": "1.1.1",
+	"description": "A simple MJML component to make static bar charts",
+	"source": "src/index.ts",
+	"main": "lib/index.js",
+	"scripts": {
+		"watch": "tsc --watch",
+		"build": "tsc",
+		"postinstall": "npm run build",
+		"test": "jest",
+		"deps": "npm-check -u",
+		"postdeps": "npm audit fix",
+		"preversion": "git reset && git switch main && git fetch -p && git pull",
+		"postversion": "npm run tag:push",
+		"tag:push": "git push && git push --tags",
+		"tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}",
+		"prettier": "prettier --check .",
+		"prettier:fix": "prettier --write ."
+	},
+	"author": "freezystem",
+	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^29.5.10",
+		"@types/mjml": "^4.7.4",
+		"@types/mjml-core": "^4.7.4",
+		"jest": "^29.7.0",
+		"npm-check": "^6.0.1",
+		"prettier": "^3.1.0",
+		"ts-jest": "^29.1.1",
+		"typescript": "^5.3.2"
+	},
+	"dependencies": {
+		"mjml": "^4.14.1",
+		"mjml-core": "^4.14.1"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	}
 }

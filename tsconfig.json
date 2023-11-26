@@ -1,18 +1,23 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 17",
-  "files": ["src/index.ts"],
-  "compilerOptions": {
-    "lib": ["es2021"],
-    "module": "ESNext",
-    "target": "es2021",
-    "sourceMap": true,
-    "outDir": "./lib",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true
-  },
-  "moduleResolution": "node"
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Node 20",
+	"files": ["src/index.ts"],
+	"compilerOptions": {
+		"lib": ["es2022"],
+		"module": "ESNext",
+		"target": "es2022",
+		"sourceMap": true,
+		"outDir": "./lib",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"useUnknownInCatchVariables": true
+	}
 }

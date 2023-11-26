@@ -1,26 +1,26 @@
 name: MJBarChart Publish
 
 on:
-  release:
-    types: [released]
+    release:
+        types: [released]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest 
-    permissions: 
-      contents: read
-      packages: write 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node and NPM
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install and Build
-        run: npm ci
-      - name: Publish to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Setup Node and NPM
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "20.x"
+                  registry-url: "https://registry.npmjs.org"
+            - name: Install and Build
+              run: npm ci
+            - name: Publish to NPM
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
