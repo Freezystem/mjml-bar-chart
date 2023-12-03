@@ -21,5 +21,5 @@
 		"noUnusedParameters": true
 	},
 	"include": ["src/**/*.ts"],
-	"exclude": ["node_modules", "build", "coverage", "src/**/*.spec.ts"],
+	"exclude": ["node_modules", "build", "coverage", "src/**/*.spec.ts"]
 }
