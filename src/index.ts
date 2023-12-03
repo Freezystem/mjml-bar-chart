@@ -1,10 +1,10 @@
 import { BodyComponent } from "mjml-core";
 import { registerDependencies } from "mjml-validator";
 
-type dataset = {
+interface dataset {
 	label: string;
 	data: number[];
-};
+}
 
 export default class MjBarChart extends BodyComponent {
 	readonly #title: string;
@@ -59,7 +59,7 @@ export default class MjBarChart extends BodyComponent {
 
 	static endingTag = true;
 
-	static dependencies = {
+	static dependencies: Record<string, string[]> = {
 		"mj-column": ["mj-bar-chart"],
 		"mj-bar-chart": [],
 	};
@@ -78,7 +78,7 @@ export default class MjBarChart extends BodyComponent {
 		"show-values": "boolean",
 	};
 
-	static defaultAttributes = {
+	static override defaultAttributes = {
 		"axis-color": "d4d4d4",
 		height: "200",
 		"bar-width": "30",
@@ -263,7 +263,7 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 
-	getStyles(): object {
+	override getStyles(): object {
 		return {
 			chartTitleWrapper: {
 				width: "100%",
