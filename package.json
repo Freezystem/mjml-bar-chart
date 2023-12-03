@@ -1,43 +1,74 @@
 {
-  "name": "@freezystem/mjml-bar-chart",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Freezystem/mjml-bar-chart.git"
-  },
-  "version": "1.1.1",
-  "description": "A simple MJML component to make static bar charts",
-  "source": "src/index.ts",
-  "main": "lib/index.js",
-  "scripts": {
-    "watch": "tsc --watch",
-    "build": "tsc",
-    "postinstall": "npm run build",
-    "test": "jest",
-    "deps": "npm-check -u",
-    "postdeps": "npm audit fix",
-    "preversion": "git reset && git switch main && git fetch -p && git pull",
-    "postversion": "npm run tag:push",
-    "tag:push": "git push && git push --tags",
-    "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
-  },
-  "author": "freezystem",
-  "homepage": "https://github.com/Freezystem/mjml-bar-chart",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^29.5.2",
-    "@types/mjml": "^4.7.1",
-    "@types/mjml-core": "^4.7.1",
-    "jest": "^29.6.1",
-    "npm-check": "^6.0.1",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "mjml": "^4.14.1",
-    "mjml-core": "^4.14.1"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/js-with-ts-esm",
-    "testEnvironment": "node"
-  }
+	"$schema": "https://json.schemastore.org/package.json",
+	"name": "@freezystem/mjml-bar-chart",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Freezystem/mjml-bar-chart.git"
+	},
+	"version": "1.1.1",
+	"description": "A simple MJML component to make static bar charts",
+	"main": "./build/index.js",
+	"module": "./build/esm/index.js",
+	"types": "./build/types/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./build/types/index.d.ts",
+			"require": "./build/index.js",
+			"import": "./build/esm/index.js",
+			"default": "./build/index.js"
+		}
+	},
+	"scripts": {
+		"watch": "tsc --watch",
+		"prebuild": "rm -rf build",
+		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
+		"postinstall": "npm run build",
+		"test": "jest",
+		"deps": "npm-check -u",
+		"postdeps": "npm audit fix",
+		"preversion": "git reset && git switch main && git fetch -p && git pull",
+		"postversion": "npm run tag:push",
+		"tag:push": "git push && git push --tags",
+		"tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}",
+		"prettier": "prettier --check .",
+		"prettier:fix": "prettier --write ."
+	},
+	"author": "freezystem",
+	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^29.5.10",
+		"@types/mjml": "^4.7.4",
+		"@types/mjml-core": "^4.7.4",
+		"@types/mjml-validator": "^4.13.4",
+		"@types/node": "^20.10.3",
+		"jest": "^29.7.0",
+		"npm-check": "^6.0.1",
+		"prettier": "^3.1.0",
+		"ts-jest": "^29.1.1",
+		"typescript": "^5.3.2"
+	},
+	"dependencies": {
+		"mjml": "^4.14.1",
+		"mjml-core": "^4.14.1",
+		"mjml-validator": "^4.13.0"
+	},
+	"jest": {
+		"detectOpenHandles": true,
+		"verbose": true,
+		"coverageDirectory": "<rootDir>/coverage",
+		"coverageReporters": [
+			"text-summary",
+			"cobertura"
+		],
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		],
+		"testMatch": [
+			"**/*.spec.ts"
+		]
+	}
 }

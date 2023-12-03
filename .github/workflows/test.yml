@@ -3,29 +3,28 @@ name: MJBarChart Test
 on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node and NPM
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.x'
-          cache: 'npm'
-      - name: Install and Build
-        run: npm ci
-      - name: Test
-        run: npm test
-      - name: Generate Changelog
-        run: git log --oneline $(git describe --tags --abbrev=0)..HEAD >> CHANGELOG.txt
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        with:
-          body_path: CHANGELOG.txt
-          draft: true
-          files: |
-            lib/index.js
-            LICENSE
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Setup Node and NPM
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: "npm"
+            - name: Install and Build
+              run: npm ci
+            - name: Test
+              run: npm test
+            - name: Prettier
+              run: npm run prettier
+            - name: Generate Changelog
+              run: git log --oneline $(git describe --tags --abbrev=0)..HEAD >> CHANGELOG.txt
+            - name: Release
+              uses: softprops/action-gh-release@v1
+              if: ${{ startsWith(github.ref, 'refs/tags/') }}
+              with:
+                  body_path: CHANGELOG.txt
+                  draft: true
