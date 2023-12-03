@@ -1,6 +1,6 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
-import MjmlBarChart from "./index";
+import MjBarChart from "./index";
 
 function toHtml(mjml: string): string {
 	const { html, errors } = mjml2html(mjml);
@@ -9,7 +9,7 @@ function toHtml(mjml: string): string {
 
 describe("mjml-bar-chart", () => {
 	beforeAll(() => {
-		registerComponent(MjmlBarChart);
+		registerComponent(MjBarChart);
 	});
 
 	it("should render the bar chart", () => {

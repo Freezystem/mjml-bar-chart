@@ -1,4 +1,5 @@
 import { BodyComponent } from "mjml-core";
+import { registerDependencies } from "mjml-validator";
 
 type dataset = {
 	label: string;
@@ -53,6 +54,8 @@ export default class MjBarChart extends BodyComponent {
 			this.#separatorWidth * (this.#groups.length + 1) +
 			this.#barWidth * this.#datasets.length * this.#groups.length;
 	}
+
+	static componentName = "mj-bar-chart";
 
 	static endingTag = true;
 
@@ -342,3 +345,5 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 }
+
+registerDependencies(MjBarChart.dependencies);

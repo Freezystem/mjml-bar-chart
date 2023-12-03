@@ -7,9 +7,9 @@
 	"version": "1.1.1",
 	"description": "A simple MJML component to make static bar charts",
 	"source": "src/index.ts",
-	"main": "lib/index.js",
 	"scripts": {
 		"watch": "tsc --watch",
+		"prebuild": "rm -rf build",
 		"build": "tsc",
 		"postinstall": "npm run build",
 		"test": "jest",
@@ -29,6 +29,7 @@
 		"@types/jest": "^29.5.10",
 		"@types/mjml": "^4.7.4",
 		"@types/mjml-core": "^4.7.4",
+		"@types/mjml-validator": "^4.13.4",
 		"jest": "^29.7.0",
 		"npm-check": "^6.0.1",
 		"prettier": "^3.1.0",
@@ -37,9 +38,25 @@
 	},
 	"dependencies": {
 		"mjml": "^4.14.1",
-		"mjml-core": "^4.14.1"
+		"mjml-core": "^4.14.1",
+		"mjml-validator": "^4.13.0"
 	},
 	"jest": {
-		"testEnvironment": "node"
+		"detectOpenHandles": true,
+		"verbose": true,
+		"coverageDirectory": "<rootDir>/coverage",
+		"coverageReporters": [
+			"text-summary",
+			"cobertura"
+		],
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		],
+		"testMatch": [
+			"**/*.spec.ts"
+		]
 	}
 }
