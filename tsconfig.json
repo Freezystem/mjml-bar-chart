@@ -1,15 +1,16 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Node 20",
 	"compilerOptions": {
-		"types": ["node", "jest", "mjml"],
-		"outDir": "build",
-		"target": "ES2022",
+		"rootDir": "src",
+		"types": ["node", "jest", "mjml", "mjml-core", "mjml-validator"],
+		"target": "ESNext",
 		"moduleResolution": "node",
+		"esModuleInterop": true,
 		"inlineSourceMap": true,
 		"alwaysStrict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
 	},
-	"include": ["src/index.ts"]
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "dist", "build", "coverage", "src/**/*.spec.ts"]
 }
