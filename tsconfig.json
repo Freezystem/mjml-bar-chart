@@ -3,6 +3,8 @@
 	"compilerOptions": {
 		"rootDir": "src",
 		"types": ["node", "jest", "mjml", "mjml-core", "mjml-validator"],
+		"outDir": "build",
+		"module": "commonjs",
 		"target": "ESNext",
 		"moduleResolution": "node",
 		"esModuleInterop": true,

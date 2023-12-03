@@ -12,13 +12,31 @@ Then add the package to your `.mjmlconfig` file:
 
 ```json
 {
-	"packages": ["mjml-bar-chart/lib/index.js"]
+	"packages": ["mjml-bar-chart/build/index.js"]
 }
+```
+
+Or import it and manually register the plugin.
+
+with **ESM**:
+```ecmascript 6
+import { registerComponent } from "mjml-core";
+import MjBarChart from "@freezystem/mjml-bar-chart";
+
+registerComponent(MjBarChart);
+```
+
+with **CJS**:
+```ecmascript 6
+const { registerComponent } = require("mjml-core");
+const MjBarChart = require("@freezystem/mjml-bar-chart");
+
+registerComponent(MjBarChart);
 ```
 
 You can now use the `mjml-bar-chart` component in your MJML templates:
 
-```xml
+```mjml
 <mjml>
   <mj-body>
     <mj-section>

@@ -7,21 +7,21 @@
 	},
 	"version": "1.1.1",
 	"description": "A simple MJML component to make static bar charts",
-	"main":  "./build/umd/index.js",
+	"main":  "./build/index.js",
 	"module":  "./build/esm/index.js",
 	"types":  "./build/types/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./build/types/index.d.ts",
-			"require": "./build/umd/index.js",
+			"require": "./build/index.js",
 			"import": "./build/esm/index.js",
-			"default": "./build/umd/index.js"
+			"default": "./build/index.js"
 		}
 	},
 	"scripts": {
 		"watch": "tsc --watch",
 		"prebuild": "rm -rf build",
-		"build": "tsc -b tsconfig.umd.json tsconfig.esm.json tsconfig.types.json",
+		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
 		"postinstall": "npm run build",
 		"test": "jest",
 		"deps": "npm-check -u",
