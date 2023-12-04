@@ -3,3 +3,4 @@ index.html
 build
 node_modules
 .parcel-cache
+coverage

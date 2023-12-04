@@ -24,6 +24,8 @@
 		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
 		"postinstall": "npm run build",
 		"test": "jest",
+		"test:coverage": "jest --coverage",
+		"test:snap": "jest --updateSnapshot",
 		"deps": "npm-check -u",
 		"postdeps": "npm audit fix",
 		"preversion": "git reset && git switch main && git fetch -p && git pull",

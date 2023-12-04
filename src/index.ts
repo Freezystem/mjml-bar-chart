@@ -7,52 +7,52 @@ interface dataset {
 }
 
 export default class MjBarChart extends BodyComponent {
-	readonly #title: string;
-	readonly #colors: string[];
-	readonly #axisColor: string;
-	readonly #groups: string[];
-	readonly #chartHeight: number;
-	readonly #barWidth: number;
-	readonly #separatorWidth: number;
-	readonly #stepCount: number;
-	readonly #showValues: boolean;
-	readonly #datasetValues: number[][];
-	readonly #datasets: dataset[];
-	readonly #higherValue: number;
-	readonly #chartWidth: number;
+	private readonly title: string;
+	private readonly colors: string[];
+	private readonly axisColor: string;
+	private readonly groups: string[];
+	private readonly chartHeight: number;
+	private readonly barWidth: number;
+	private readonly separatorWidth: number;
+	private readonly stepCount: number;
+	private readonly showValues: boolean;
+	private readonly datasetValues: number[][];
+	private readonly datasets: dataset[];
+	private readonly higherValue: number;
+	private readonly chartWidth: number;
 
 	constructor(initialData = {}) {
 		super(initialData);
 
-		this.#title = this.getAttribute("title");
-		this.#colors = this.getAttribute("colors").split(",");
-		this.#axisColor = this.getAttribute("axis-color");
-		this.#groups = this.getAttribute("groups").split(",");
-		this.#chartHeight = parseInt(this.getAttribute("height"), 10);
-		this.#barWidth = parseInt(this.getAttribute("bar-width"), 10);
-		this.#separatorWidth = parseInt(this.getAttribute("separator-width"), 10);
-		this.#stepCount = parseInt(this.getAttribute("step-count"), 10);
-		this.#showValues = Boolean(this.getAttribute("show-values"));
+		this.title = this.getAttribute("title");
+		this.colors = this.getAttribute("colors").split(",");
+		this.axisColor = this.getAttribute("axis-color");
+		this.groups = this.getAttribute("groups").split(",");
+		this.chartHeight = parseInt(this.getAttribute("height"), 10);
+		this.barWidth = parseInt(this.getAttribute("bar-width"), 10);
+		this.separatorWidth = parseInt(this.getAttribute("separator-width"), 10);
+		this.stepCount = parseInt(this.getAttribute("step-count"), 10);
+		this.showValues = Boolean(this.getAttribute("show-values"));
 
-		this.#datasetValues = JSON.parse(this.getAttribute("datasets"));
+		this.datasetValues = JSON.parse(this.getAttribute("datasets"));
 
-		this.#datasets = this.getAttribute("dataset-labels")
+		this.datasets = this.getAttribute("dataset-labels")
 			.split(",")
 			.map((label: string, idx: number) => ({
 				label,
-				data: this.#datasetValues[idx],
+				data: this.datasetValues[idx],
 			}));
 
-		this.#higherValue =
-			this.#datasetValues
+		this.higherValue =
+			this.datasetValues
 				.reduce((vs, d) => [...vs, ...d], [])
 				.sort((a, b) => b - a)
 				.shift() || 0;
 
-		this.#chartWidth =
+		this.chartWidth =
 			2 +
-			this.#separatorWidth * (this.#groups.length + 1) +
-			this.#barWidth * this.#datasets.length * this.#groups.length;
+			this.separatorWidth * (this.groups.length + 1) +
+			this.barWidth * this.datasets.length * this.groups.length;
 	}
 
 	static componentName = "mj-bar-chart";
@@ -87,17 +87,17 @@ export default class MjBarChart extends BodyComponent {
 		"show-values": "true",
 	};
 
-	#getChartTitle() {
-		if (!this.#title) {
+	private getChartTitle() {
+		if (!this.title) {
 			return "";
 		}
 
 		return `
           <tr>
             <td style="padding:0;">
-              <table ${this.htmlAttributes({ style: "chartTitleWrapper" })}>
+              <table${this.htmlAttributes({ style: "chartTitleWrapper" })}>
                 <tr>
-                  <td ${this.htmlAttributes({ style: "chartTitle" })}>${this.#title}</td>
+                  <td${this.htmlAttributes({ style: "chartTitle" })}>${this.title}</td>
                 </tr>
               </table>
             </td>
@@ -105,10 +105,10 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 
-	#getChartBar(value: number, color: string) {
+	private getChartBar(value: number, color: string) {
 		const v = value > 0 ? value : 0;
-		const plainPartHeight = Math.round((v / this.#higherValue) * this.#chartHeight);
-		const emptyPartHeight = this.#chartHeight - plainPartHeight + 16;
+		const plainPartHeight = Math.round((v / this.higherValue) * this.chartHeight);
+		const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
 		const emptyCellStyle = {
 			padding: "0",
@@ -127,37 +127,38 @@ export default class MjBarChart extends BodyComponent {
 
 		return `
           <td style="padding:0">
-            <table ${this.htmlAttributes({ style: "chartBarWrapper" })}>
+            <table${this.htmlAttributes({ style: "chartBarWrapper" })}>
               <tr>
-                <td ${this.htmlAttributes({ style: emptyCellStyle })}>${
-					this.#showValues ? value : ""
+                <td${this.htmlAttributes({ style: emptyCellStyle })}>${
+					this.showValues ? value : ""
 				}</td>
               </tr>
               <tr>
-                <td ${this.htmlAttributes({ style: plainCellStyle })}></td>
+                <td${this.htmlAttributes({ style: plainCellStyle })}></td>
               </tr>
             </table>
           </td>
         `;
 	}
 
-	#getChartBarSeparator = () =>
-		`<td ${this.htmlAttributes({ style: "chartBarSeparator" })}></td>`;
+	private getChartBarSeparator() {
+		return `<td${this.htmlAttributes({ style: "chartBarSeparator" })}></td>`;
+	}
 
-	#getChartBars() {
-		const bars = [this.#getChartBarSeparator()];
+	private getChartBars() {
+		const bars = [this.getChartBarSeparator()];
 
-		this.#datasets.forEach((dataset) => {
+		this.datasets.forEach((dataset) => {
 			dataset.data.forEach((datum, idx) =>
-				bars.push(this.#getChartBar(datum, this.#colors[idx]))
+				bars.push(this.getChartBar(datum, this.colors[idx]))
 			);
-			bars.push(this.#getChartBarSeparator());
+			bars.push(this.getChartBarSeparator());
 		});
 
 		return `
           <tr>
             <td style="padding:0;">
-              <table ${this.htmlAttributes({ style: "barChart" })}>
+              <table${this.htmlAttributes({ style: "barChart" })}>
                 <tr>
                   ${bars.join("\n")}
                 </tr>
@@ -167,21 +168,22 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 
-	#getLabel = (value: string) =>
-		`<td ${this.htmlAttributes({ style: "chartLabel" })}>${value}</td>`;
+	private getLabel(value: string) {
+		return `<td${this.htmlAttributes({ style: "chartLabel" })}>${value}</td>`;
+	}
 
-	#getChartLabels() {
-		const labels = [this.#getChartBarSeparator()];
+	private getChartLabels() {
+		const labels = [this.getChartBarSeparator()];
 
-		this.#datasets.forEach((dataset) => {
-			labels.push(this.#getLabel(dataset.label));
-			labels.push(this.#getChartBarSeparator());
+		this.datasets.forEach((dataset) => {
+			labels.push(this.getLabel(dataset.label));
+			labels.push(this.getChartBarSeparator());
 		});
 
 		return `
           <tr>
             <td style="padding:0;">
-              <table ${this.htmlAttributes({ style: "chartLabelWrapper" })}>
+              <table${this.htmlAttributes({ style: "chartLabelWrapper" })}>
                 <tr>
                   ${labels.join("\n")}
                 </tr>
@@ -191,29 +193,29 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 
-	#getLegend(value: string, color: string) {
+	private getLegend(value: string, color: string) {
 		const legendStyle = {
 			padding: "0 10px",
 			height: "20px",
 			"font-size": "14px",
-			"border-left": `${this.#barWidth}px solid ${color}`,
+			"border-left": `${this.barWidth}px solid ${color}`,
 		};
 
-		return `<span ${this.htmlAttributes({ style: legendStyle })}>${value}</span>`;
+		return `<span${this.htmlAttributes({ style: legendStyle })}>${value}</span>`;
 	}
 
-	#getChartLegend() {
+	private getChartLegend() {
 		return `
           <tr>
             <td style="padding:0;">
-              <table ${this.htmlAttributes({ style: "chartLegendWrapper" })}>
+              <table${this.htmlAttributes({ style: "chartLegendWrapper" })}>
                 <tr>
                   <td style="padding:0;height:10px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;">
-                    <p ${this.htmlAttributes({ style: "chartLegend" })}>
-                      ${this.#groups.map((g, i) => this.#getLegend(g, this.#colors[i]))}
+                    <p${this.htmlAttributes({ style: "chartLegend" })}>
+                      ${this.groups.map((g, i) => this.getLegend(g, this.colors[i]))}
                     </p>
                   </td>
                 </tr>
@@ -223,33 +225,33 @@ export default class MjBarChart extends BodyComponent {
         `;
 	}
 
-	#getChart() {
+	private getChart() {
 		return `
           <td style="padding:0;">
             <table style="border-collapse:collapse;">
-              ${this.#getChartTitle()}
-              ${this.#getChartBars()}
-              ${this.#getChartLabels()}
-              ${this.#getChartLegend()}
+              ${this.getChartTitle()}
+              ${this.getChartBars()}
+              ${this.getChartLabels()}
+              ${this.getChartLegend()}
             </table>
           </td>
         `;
 	}
 
-	#getScale() {
-		if (this.#stepCount < 2) {
+	private getScale() {
+		if (this.stepCount < 2) {
 			return "";
 		}
 
 		const steps = [];
 
-		for (let i = this.#stepCount; i > 0; i -= 1) {
-			const value = Math.trunc((this.#higherValue / (this.#stepCount - 1)) * (i - 1));
-			const style = i === this.#stepCount ? "firstStep" : "otherStep";
+		for (let i = this.stepCount; i > 0; i -= 1) {
+			const value = Math.trunc((this.higherValue / (this.stepCount - 1)) * (i - 1));
+			const style = i === this.stepCount ? "firstStep" : "otherStep";
 
 			steps.push(`
                 <tr>
-                  <td ${this.htmlAttributes({ style })}>${value}</td>
+                  <td${this.htmlAttributes({ style })}>${value}</td>
                 </tr>
               `);
 		}
@@ -278,18 +280,18 @@ export default class MjBarChart extends BodyComponent {
 			},
 			chartBarSeparator: {
 				padding: "0",
-				"min-width": `${this.#separatorWidth}px`,
-				"max-width": `${this.#separatorWidth}px`,
+				"min-width": `${this.separatorWidth}px`,
+				"max-width": `${this.separatorWidth}px`,
 			},
 			chartBarWrapper: {
 				padding: "0",
-				"min-width": `${this.#barWidth}px`,
-				"max-width": `${this.#barWidth}px`,
+				"min-width": `${this.barWidth}px`,
+				"max-width": `${this.barWidth}px`,
 			},
 			barChart: {
 				"border-collapse": "collapse",
-				"border-left": `2px solid ${this.#axisColor}`,
-				"border-bottom": `2px solid ${this.#axisColor}`,
+				"border-left": `2px solid ${this.axisColor}`,
+				"border-bottom": `2px solid ${this.axisColor}`,
 			},
 			chartLabelWrapper: {
 				"border-collapse": "collapse",
@@ -301,8 +303,8 @@ export default class MjBarChart extends BodyComponent {
 				"font-size": "14px",
 				"text-align": "center",
 				overflow: "hidden",
-				"min-width": `${this.#barWidth * this.#groups.length}px`,
-				"max-width": `${this.#barWidth * this.#groups.length}px`,
+				"min-width": `${this.barWidth * this.groups.length}px`,
+				"max-width": `${this.barWidth * this.groups.length}px`,
 			},
 			chartLegendWrapper: {
 				"border-collapse": "collapse",
@@ -311,7 +313,7 @@ export default class MjBarChart extends BodyComponent {
 			chartLegend: {
 				margin: "0",
 				padding: "0",
-				"max-width": `${this.#chartWidth}px`,
+				"max-width": `${this.chartWidth}px`,
 				"line-height": "20px",
 				"text-align": "center",
 			},
@@ -321,15 +323,15 @@ export default class MjBarChart extends BodyComponent {
 				"vertical-align": "bottom",
 				"text-align": "right",
 				"font-size": "14px",
-				color: this.#axisColor,
+				color: this.axisColor,
 			},
 			otherStep: {
 				padding: "0 5px 0 0",
-				height: `${(this.#chartHeight + 2) / (this.#stepCount - 1)}px`,
+				height: `${(this.chartHeight + 2) / (this.stepCount - 1)}px`,
 				"vertical-align": "bottom",
 				"text-align": "right",
 				"font-size": "14px",
-				color: this.#axisColor,
+				color: this.axisColor,
 			},
 		};
 	}
@@ -338,8 +340,8 @@ export default class MjBarChart extends BodyComponent {
 		return `
           <table class="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
             <tr>
-              ${this.#getScale()}
-              ${this.#getChart()}
+              ${this.getScale()}
+              ${this.getChart()}
             </tr>
           </table>
         `;
