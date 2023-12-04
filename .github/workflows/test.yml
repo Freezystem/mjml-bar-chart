@@ -16,18 +16,18 @@ jobs:
                   cache: "npm"
             - name: Install and Build
               run: npm ci
-            - name: Test
-              run: npm run test:coverage
             - name: Code Coverage Summary Report
               uses: irongut/CodeCoverageSummary@v1.3.0
               with:
-                filename: coverage/cobertura-coverage.xml
-                badge: true
-                indicator: true
-                fail_below_min: true
-                threshold: '70 90'
-                format: markdown
-                output: both
+                  filename: coverage/cobertura-coverage.xml
+                  badge: true
+                  indicator: true
+                  fail_below_min: true
+                  threshold: "70 90"
+                  format: markdown
+                  output: both
+            - name: Tests
+              run: npm run test:coverage
             - name: Prettier
               run: npm run prettier
             - name: Generate Changelog
