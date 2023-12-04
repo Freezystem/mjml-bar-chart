@@ -4,7 +4,7 @@
 
 First you'll have to install `mjml-bar-chart` in your project.
 
-```
+```sh
 npm i -S @freezystem/mjml-bar-chart
 ```
 
@@ -20,7 +20,7 @@ Or import it and manually register the plugin.
 
 with **ESM**:
 
-```ecmascript 6
+```js
 import { registerComponent } from "mjml-core";
 import MjBarChart from "@freezystem/mjml-bar-chart";
 
@@ -29,7 +29,7 @@ registerComponent(MjBarChart);
 
 with **CJS**:
 
-```ecmascript 6
+```js
 const { registerComponent } = require("mjml-core");
 const MjBarChart = require("@freezystem/mjml-bar-chart");
 
@@ -39,21 +39,13 @@ registerComponent(MjBarChart);
 You can now use the `mjml-bar-chart` component in your MJML templates:
 
 ```mjml
-<mjml>
-	<mj-body>
-		<mj-section>
-			<mj-column>
-				<mj-bar-chart
-					title="Sum of Requests by Department"
-					dataset-labels="January,February,March"
-					datasets="[[33,14,27],[18,66,42],[7,15,21]]"
-					groups="support,sales,tech"
-					colors="#d8f3dc,#95d5b2,#52b788"
-				/>
-			</mj-column>
-		</mj-section>
-	</mj-body>
-</mjml>
+<mj-bar-chart
+    title="Sum of Requests by Department"
+    dataset-labels="January,February,March"
+    datasets="[[33,14,27],[18,66,42],[7,15,21]]"
+    groups="support,sales,tech"
+    colors="#d8f3dc,#95d5b2,#52b788"
+/>
 ```
 
 Yay, you're all set !
