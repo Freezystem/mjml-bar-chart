@@ -60,4 +60,14 @@ describe("mjml-bar-chart", () => {
 			);
 		});
 	});
+
+	describe("getLegend", () => {
+		it("should render legend", () => {
+			const gen = barChart["getLegend"]("test", "#abcdef");
+
+			expect(gen).toBe(
+				'<span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #abcdef;">test</span>'
+			);
+		});
+	});
 });
