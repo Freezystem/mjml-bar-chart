@@ -39,13 +39,20 @@ registerComponent(MjBarChart);
 You can now use the `mjml-bar-chart` component in your MJML templates:
 
 ```mjml
-<mj-bar-chart
-    title="Sum of Requests by Department"
-    dataset-labels="January,February,March"
-    datasets="[[33,14,27],[18,66,42],[7,15,21]]"
-    groups="support,sales,tech"
-    colors="#d8f3dc,#95d5b2,#52b788"
-/>
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-bar-chart
+          title="Sum of Requests by Department"
+          dataset-labels="January,February,March"
+          datasets="[[33,14,27],[18,66,42],[7,15,21]]"
+          groups="support,sales,tech"
+          colors="#d8f3dc,#95d5b2,#52b788"/>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
 ```
 
 Yay, you're all set !
