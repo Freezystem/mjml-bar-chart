@@ -147,10 +147,18 @@ describe("mjml-bar-chart", () => {
 	});
 
 	describe("renderJSON", () => {
-		it("should render barChart", () => {
+		it("should render the barChart as JSON", () => {
 			const json = barChart["renderJSON"]();
 
 			expect(json).toMatchSnapshot();
+		});
+	});
+
+	describe("render", () => {
+		it("should render the barChart as HTML", () => {
+			const html = barChart.render();
+
+			expect(html).toMatchSnapshot();
 		});
 	});
 });

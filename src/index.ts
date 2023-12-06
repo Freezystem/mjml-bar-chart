@@ -271,6 +271,8 @@ export default class MjBarChart extends BodyComponent {
 	}
 
 	private getChartLegend(): JsonNode {
+		const legends = this.groups.map((_, i) => this.getLegend(i));
+
 		return {
 			...TR,
 			children: [
@@ -303,9 +305,7 @@ export default class MjBarChart extends BodyComponent {
 													attributes: {
 														style: this.styles("chartLegend"),
 													},
-													children: this.groups.map((_, i) =>
-														this.getLegend(i)
-													),
+													children: legends,
 												},
 											],
 										},

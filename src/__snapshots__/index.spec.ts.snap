@@ -155,7 +155,48 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
   "
 `;
 
-exports[`mjml-bar-chart renderJSON should render barChart 1`] = `
+exports[`mjml-bar-chart render should render the barChart as HTML 1`] = `
+"<table class="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;"><tr><td style="padding:0;vertical-align:top;"><table style="border-collapse:collapse;"><tr><td style="firstStep">66</td></tr>
+<tr><td style="otherStep">49</td></tr>
+<tr><td style="otherStep">33</td></tr>
+<tr><td style="otherStep">16</td></tr>
+<tr><td style="otherStep">0</td></tr></table></td>
+<td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;"><table style="border-collapse:collapse;border-left:2px solid d4d4d4;border-bottom:2px solid d4d4d4;"><tr><td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td></tr>
+<tr><td style="padding:0;height:100px;background-color:#ffe5ec;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td></tr>
+<tr><td style="padding:0;height:42px;background-color:#ffb3c6;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td></tr>
+<tr><td style="padding:0;height:82px;background-color:#fb6f92;"></td></tr></table></td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td></tr>
+<tr><td style="padding:0;height:55px;background-color:#ffe5ec;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td></tr>
+<tr><td style="padding:0;height:200px;background-color:#ffb3c6;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td></tr>
+<tr><td style="padding:0;height:127px;background-color:#fb6f92;"></td></tr></table></td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:195px;">7</td></tr>
+<tr><td style="padding:0;height:21px;background-color:#ffe5ec;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td></tr>
+<tr><td style="padding:0;height:45px;background-color:#ffb3c6;"></td></tr></table></td>
+<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td></tr>
+<tr><td style="padding:0;height:64px;background-color:#fb6f92;"></td></tr></table></td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td></tr>
+<tr><td style="padding:0;"><table style="border-collapse:collapse;border-left:2px solid transparent;"><tr><td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">January</td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">February</td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td>
+<td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>
+<td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td></tr>
+<tr><td style="padding:0;"><table style="border-collapse:collapse;width:100%;"><tr><td style="padding:0;height:10px;"></td></tr>
+<tr><td style="padding:0;"><p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;"><span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
+<span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
+<span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span></p></td></tr></table></td></tr></table></td></tr></table>"
+`;
+
+exports[`mjml-bar-chart renderJSON should render the barChart as JSON 1`] = `
 {
   "attributes": {
     "class": "mjmlBarChart",
