@@ -1,10 +1,44 @@
 import { BodyComponent } from "mjml-core";
 import { registerDependencies } from "mjml-validator";
+// @ts-expect-error
+import jsonToXML from "mjml-core/lib/helpers/jsonToXML";
 
-interface dataset {
+interface Dataset {
 	label: string;
 	data: number[];
 }
+
+interface Attributes {
+	title?: string;
+	colors: string;
+	"dataset-labels": string;
+	datasets: string;
+	groups: string;
+	"axis-color"?: string;
+	height?: string;
+	"bar-width"?: string;
+	"separator-width"?: string;
+	"step-count"?: string;
+	"show-values"?: string;
+}
+
+interface InitialData {
+	attributes: Attributes;
+	[key: string]: any;
+}
+
+interface JsonNode {
+	tagName: string;
+	attributes: Record<string, string>;
+	children?: JsonNode[];
+	content?: string;
+}
+
+const TABLE: JsonNode = { tagName: "table", attributes: {} };
+const TR: JsonNode = { tagName: "tr", attributes: {} };
+const TD: JsonNode = { tagName: "td", attributes: {} };
+const SPAN: JsonNode = { tagName: "span", attributes: {} };
+const P: JsonNode = { tagName: "p", attributes: {} };
 
 export default class MjBarChart extends BodyComponent {
 	private readonly title: string;
@@ -17,11 +51,11 @@ export default class MjBarChart extends BodyComponent {
 	private readonly stepCount: number;
 	private readonly showValues: boolean;
 	private readonly datasetValues: number[][];
-	private readonly datasets: dataset[];
+	private readonly datasets: Dataset[];
 	private readonly higherValue: number;
 	private readonly chartWidth: number;
 
-	constructor(initialData = {}) {
+	constructor(initialData: InitialData) {
 		super(initialData);
 
 		this.title = this.getAttribute("title");
@@ -87,161 +121,223 @@ export default class MjBarChart extends BodyComponent {
 		"show-values": "true",
 	};
 
-	private getChartTitle() {
-		if (!this.title) {
-			return "";
-		}
+	private getChartTitle(): JsonNode | undefined {
+		if (!this.title) return;
 
-		return `
-          <tr>
-            <td style="padding:0;">
-              <table${this.htmlAttributes({ style: "chartTitleWrapper" })}>
-                <tr>
-                  <td${this.htmlAttributes({ style: "chartTitle" })}>${this.title}</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        `;
+		return {
+			...TR,
+			children: [
+				{
+					...TD,
+					attributes: { style: "padding:0" },
+					children: [
+						{
+							...TABLE,
+							attributes: { style: this.styles("chartTitleWrapper") },
+							children: [
+								{
+									...TR,
+									children: [
+										{
+											...TD,
+											attributes: { style: this.styles("chartTitle") },
+											content: this.title,
+										},
+									],
+								},
+							],
+						},
+					],
+				},
+			],
+		};
 	}
 
-	private getChartBar(value: number, color: string) {
+	private getChartBar(datasetIndex: number, dataIndex: number): JsonNode {
+		const value = this.datasets[datasetIndex].data[dataIndex];
 		const v = value > 0 ? value : 0;
 		const plainPartHeight = Math.round((v / this.higherValue) * this.chartHeight);
 		const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
-		const emptyCellStyle = {
-			padding: "0",
-			height: `${emptyPartHeight}px`,
-			"font-size": "12px",
-			"vertical-align": "bottom",
-			"text-align": "center",
-			"line-height": "16px",
+		const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
+		const plainCellStyle = `${this.styles(
+			"plainCell"
+		)}height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
+
+		return {
+			...TD,
+			attributes: { style: "padding:0" },
+			children: [
+				{
+					...TABLE,
+					attributes: { style: this.styles("chartBarWrapper") },
+					children: [
+						{
+							...TR,
+							children: [
+								{
+									...TD,
+									attributes: { style: emptyCellStyle },
+									content: this.showValues ? `${value}` : "",
+								},
+							],
+						},
+						{
+							...TR,
+							children: [
+								{
+									...TD,
+									attributes: { style: plainCellStyle },
+								},
+							],
+						},
+					],
+				},
+			],
 		};
+	}
 
-		const plainCellStyle = {
-			padding: "0",
-			height: `${plainPartHeight}px`,
-			"background-color": color,
+	private getChartBarSeparator(): JsonNode {
+		return { ...TD, attributes: { style: this.styles("chartBarSeparator") } };
+	}
+
+	private getChartBars(): JsonNode {
+		const bars = this.datasets.flatMap((dataset, dsi) => [
+			...dataset.data.map((_, di) => this.getChartBar(dsi, di)),
+			this.getChartBarSeparator(),
+		]);
+
+		return {
+			...TR,
+			children: [
+				{
+					...TD,
+					attributes: { style: "padding:0;" },
+					children: [
+						{
+							...TABLE,
+							attributes: { style: this.styles("barChart") },
+							children: [{ ...TR, children: [this.getChartBarSeparator(), ...bars] }],
+						},
+					],
+				},
+			],
 		};
-
-		return `
-          <td style="padding:0">
-            <table${this.htmlAttributes({ style: "chartBarWrapper" })}>
-              <tr>
-                <td${this.htmlAttributes({ style: emptyCellStyle })}>${
-					this.showValues ? value : ""
-				}</td>
-              </tr>
-              <tr>
-                <td${this.htmlAttributes({ style: plainCellStyle })}></td>
-              </tr>
-            </table>
-          </td>
-        `;
 	}
 
-	private getChartBarSeparator() {
-		return `<td${this.htmlAttributes({ style: "chartBarSeparator" })}></td>`;
-	}
-
-	private getChartBars() {
-		const bars = [this.getChartBarSeparator()];
-
-		this.datasets.forEach((dataset) => {
-			dataset.data.forEach((datum, idx) =>
-				bars.push(this.getChartBar(datum, this.colors[idx]))
-			);
-			bars.push(this.getChartBarSeparator());
-		});
-
-		return `
-          <tr>
-            <td style="padding:0;">
-              <table${this.htmlAttributes({ style: "barChart" })}>
-                <tr>
-                  ${bars.join("\n")}
-                </tr>
-              </table>
-            </td>
-          </tr>
-        `;
-	}
-
-	private getLabel(value: string) {
-		return `<td${this.htmlAttributes({ style: "chartLabel" })}>${value}</td>`;
+	private getDatasetLabel(index: number): JsonNode {
+		return {
+			...TD,
+			attributes: { style: this.styles("chartLabel") },
+			content: this.datasets[index].label,
+		};
 	}
 
 	private getChartLabels() {
-		const labels = [this.getChartBarSeparator()];
+		const labels = this.datasets.flatMap((_, i) => [
+			this.getDatasetLabel(i),
+			this.getChartBarSeparator(),
+		]);
 
-		this.datasets.forEach((dataset) => {
-			labels.push(this.getLabel(dataset.label));
-			labels.push(this.getChartBarSeparator());
-		});
-
-		return `
-          <tr>
-            <td style="padding:0;">
-              <table${this.htmlAttributes({ style: "chartLabelWrapper" })}>
-                <tr>
-                  ${labels.join("\n")}
-                </tr>
-              </table>
-            </td>
-          </tr>
-        `;
-	}
-
-	private getLegend(value: string, color: string) {
-		const legendStyle = {
-			padding: "0 10px",
-			height: "20px",
-			"font-size": "14px",
-			"border-left": `${this.barWidth}px solid ${color}`,
+		return {
+			...TR,
+			children: [
+				{
+					...TD,
+					attributes: { style: "padding:0;" },
+					children: [
+						{
+							...TABLE,
+							attributes: { style: this.styles("chartLabelWrapper") },
+							children: [
+								{
+									...TR,
+									children: [this.getChartBarSeparator(), ...labels],
+								},
+							],
+						},
+					],
+				},
+			],
 		};
-
-		return `<span${this.htmlAttributes({ style: legendStyle })}>${value}</span>`;
 	}
 
-	private getChartLegend() {
-		return `
-          <tr>
-            <td style="padding:0;">
-              <table${this.htmlAttributes({ style: "chartLegendWrapper" })}>
-                <tr>
-                  <td style="padding:0;height:10px;"></td>
-                </tr>
-                <tr>
-                  <td style="padding:0;">
-                    <p${this.htmlAttributes({ style: "chartLegend" })}>
-                      ${this.groups.map((g, i) => this.getLegend(g, this.colors[i]))}
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        `;
+	private getLegend(index: number): JsonNode {
+		const content = this.groups[index];
+		const color = this.colors[index];
+		const style = `${this.styles("legend")}border-left:${this.barWidth}px solid ${color};`;
+
+		return { ...SPAN, attributes: { style }, content };
 	}
 
-	private getChart() {
-		return `
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              ${this.getChartTitle()}
-              ${this.getChartBars()}
-              ${this.getChartLabels()}
-              ${this.getChartLegend()}
-            </table>
-          </td>
-        `;
+	private getChartLegend(): JsonNode {
+		return {
+			...TR,
+			children: [
+				{
+					...TD,
+					attributes: { style: "padding:0;" },
+					children: [
+						{
+							...TABLE,
+							attributes: { style: this.styles("chartLegendWrapper") },
+							children: [
+								{
+									...TR,
+									children: [
+										{
+											...TD,
+											attributes: { style: "padding:0;height:10px;" },
+										},
+									],
+								},
+								{
+									...TR,
+									children: [
+										{
+											...TD,
+											attributes: { style: "padding:0;" },
+											children: [
+												{
+													...P,
+													attributes: {
+														style: this.styles("chartLegend"),
+													},
+													children: this.groups.map((_, i) =>
+														this.getLegend(i)
+													),
+												},
+											],
+										},
+									],
+								},
+							],
+						},
+					],
+				},
+			],
+		};
 	}
 
-	private getScale() {
-		if (this.stepCount < 2) {
-			return "";
-		}
+	private getChart(): JsonNode {
+		const chartTitle = this.getChartTitle();
+		const children = [this.getChartBars(), this.getChartLabels(), this.getChartLegend()];
+
+		return {
+			...TD,
+			attributes: { style: "padding:0;" },
+			children: [
+				{
+					...TABLE,
+					attributes: { style: "border-collapse:collapse;" },
+					children: chartTitle ? [chartTitle, ...children] : children,
+				},
+			],
+		};
+	}
+
+	private getScale(): JsonNode | undefined {
+		if (this.stepCount < 2) return;
 
 		const steps = [];
 
@@ -249,20 +345,29 @@ export default class MjBarChart extends BodyComponent {
 			const value = Math.trunc((this.higherValue / (this.stepCount - 1)) * (i - 1));
 			const style = i === this.stepCount ? "firstStep" : "otherStep";
 
-			steps.push(`
-                <tr>
-                  <td${this.htmlAttributes({ style })}>${value}</td>
-                </tr>
-              `);
+			steps.push({
+				...TR,
+				children: [
+					{
+						...TD,
+						attributes: { style },
+						content: `${value}`,
+					},
+				],
+			});
 		}
 
-		return `
-          <td style="padding:0;vertical-align:top;">
-            <table style="border-collapse:collapse;">
-              ${steps.join("\n")}
-            </table>
-          </td>
-        `;
+		return {
+			...TD,
+			attributes: { style: "padding:0;vertical-align:top;" },
+			children: [
+				{
+					...TABLE,
+					attributes: { style: "border-collapse:collapse;" },
+					children: steps,
+				},
+			],
+		};
 	}
 
 	override getStyles(): object {
@@ -293,6 +398,16 @@ export default class MjBarChart extends BodyComponent {
 				"border-left": `2px solid ${this.axisColor}`,
 				"border-bottom": `2px solid ${this.axisColor}`,
 			},
+			plainCell: {
+				padding: "0",
+			},
+			emptyCell: {
+				padding: "0",
+				"font-size": "12px",
+				"vertical-align": "bottom",
+				"text-align": "center",
+				"line-height": "16px",
+			},
 			chartLabelWrapper: {
 				"border-collapse": "collapse",
 				"border-left": "2px solid transparent",
@@ -317,6 +432,11 @@ export default class MjBarChart extends BodyComponent {
 				"line-height": "20px",
 				"text-align": "center",
 			},
+			legend: {
+				padding: "0 10px",
+				height: "20px",
+				"font-size": "14px",
+			},
 			firstStep: {
 				padding: "0 5px 0 0",
 				height: "56px",
@@ -336,15 +456,23 @@ export default class MjBarChart extends BodyComponent {
 		};
 	}
 
+	private renderJSON(): JsonNode {
+		const scale = this.getScale();
+		const chart = this.getChart();
+
+		return {
+			...TABLE,
+			attributes: {
+				class: "mjmlBarChart",
+				style: "border-collapse:collapse;margin:0 auto;",
+			},
+			children: [{ ...TR, children: scale ? [scale, chart] : [chart] }],
+		};
+	}
+
 	render() {
-		return `
-          <table class="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
-            <tr>
-              ${this.getScale()}
-              ${this.getChart()}
-            </tr>
-          </table>
-        `;
+		const json = this.renderJSON();
+		return jsonToXML(json);
 	}
 }
 
