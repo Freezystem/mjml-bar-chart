@@ -24,13 +24,13 @@ jobs:
               uses: greatwizard/coverage-diff-action@v1
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
-                  coverage-filename: coverage/cobertura-coverage.xml
                   allowed-to-fail: false
                   badge-enabled: true
                   badge-threshold-green: 90
                   badge-threshold-orange: 80
             - name: Generate Changelog
               run: git log --oneline $(git describe --tags --abbrev=0)..HEAD >> CHANGELOG.txt
+              if: ${{ startsWith(github.ref, 'refs/tags/') }}
             - name: Release
               uses: softprops/action-gh-release@v1
               if: ${{ startsWith(github.ref, 'refs/tags/') }}

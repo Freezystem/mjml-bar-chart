@@ -45,7 +45,7 @@
 	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/jest": "^29.5.10",
+		"@types/jest": "^29.5.11",
 		"@types/mjml": "^4.7.4",
 		"@types/mjml-core": "^4.7.4",
 		"@types/mjml-validator": "^4.13.4",
@@ -54,7 +54,7 @@
 		"npm-check": "^6.0.1",
 		"prettier": "^3.1.0",
 		"ts-jest": "^29.1.1",
-		"typescript": "^5.3.2"
+		"typescript": "^5.3.3"
 	},
 	"dependencies": {
 		"mjml": "^4.14.1",
@@ -67,10 +67,19 @@
 		"coverageDirectory": "<rootDir>/coverage",
 		"coverageReporters": [
 			"text-summary",
-			"cobertura"
+			"json-summary"
 		],
 		"preset": "ts-jest",
 		"testEnvironment": "node",
+		"reporters": [
+			[
+				"github-actions",
+				{
+					"silent": false
+				}
+			],
+			"summary"
+		],
 		"moduleFileExtensions": [
 			"ts",
 			"js"
