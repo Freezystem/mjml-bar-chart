@@ -45,6 +45,56 @@ describe("mjml-bar-chart", () => {
 		});
 	});
 
+	describe("getChartTitle", () => {
+		it("should not render chart title if empty", () => {
+			const json = barChart["getChartTitle"]();
+			expect(json).not.toBeDefined();
+		});
+
+		it("should render chart title", () => {
+			const barChart = new MjBarChart({
+				attributes: { ...attributes, title: "Sum of Requests by Department" },
+			});
+			const json = barChart["getChartTitle"]();
+			const html = jsonToXML(json);
+
+			expect(json).toStrictEqual({
+				tagName: "tr",
+				attributes: {},
+				children: [
+					{
+						tagName: "td",
+						attributes: { style: "padding:0" },
+						children: [
+							{
+								tagName: "table",
+								attributes: { style: "width:100%;border-collapse:collapse;" },
+								children: [
+									{
+										tagName: "tr",
+										attributes: {},
+										children: [
+											{
+												tagName: "td",
+												attributes: {
+													style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
+												},
+												content: "Sum of Requests by Department",
+											},
+										],
+									},
+								],
+							},
+						],
+					},
+				],
+			});
+			expect(html).toBe(
+				'<tr><td style="padding:0"><table style="width:100%;border-collapse:collapse;"><tr><td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td></tr></table></td></tr>'
+			);
+		});
+	});
+
 	describe("getChartBarSeparator", () => {
 		it("should render chart bar separator", () => {
 			const json = barChart["getChartBarSeparator"]();
