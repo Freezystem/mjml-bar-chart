@@ -1286,6 +1286,202 @@ exports[`mjml-bar-chart getChartLabels should render chart labels with minimum p
 </tr>"
 `;
 
+exports[`mjml-bar-chart getChartLegend should render chart legend with maximum params 1`] = `
+{
+  "children": [
+    {
+      "attributes": {
+        "style": "padding:0;",
+      },
+      "children": [
+        {
+          "attributes": {
+            "style": "border-collapse:collapse;width:100%;",
+          },
+          "children": [
+            {
+              "children": [
+                {
+                  "attributes": {
+                    "style": "padding:0;height:10px;",
+                  },
+                  "tagName": "td",
+                },
+              ],
+              "tagName": "tr",
+            },
+            {
+              "children": [
+                {
+                  "attributes": {
+                    "style": "padding:0;",
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "style": "margin:0;padding:0;max-width:302px;line-height:20px;text-align:center;",
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffe5ec;",
+                          },
+                          "content": "support",
+                          "tagName": "span",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffb3c6;",
+                          },
+                          "content": "sales",
+                          "tagName": "span",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #fb6f92;",
+                          },
+                          "content": "tech",
+                          "tagName": "span",
+                        },
+                      ],
+                      "tagName": "p",
+                    },
+                  ],
+                  "tagName": "td",
+                },
+              ],
+              "tagName": "tr",
+            },
+          ],
+          "tagName": "table",
+        },
+      ],
+      "tagName": "td",
+    },
+  ],
+  "tagName": "tr",
+}
+`;
+
+exports[`mjml-bar-chart getChartLegend should render chart legend with maximum params 2`] = `
+"<tr>
+  <td style="padding:0;">
+    <table style="border-collapse:collapse;width:100%;">
+      <tr>
+        <td style="padding:0;height:10px;"></td>
+      </tr>
+      <tr>
+        <td style="padding:0;">
+          <p style="margin:0;padding:0;max-width:302px;line-height:20px;text-align:center;">
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffe5ec;">support</span>
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffb3c6;">sales</span>
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #fb6f92;">tech</span>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>"
+`;
+
+exports[`mjml-bar-chart getChartLegend should render chart legend with minimum params 1`] = `
+{
+  "children": [
+    {
+      "attributes": {
+        "style": "padding:0;",
+      },
+      "children": [
+        {
+          "attributes": {
+            "style": "border-collapse:collapse;width:100%;",
+          },
+          "children": [
+            {
+              "children": [
+                {
+                  "attributes": {
+                    "style": "padding:0;height:10px;",
+                  },
+                  "tagName": "td",
+                },
+              ],
+              "tagName": "tr",
+            },
+            {
+              "children": [
+                {
+                  "attributes": {
+                    "style": "padding:0;",
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "style": "margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;",
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;",
+                          },
+                          "content": "support",
+                          "tagName": "span",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                          },
+                          "content": "sales",
+                          "tagName": "span",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;",
+                          },
+                          "content": "tech",
+                          "tagName": "span",
+                        },
+                      ],
+                      "tagName": "p",
+                    },
+                  ],
+                  "tagName": "td",
+                },
+              ],
+              "tagName": "tr",
+            },
+          ],
+          "tagName": "table",
+        },
+      ],
+      "tagName": "td",
+    },
+  ],
+  "tagName": "tr",
+}
+`;
+
+exports[`mjml-bar-chart getChartLegend should render chart legend with minimum params 2`] = `
+"<tr>
+  <td style="padding:0;">
+    <table style="border-collapse:collapse;width:100%;">
+      <tr>
+        <td style="padding:0;height:10px;"></td>
+      </tr>
+      <tr>
+        <td style="padding:0;">
+          <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
+            <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>"
+`;
+
 exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">

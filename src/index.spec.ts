@@ -252,7 +252,7 @@ describe("mjml-bar-chart", () => {
 	});
 
 	describe("getLegend", () => {
-		it("should render legend", () => {
+		it("should render legend with minimum params", () => {
 			const json = barChart["getLegend"](1);
 			const html = jsonToXML(json);
 
@@ -266,6 +266,52 @@ describe("mjml-bar-chart", () => {
 			expect(html).toBe(
 				'<span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>'
 			);
+		});
+
+		it("should render legend with maximum params", () => {
+			const barChart = new MjBarChart({
+				attributes: {
+					...attributes,
+					"bar-width": "40",
+				},
+			});
+			const json = barChart["getLegend"](2);
+			const html = jsonToXML(json);
+
+			expect(json).toStrictEqual({
+				tagName: "span",
+				attributes: {
+					style: "padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;",
+				},
+				content: "tech",
+			});
+			expect(html).toBe(
+				'<span style="padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;">tech</span>'
+			);
+		});
+	});
+
+	describe("getChartLegend", () => {
+		it("should render chart legend with minimum params", () => {
+			const json = barChart["getChartLegend"]();
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
+		});
+
+		it("should render chart legend with maximum params", () => {
+			const barChart = new MjBarChart({
+				attributes: {
+					...attributes,
+					"bar-width": "20",
+				},
+			});
+			const json = barChart["getChartLegend"]();
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
 		});
 	});
 
