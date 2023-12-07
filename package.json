@@ -7,6 +7,12 @@
 	},
 	"version": "1.1.1",
 	"description": "A simple MJML component to make static bar charts",
+	"keywords": [
+		"mjml",
+		"chart",
+		"bar chart",
+		"email"
+	],
 	"main": "./build/index.js",
 	"module": "./build/esm/index.js",
 	"types": "./build/types/index.d.ts",
@@ -24,6 +30,8 @@
 		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
 		"postinstall": "npm run build",
 		"test": "jest",
+		"test:coverage": "jest --coverage",
+		"test:snap": "jest --updateSnapshot",
 		"deps": "npm-check -u",
 		"postdeps": "npm audit fix",
 		"preversion": "git reset && git switch main && git fetch -p && git pull",
@@ -37,7 +45,7 @@
 	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/jest": "^29.5.10",
+		"@types/jest": "^29.5.11",
 		"@types/mjml": "^4.7.4",
 		"@types/mjml-core": "^4.7.4",
 		"@types/mjml-validator": "^4.13.4",
@@ -46,7 +54,7 @@
 		"npm-check": "^6.0.1",
 		"prettier": "^3.1.0",
 		"ts-jest": "^29.1.1",
-		"typescript": "^5.3.2"
+		"typescript": "^5.3.3"
 	},
 	"dependencies": {
 		"mjml": "^4.14.1",
@@ -59,10 +67,19 @@
 		"coverageDirectory": "<rootDir>/coverage",
 		"coverageReporters": [
 			"text-summary",
-			"cobertura"
+			"json-summary"
 		],
 		"preset": "ts-jest",
 		"testEnvironment": "node",
+		"reporters": [
+			[
+				"github-actions",
+				{
+					"silent": false
+				}
+			],
+			"summary"
+		],
 		"moduleFileExtensions": [
 			"ts",
 			"js"

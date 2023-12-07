@@ -16,12 +16,21 @@ jobs:
                   cache: "npm"
             - name: Install and Build
               run: npm ci
-            - name: Test
-              run: npm test
             - name: Prettier
               run: npm run prettier
+            - name: Tests
+              run: npm run test:coverage
+            - name: Code Coverage
+              uses: greatwizard/coverage-diff-action@v1
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  allowed-to-fail: false
+                  badge-enabled: true
+                  badge-threshold-green: 90
+                  badge-threshold-orange: 80
             - name: Generate Changelog
               run: git log --oneline $(git describe --tags --abbrev=0)..HEAD >> CHANGELOG.txt
+              if: ${{ startsWith(github.ref, 'refs/tags/') }}
             - name: Release
               uses: softprops/action-gh-release@v1
               if: ${{ startsWith(github.ref, 'refs/tags/') }}
