@@ -100,6 +100,49 @@ describe("mjml-bar-chart", () => {
 		});
 	});
 
+	describe("getChartBar", () => {
+		it("should render chart bar with minimum params", () => {
+			const json = barChart["getChartBar"](1, 2);
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toBe(
+				'<td style="padding:0">\n' +
+					'  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
+					"    <tr>\n" +
+					'      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
+					"    </tr>\n" +
+					"    <tr>\n" +
+					'      <td style="padding:0;height:127px;background-color:#fb6f92;"></td>\n' +
+					"    </tr>\n" +
+					"  </table>\n" +
+					"</td>"
+			);
+		});
+
+		it("should render chart bar with maximum params", () => {
+			const barChart = new MjBarChart({
+				attributes: { ...attributes, height: "100", "show-values": "false" },
+			});
+			const json = barChart["getChartBar"](0, 1);
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toBe(
+				'<td style="padding:0">\n' +
+					'  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
+					"    <tr>\n" +
+					'      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
+					"    </tr>\n" +
+					"    <tr>\n" +
+					'      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>\n' +
+					"    </tr>\n" +
+					"  </table>\n" +
+					"</td>"
+			);
+		});
+	});
+
 	describe("getChartBarSeparator", () => {
 		it("should render chart bar separator", () => {
 			const json = barChart["getChartBarSeparator"]();

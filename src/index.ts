@@ -52,7 +52,7 @@ export default class MjBarChart extends BodyComponent {
 		this.barWidth = parseInt(this.getAttribute("bar-width"), 10);
 		this.separatorWidth = parseInt(this.getAttribute("separator-width"), 10);
 		this.stepCount = parseInt(this.getAttribute("step-count"), 10);
-		this.showValues = Boolean(this.getAttribute("show-values"));
+		this.showValues = this.getAttribute("show-values") === "true";
 
 		this.datasetValues = JSON.parse(this.getAttribute("datasets"));
 
@@ -99,7 +99,7 @@ export default class MjBarChart extends BodyComponent {
 	};
 
 	static override defaultAttributes = {
-		"axis-color": "d4d4d4",
+		"axis-color": "#d4d4d4",
 		height: "200",
 		"bar-width": "30",
 		"separator-width": "30",
@@ -146,9 +146,9 @@ export default class MjBarChart extends BodyComponent {
 		const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
 		const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
-		const plainCellStyle = `${this.styles(
-			"plainCell"
-		)}height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
+		const plainCellStyle =
+			this.styles("plainCell") +
+			`height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
 
 		return {
 			tagName: "td",

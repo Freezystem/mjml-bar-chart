@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 1`] = `
+{
+  "attributes": {
+    "style": "padding:0",
+  },
+  "children": [
+    {
+      "attributes": {
+        "style": "padding:0;min-width:30px;max-width:30px;",
+      },
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;",
+              },
+              "content": "",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;height:21px;background-color:#ffb3c6;",
+              },
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+      ],
+      "tagName": "table",
+    },
+  ],
+  "tagName": "td",
+}
+`;
+
 exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
