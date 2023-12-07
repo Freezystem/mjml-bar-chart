@@ -1,8 +1,7 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
 import MjBarChart from "./index";
-// @ts-expect-error
-import jsonToXML from "mjml-core/lib/helpers/jsonToXML";
+import jsonToXML, { JsonNode } from "./helpers/jsonToXML";
 
 function toHtml(mjml: string): string {
 	const { html, errors } = mjml2html(mjml);
@@ -55,12 +54,11 @@ describe("mjml-bar-chart", () => {
 			const barChart = new MjBarChart({
 				attributes: { ...attributes, title: "Sum of Requests by Department" },
 			});
-			const json = barChart["getChartTitle"]();
+			const json = barChart["getChartTitle"]() as JsonNode;
 			const html = jsonToXML(json);
 
 			expect(json).toStrictEqual({
 				tagName: "tr",
-				attributes: {},
 				children: [
 					{
 						tagName: "td",
@@ -72,7 +70,6 @@ describe("mjml-bar-chart", () => {
 								children: [
 									{
 										tagName: "tr",
-										attributes: {},
 										children: [
 											{
 												tagName: "td",
@@ -90,7 +87,15 @@ describe("mjml-bar-chart", () => {
 				],
 			});
 			expect(html).toBe(
-				'<tr><td style="padding:0"><table style="width:100%;border-collapse:collapse;"><tr><td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td></tr></table></td></tr>'
+				"<tr>\n" +
+					'  <td style="padding:0">\n' +
+					'    <table style="width:100%;border-collapse:collapse;">\n' +
+					"      <tr>\n" +
+					'        <td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>\n' +
+					"      </tr>\n" +
+					"    </table>\n" +
+					"  </td>\n" +
+					"</tr>"
 			);
 		});
 	});

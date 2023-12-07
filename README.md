@@ -7,14 +7,14 @@
 First you'll have to install `mjml-bar-chart` in your project.
 
 ```sh
-npm i -S @freezystem/mjml-bar-chart
+npm install --save-dev mjml @freezystem/mjml-bar-chart
 ```
 
 Then add the package to your `.mjmlconfig` file:
 
 ```json
 {
-	"packages": ["mjml-bar-chart/build/index.js"]
+  "packages": ["@freezystem/mjml-bar-chart/build/index.js"]
 }
 ```
 
