@@ -10,7 +10,9 @@
 	"keywords": [
 		"mjml",
 		"chart",
-		"bar chart",
+		"charts",
+		"bar",
+		"bars",
 		"email"
 	],
 	"main": "./build/index.js",
@@ -24,6 +26,10 @@
 			"default": "./build/index.js"
 		}
 	},
+	"files": [
+		"build/**/*",
+		"src/**/*"
+	],
 	"scripts": {
 		"watch": "tsc --watch",
 		"prebuild": "rm -rf build",
