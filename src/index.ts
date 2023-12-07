@@ -1,7 +1,6 @@
 import { BodyComponent } from "mjml-core";
 import { registerDependencies } from "mjml-validator";
-// @ts-expect-error
-import jsonToXML from "mjml-core/lib/helpers/jsonToXML";
+import jsonToXML, { JsonNode } from "./helpers/jsonToXML";
 
 interface Dataset {
 	label: string;
@@ -26,19 +25,6 @@ interface InitialData {
 	attributes: Attributes;
 	[key: string]: any;
 }
-
-interface JsonNode {
-	tagName: string;
-	attributes: Record<string, string>;
-	children?: JsonNode[];
-	content?: string;
-}
-
-const TABLE: JsonNode = { tagName: "table", attributes: {} };
-const TR: JsonNode = { tagName: "tr", attributes: {} };
-const TD: JsonNode = { tagName: "td", attributes: {} };
-const SPAN: JsonNode = { tagName: "span", attributes: {} };
-const P: JsonNode = { tagName: "p", attributes: {} };
 
 export default class MjBarChart extends BodyComponent {
 	private readonly title: string;
@@ -66,7 +52,7 @@ export default class MjBarChart extends BodyComponent {
 		this.barWidth = parseInt(this.getAttribute("bar-width"), 10);
 		this.separatorWidth = parseInt(this.getAttribute("separator-width"), 10);
 		this.stepCount = parseInt(this.getAttribute("step-count"), 10);
-		this.showValues = Boolean(this.getAttribute("show-values"));
+		this.showValues = this.getAttribute("show-values") === "true";
 
 		this.datasetValues = JSON.parse(this.getAttribute("datasets"));
 
@@ -105,15 +91,15 @@ export default class MjBarChart extends BodyComponent {
 		groups: "string",
 		colors: "string",
 		"axis-color": "color",
-		height: "unit(px)",
-		"bar-width": "unit(px)",
-		"separator-width": "unit(px)",
+		height: "integer",
+		"bar-width": "integer",
+		"separator-width": "integer",
 		"step-count": "enum(0,2,3,4,5,6,7,8)",
 		"show-values": "boolean",
 	};
 
 	static override defaultAttributes = {
-		"axis-color": "d4d4d4",
+		"axis-color": "#d4d4d4",
 		height: "200",
 		"bar-width": "30",
 		"separator-width": "30",
@@ -125,21 +111,21 @@ export default class MjBarChart extends BodyComponent {
 		if (!this.title) return;
 
 		return {
-			...TR,
+			tagName: "tr",
 			children: [
 				{
-					...TD,
+					tagName: "td",
 					attributes: { style: "padding:0" },
 					children: [
 						{
-							...TABLE,
+							tagName: "table",
 							attributes: { style: this.styles("chartTitleWrapper") },
 							children: [
 								{
-									...TR,
+									tagName: "tr",
 									children: [
 										{
-											...TD,
+											tagName: "td",
 											attributes: { style: this.styles("chartTitle") },
 											content: this.title,
 										},
@@ -160,33 +146,33 @@ export default class MjBarChart extends BodyComponent {
 		const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
 		const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
-		const plainCellStyle = `${this.styles(
-			"plainCell"
-		)}height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
+		const plainCellStyle =
+			this.styles("plainCell") +
+			`height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
 
 		return {
-			...TD,
+			tagName: "td",
 			attributes: { style: "padding:0" },
 			children: [
 				{
-					...TABLE,
+					tagName: "table",
 					attributes: { style: this.styles("chartBarWrapper") },
 					children: [
 						{
-							...TR,
+							tagName: "tr",
 							children: [
 								{
-									...TD,
+									tagName: "td",
 									attributes: { style: emptyCellStyle },
 									content: this.showValues ? `${value}` : "",
 								},
 							],
 						},
 						{
-							...TR,
+							tagName: "tr",
 							children: [
 								{
-									...TD,
+									tagName: "td",
 									attributes: { style: plainCellStyle },
 								},
 							],
@@ -198,7 +184,7 @@ export default class MjBarChart extends BodyComponent {
 	}
 
 	private getChartBarSeparator(): JsonNode {
-		return { ...TD, attributes: { style: this.styles("chartBarSeparator") } };
+		return { tagName: "td", attributes: { style: this.styles("chartBarSeparator") } };
 	}
 
 	private getChartBars(): JsonNode {
@@ -208,16 +194,18 @@ export default class MjBarChart extends BodyComponent {
 		]);
 
 		return {
-			...TR,
+			tagName: "tr",
 			children: [
 				{
-					...TD,
+					tagName: "td",
 					attributes: { style: "padding:0;" },
 					children: [
 						{
-							...TABLE,
+							tagName: "table",
 							attributes: { style: this.styles("barChart") },
-							children: [{ ...TR, children: [this.getChartBarSeparator(), ...bars] }],
+							children: [
+								{ tagName: "tr", children: [this.getChartBarSeparator(), ...bars] },
+							],
 						},
 					],
 				},
@@ -227,7 +215,7 @@ export default class MjBarChart extends BodyComponent {
 
 	private getDatasetLabel(index: number): JsonNode {
 		return {
-			...TD,
+			tagName: "td",
 			attributes: { style: this.styles("chartLabel") },
 			content: this.datasets[index].label,
 		};
@@ -240,18 +228,18 @@ export default class MjBarChart extends BodyComponent {
 		]);
 
 		return {
-			...TR,
+			tagName: "tr",
 			children: [
 				{
-					...TD,
+					tagName: "td",
 					attributes: { style: "padding:0;" },
 					children: [
 						{
-							...TABLE,
+							tagName: "table",
 							attributes: { style: this.styles("chartLabelWrapper") },
 							children: [
 								{
-									...TR,
+									tagName: "tr",
 									children: [this.getChartBarSeparator(), ...labels],
 								},
 							],
@@ -267,41 +255,41 @@ export default class MjBarChart extends BodyComponent {
 		const color = this.colors[index];
 		const style = `${this.styles("legend")}border-left:${this.barWidth}px solid ${color};`;
 
-		return { ...SPAN, attributes: { style }, content };
+		return { tagName: "span", attributes: { style }, content };
 	}
 
 	private getChartLegend(): JsonNode {
 		const legends = this.groups.map((_, i) => this.getLegend(i));
 
 		return {
-			...TR,
+			tagName: "tr",
 			children: [
 				{
-					...TD,
+					tagName: "td",
 					attributes: { style: "padding:0;" },
 					children: [
 						{
-							...TABLE,
+							tagName: "table",
 							attributes: { style: this.styles("chartLegendWrapper") },
 							children: [
 								{
-									...TR,
+									tagName: "tr",
 									children: [
 										{
-											...TD,
+											tagName: "td",
 											attributes: { style: "padding:0;height:10px;" },
 										},
 									],
 								},
 								{
-									...TR,
+									tagName: "tr",
 									children: [
 										{
-											...TD,
+											tagName: "td",
 											attributes: { style: "padding:0;" },
 											children: [
 												{
-													...P,
+													tagName: "p",
 													attributes: {
 														style: this.styles("chartLegend"),
 													},
@@ -324,11 +312,11 @@ export default class MjBarChart extends BodyComponent {
 		const children = [this.getChartBars(), this.getChartLabels(), this.getChartLegend()];
 
 		return {
-			...TD,
+			tagName: "td",
 			attributes: { style: "padding:0;" },
 			children: [
 				{
-					...TABLE,
+					tagName: "table",
 					attributes: { style: "border-collapse:collapse;" },
 					children: chartTitle ? [chartTitle, ...children] : children,
 				},
@@ -346,11 +334,11 @@ export default class MjBarChart extends BodyComponent {
 			const style = i === this.stepCount ? "firstStep" : "otherStep";
 
 			steps.push({
-				...TR,
+				tagName: "tr",
 				children: [
 					{
-						...TD,
-						attributes: { style },
+						tagName: "td",
+						attributes: { style: this.styles(style) },
 						content: `${value}`,
 					},
 				],
@@ -358,11 +346,11 @@ export default class MjBarChart extends BodyComponent {
 		}
 
 		return {
-			...TD,
+			tagName: "td",
 			attributes: { style: "padding:0;vertical-align:top;" },
 			children: [
 				{
-					...TABLE,
+					tagName: "table",
 					attributes: { style: "border-collapse:collapse;" },
 					children: steps,
 				},
@@ -461,12 +449,12 @@ export default class MjBarChart extends BodyComponent {
 		const chart = this.getChart();
 
 		return {
-			...TABLE,
+			tagName: "table",
 			attributes: {
 				class: "mjmlBarChart",
 				style: "border-collapse:collapse;margin:0 auto;",
 			},
-			children: [{ ...TR, children: scale ? [scale, chart] : [chart] }],
+			children: [{ tagName: "tr", children: scale ? [scale, chart] : [chart] }],
 		};
 	}
 
