@@ -29,11 +29,13 @@ jobs:
                   badge-threshold-green: 90
                   badge-threshold-orange: 80
             - name: Generate Changelog
-              run: git log --oneline $(git describe --tags --abbrev=0)..HEAD >> CHANGELOG.txt
               if: ${{ startsWith(github.ref, 'refs/tags/') }}
-            - name: Release
+              run: |
+                  echo "# What's new ?" > CHANGELOG.md
+                  git log --pretty='- %h %s by %aN' --no-merges $(git describe --tags --abbrev=0 @^)..@ >> CHANGELOG.md
+            - name: Pre Release
               uses: softprops/action-gh-release@v1
               if: ${{ startsWith(github.ref, 'refs/tags/') }}
               with:
-                  body_path: CHANGELOG.txt
+                  body_path: CHANGELOG.md
                   draft: true
