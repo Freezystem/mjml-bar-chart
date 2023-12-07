@@ -91,9 +91,9 @@ export default class MjBarChart extends BodyComponent {
 		groups: "string",
 		colors: "string",
 		"axis-color": "color",
-		height: "unit(px)",
-		"bar-width": "unit(px)",
-		"separator-width": "unit(px)",
+		height: "integer",
+		"bar-width": "integer",
+		"separator-width": "integer",
 		"step-count": "enum(0,2,3,4,5,6,7,8)",
 		"show-values": "boolean",
 	};
