@@ -315,16 +315,89 @@ describe("mjml-bar-chart", () => {
 		});
 	});
 
+	describe("getChart", () => {
+		it("should render the chart with minimum params", () => {
+			const json = barChart["getChart"]();
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
+		});
+
+		it("should render the chart with maximum params", () => {
+			const barChart = new MjBarChart({
+				attributes: {
+					title: "Some Stats",
+					"dataset-labels": "September,October,November",
+					datasets: "[[12,76],[38,20],[64,39]]",
+					groups: "legal,hr",
+					colors: "#95d5b2,#52b788",
+					"axis-color": "#e3e3e3",
+					height: "250",
+					"bar-width": "32",
+					"separator-width": "24",
+					"step-count": "8",
+					"show-values": "false",
+				},
+			});
+			const json = barChart["getChart"]();
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
+		});
+	});
+
+	describe("getScale", () => {
+		it("should render the scale with minimum params", () => {
+			const json = barChart["getScale"]() as JsonNode;
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
+		});
+
+		it("should render the scale with maximum params", () => {
+			const barChart = new MjBarChart({
+				attributes: {
+					...attributes,
+					datasets: "[[12,76],[38,20],[64,39]]",
+					groups: "legal,hr",
+					colors: "#95d5b2,#52b788",
+					"step-count": "6",
+				},
+			});
+			const json = barChart["getScale"]() as JsonNode;
+			const html = jsonToXML(json);
+
+			expect(json).toMatchSnapshot();
+			expect(html).toMatchSnapshot();
+		});
+
+		it("should not render the scale when step count is lower than 2", () => {
+			const barChart = new MjBarChart({
+				attributes: {
+					...attributes,
+					"step-count": "0",
+				},
+			});
+			const json = barChart["getScale"]();
+
+			expect(json).not.toBeDefined();
+		});
+	});
+
 	describe("renderJSON", () => {
-		it("should render the barChart as JSON with minimum params", () => {
+		it("should render the bar chart as JSON with minimum params", () => {
 			const json = barChart["renderJSON"]();
 
 			expect(json).toMatchSnapshot();
 		});
 
-		it("should render the barChart as JSON with maximum params", () => {
+		it("should render the bar chart as JSON with maximum params", () => {
 			const barChart = new MjBarChart({
 				attributes: {
+					title: "Some Stats",
 					"dataset-labels": "September,October,November",
 					datasets: "[[12,76],[38,20],[64,39]]",
 					groups: "legal,hr",
@@ -344,15 +417,16 @@ describe("mjml-bar-chart", () => {
 	});
 
 	describe("render", () => {
-		it("should render the barChart as HTML with minimum params", () => {
+		it("should render the bar chart as HTML with minimum params", () => {
 			const html = barChart.render();
 
 			expect(html).toMatchSnapshot();
 		});
 
-		it("should render the barChart as HTML with maximum params", () => {
+		it("should render the bar chart as HTML with maximum params", () => {
 			const barChart = new MjBarChart({
 				attributes: {
+					title: "Some Stats",
 					"dataset-labels": "September,October,November",
 					datasets: "[[12,76],[38,20],[64,39]]",
 					groups: "legal,hr",

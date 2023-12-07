@@ -1,5 +1,1306 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`mjml-bar-chart getChart should render the chart with maximum params 1`] = `
+{
+  "attributes": {
+    "style": "padding:0;",
+  },
+  "children": [
+    {
+      "attributes": {
+        "style": "border-collapse:collapse;",
+      },
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "width:100%;border-collapse:collapse;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
+                          },
+                          "content": "Some Stats",
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;border-left:2px solid #e3e3e3;border-bottom:2px solid #e3e3e3;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:227px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:39px;background-color:#95d5b2;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:250px;background-color:#52b788;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:141px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:125px;background-color:#95d5b2;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:200px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:66px;background-color:#52b788;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:55px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:211px;background-color:#95d5b2;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:32px;max-width:32px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:138px;",
+                                      },
+                                      "content": "",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:128px;background-color:#52b788;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;border-left:2px solid transparent;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;",
+                          },
+                          "content": "September",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;",
+                          },
+                          "content": "October",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;",
+                          },
+                          "content": "November",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:24px;max-width:24px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;width:100%;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;height:10px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;",
+                              },
+                              "children": [
+                                {
+                                  "attributes": {
+                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #95d5b2;",
+                                  },
+                                  "content": "legal",
+                                  "tagName": "span",
+                                },
+                                {
+                                  "attributes": {
+                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #52b788;",
+                                  },
+                                  "content": "hr",
+                                  "tagName": "span",
+                                },
+                              ],
+                              "tagName": "p",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+      ],
+      "tagName": "table",
+    },
+  ],
+  "tagName": "td",
+}
+`;
+
+exports[`mjml-bar-chart getChart should render the chart with maximum params 2`] = `
+"<td style="padding:0;">
+  <table style="border-collapse:collapse;">
+    <tr>
+      <td style="padding:0">
+        <table style="width:100%;border-collapse:collapse;">
+          <tr>
+            <td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Some Stats</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;border-left:2px solid #e3e3e3;border-bottom:2px solid #e3e3e3;">
+          <tr>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:227px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:39px;background-color:#95d5b2;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:250px;background-color:#52b788;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:141px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:125px;background-color:#95d5b2;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:200px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:66px;background-color:#52b788;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:55px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:211px;background-color:#95d5b2;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:32px;max-width:32px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:138px;"></td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:128px;background-color:#52b788;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;border-left:2px solid transparent;">
+          <tr>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;">September</td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;">October</td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:64px;max-width:64px;">November</td>
+            <td style="padding:0;min-width:24px;max-width:24px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;width:100%;">
+          <tr>
+            <td style="padding:0;height:10px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:0;">
+              <p style="margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;">
+                <span style="padding:0 10px;height:20px;font-size:14px;border-left:32px solid #95d5b2;">legal</span>
+                <span style="padding:0 10px;height:20px;font-size:14px;border-left:32px solid #52b788;">hr</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</td>"
+`;
+
+exports[`mjml-bar-chart getChart should render the chart with minimum params 1`] = `
+{
+  "attributes": {
+    "style": "padding:0;",
+  },
+  "children": [
+    {
+      "attributes": {
+        "style": "border-collapse:collapse;",
+      },
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;border-left:2px solid #d4d4d4;border-bottom:2px solid #d4d4d4;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;",
+                                      },
+                                      "content": "33",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:100px;background-color:#ffe5ec;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;",
+                                      },
+                                      "content": "14",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:42px;background-color:#ffb3c6;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;",
+                                      },
+                                      "content": "27",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:82px;background-color:#fb6f92;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;",
+                                      },
+                                      "content": "18",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:55px;background-color:#ffe5ec;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                      },
+                                      "content": "66",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:200px;background-color:#ffb3c6;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                                      },
+                                      "content": "42",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:127px;background-color:#fb6f92;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:195px;",
+                                      },
+                                      "content": "7",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:21px;background-color:#ffe5ec;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;",
+                                      },
+                                      "content": "15",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:45px;background-color:#ffb3c6;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "padding:0;min-width:30px;max-width:30px;",
+                              },
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;",
+                                      },
+                                      "content": "21",
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "attributes": {
+                                        "style": "padding:0;height:64px;background-color:#fb6f92;",
+                                      },
+                                      "tagName": "td",
+                                    },
+                                  ],
+                                  "tagName": "tr",
+                                },
+                              ],
+                              "tagName": "table",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;border-left:2px solid transparent;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                          },
+                          "content": "January",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                          },
+                          "content": "February",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                          },
+                          "content": "March",
+                          "tagName": "td",
+                        },
+                        {
+                          "attributes": {
+                            "style": "padding:0;min-width:30px;max-width:30px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0;",
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "style": "border-collapse:collapse;width:100%;",
+                  },
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;height:10px;",
+                          },
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                    {
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "padding:0;",
+                          },
+                          "children": [
+                            {
+                              "attributes": {
+                                "style": "margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;",
+                              },
+                              "children": [
+                                {
+                                  "attributes": {
+                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;",
+                                  },
+                                  "content": "support",
+                                  "tagName": "span",
+                                },
+                                {
+                                  "attributes": {
+                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                                  },
+                                  "content": "sales",
+                                  "tagName": "span",
+                                },
+                                {
+                                  "attributes": {
+                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;",
+                                  },
+                                  "content": "tech",
+                                  "tagName": "span",
+                                },
+                              ],
+                              "tagName": "p",
+                            },
+                          ],
+                          "tagName": "td",
+                        },
+                      ],
+                      "tagName": "tr",
+                    },
+                  ],
+                  "tagName": "table",
+                },
+              ],
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+      ],
+      "tagName": "table",
+    },
+  ],
+  "tagName": "td",
+}
+`;
+
+exports[`mjml-bar-chart getChart should render the chart with minimum params 2`] = `
+"<td style="padding:0;">
+  <table style="border-collapse:collapse;">
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;border-left:2px solid #d4d4d4;border-bottom:2px solid #d4d4d4;">
+          <tr>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:100px;background-color:#ffe5ec;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:42px;background-color:#ffb3c6;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:82px;background-color:#fb6f92;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:55px;background-color:#ffe5ec;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:200px;background-color:#ffb3c6;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:195px;">7</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:21px;background-color:#ffe5ec;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:45px;background-color:#ffb3c6;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0">
+              <table style="padding:0;min-width:30px;max-width:30px;">
+                <tr>
+                  <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;border-left:2px solid transparent;">
+          <tr>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">January</td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">February</td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+            <td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>
+            <td style="padding:0;min-width:30px;max-width:30px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0;">
+        <table style="border-collapse:collapse;width:100%;">
+          <tr>
+            <td style="padding:0;height:10px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:0;">
+              <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
+                <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
+                <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
+                <span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</td>"
+`;
+
 exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 1`] = `
 {
   "attributes": {
@@ -1482,6 +2783,223 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
 </tr>"
 `;
 
+exports[`mjml-bar-chart getScale should render the scale with maximum params 1`] = `
+{
+  "attributes": {
+    "style": "padding:0;vertical-align:top;",
+  },
+  "children": [
+    {
+      "attributes": {
+        "style": "border-collapse:collapse;",
+      },
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "76",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "60",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "45",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "30",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "15",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "0",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+      ],
+      "tagName": "table",
+    },
+  ],
+  "tagName": "td",
+}
+`;
+
+exports[`mjml-bar-chart getScale should render the scale with maximum params 2`] = `
+"<td style="padding:0;vertical-align:top;">
+  <table style="border-collapse:collapse;">
+    <tr>
+      <td style="padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">76</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">60</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">45</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">30</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">15</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:40.4px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">0</td>
+    </tr>
+  </table>
+</td>"
+`;
+
+exports[`mjml-bar-chart getScale should render the scale with minimum params 1`] = `
+{
+  "attributes": {
+    "style": "padding:0;vertical-align:top;",
+  },
+  "children": [
+    {
+      "attributes": {
+        "style": "border-collapse:collapse;",
+      },
+      "children": [
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "66",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "49",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "33",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "16",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+        {
+          "children": [
+            {
+              "attributes": {
+                "style": "padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;",
+              },
+              "content": "0",
+              "tagName": "td",
+            },
+          ],
+          "tagName": "tr",
+        },
+      ],
+      "tagName": "table",
+    },
+  ],
+  "tagName": "td",
+}
+`;
+
+exports[`mjml-bar-chart getScale should render the scale with minimum params 2`] = `
+"<td style="padding:0;vertical-align:top;">
+  <table style="border-collapse:collapse;">
+    <tr>
+      <td style="padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">66</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">49</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">33</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">16</td>
+    </tr>
+    <tr>
+      <td style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">0</td>
+    </tr>
+  </table>
+</td>"
+`;
+
 exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -1769,11 +3287,20 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
   "
 `;
 
-exports[`mjml-bar-chart render should render the barChart as HTML with maximum params 1`] = `
+exports[`mjml-bar-chart render should render the bar chart as HTML with maximum params 1`] = `
 "<table class="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;">
       <table style="border-collapse:collapse;">
+        <tr>
+          <td style="padding:0">
+            <table style="width:100%;border-collapse:collapse;">
+              <tr>
+                <td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Some Stats</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
         <tr>
           <td style="padding:0;">
             <table style="border-collapse:collapse;border-left:2px solid #e3e3e3;border-bottom:2px solid #e3e3e3;">
@@ -1884,7 +3411,7 @@ exports[`mjml-bar-chart render should render the barChart as HTML with maximum p
 </table>"
 `;
 
-exports[`mjml-bar-chart render should render the barChart as HTML with minimum params 1`] = `
+exports[`mjml-bar-chart render should render the bar chart as HTML with minimum params 1`] = `
 "<table class="mjmlBarChart" style="border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;vertical-align:top;">
@@ -2049,7 +3576,7 @@ exports[`mjml-bar-chart render should render the barChart as HTML with minimum p
 </table>"
 `;
 
-exports[`mjml-bar-chart renderJSON should render the barChart as JSON with maximum params 1`] = `
+exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maximum params 1`] = `
 {
   "attributes": {
     "class": "mjmlBarChart",
@@ -2180,6 +3707,39 @@ exports[`mjml-bar-chart renderJSON should render the barChart as JSON with maxim
                 "style": "border-collapse:collapse;",
               },
               "children": [
+                {
+                  "children": [
+                    {
+                      "attributes": {
+                        "style": "padding:0",
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "style": "width:100%;border-collapse:collapse;",
+                          },
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "attributes": {
+                                    "style": "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
+                                  },
+                                  "content": "Some Stats",
+                                  "tagName": "td",
+                                },
+                              ],
+                              "tagName": "tr",
+                            },
+                          ],
+                          "tagName": "table",
+                        },
+                      ],
+                      "tagName": "td",
+                    },
+                  ],
+                  "tagName": "tr",
+                },
                 {
                   "children": [
                     {
@@ -2616,7 +4176,7 @@ exports[`mjml-bar-chart renderJSON should render the barChart as JSON with maxim
 }
 `;
 
-exports[`mjml-bar-chart renderJSON should render the barChart as JSON with minimum params 1`] = `
+exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with minimum params 1`] = `
 {
   "attributes": {
     "class": "mjmlBarChart",
