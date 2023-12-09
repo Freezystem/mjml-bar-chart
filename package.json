@@ -34,7 +34,6 @@
 		"watch": "tsc --watch",
 		"prebuild": "rm -rf build",
 		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
-		"postinstall": "npm run build",
 		"test": "jest",
 		"test:coverage": "jest --coverage",
 		"test:snap": "jest --updateSnapshot",
