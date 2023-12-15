@@ -15,16 +15,20 @@
 		"bars",
 		"email"
 	],
-	"main": "./build/index.js",
+	"type": "module",
+	"main": "./build/umd/index.js",
 	"module": "./build/esm/index.js",
 	"types": "./build/types/index.d.ts",
 	"exports": {
-		".": {
-			"types": "./build/types/index.d.ts",
-			"require": "./build/index.js",
-			"import": "./build/esm/index.js",
-			"default": "./src/index.ts"
-		}
+		"node": {
+			"require": "./build/umd/index.js",
+			"import": "./build/esm/index.js"
+		},
+		"types": "./build/types/index.d.ts",
+		"require": "./build/umd/index.js",
+		"import": "./build/esm/index.js",
+		"browser": "./build/umd/index.js",
+		"default": "./build/umd/index.js"
 	},
 	"files": [
 		"build/**/*",
