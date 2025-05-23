@@ -66,11 +66,7 @@ export default class MjBarChart extends BodyComponent {
                 data: this.datasetValues[idx],
             }));
 
-        this.higherValue =
-            this.datasetValues
-                .reduce((vs, d) => vs.concat(d), [])
-                .sort((a, b) => b - a)
-                .shift() || 0;
+        this.higherValue = Math.max(0, ...this.datasetValues.flat());
 
         this.chartWidth =
             2 +
@@ -150,7 +146,7 @@ export default class MjBarChart extends BodyComponent {
 
     private getChartBar(datasetIndex: number, dataIndex: number): JsonNode {
         const value = this.datasets[datasetIndex].data[dataIndex];
-        const v = value > 0 ? value : 0;
+        const v = Math.max(value, 0);
         const plainPartHeight = Math.round(
             (v / this.higherValue) * this.chartHeight,
         );
