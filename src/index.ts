@@ -1,5 +1,4 @@
 import { BodyComponent } from "mjml-core";
-import { registerDependencies } from "mjml-validator";
 import jsonToXML, { type JsonNode } from "./helpers/jsonToXML";
 
 interface Dataset {
@@ -507,5 +506,3 @@ export default class MjBarChart extends BodyComponent {
         return jsonToXML(json);
     }
 }
-
-registerDependencies(MjBarChart.dependencies);

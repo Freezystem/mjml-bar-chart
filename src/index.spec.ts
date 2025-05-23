@@ -10,7 +10,8 @@ function toHtml(mjml: string): string {
 
 describe("mjml-bar-chart", () => {
     beforeAll(() => {
-        registerComponent(MjBarChart);
+        // @ts-ignore
+        registerComponent(MjBarChart, { registerDependencies: true });
     });
 
     const attributes = {
