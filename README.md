@@ -25,7 +25,7 @@ with **CJS**:
 
 ```js
 const { registerComponent } = require("mjml-core");
-const MjBarChart = require("@freezystem/mjml-bar-chart");
+const MjBarChart = require("@freezystem/mjml-bar-chart").default;
 
 registerComponent(MjBarChart);
 ```
@@ -49,22 +49,23 @@ You can now use the `mjml-bar-chart` component in your MJML templates:
 </mjml>
 ```
 
-Yay, you're all set !
+Yay, you're all set!
 
 ![Basic mjml-bar-chart rendering](https://repository-images.githubusercontent.com/398511647/a3509d00-707c-48e4-9686-7c1281b2af10)
 
 ## Customize
 
-| attribute         | required |  default  | description                                                        |
-| :---------------- | :------: | :-------: | :----------------------------------------------------------------- |
-| `title`           |    ✖️    |  `null`   | Chart title, if null will not display                              |
-| `dataset-labels`  |    ✔️    |  `null`   | Comma separated labels of each dataset                             |
-| `datasets`        |    ✔️    |  `null`   | Valid JSON array of same length integer array                      |
-| `groups`          |    ✔️    |  `null`   | Comma separated data group names                                   |
-| `colors`          |    ✔️    |  `null`   | Comma separated CSS colors of each group                           |
-| `axis-color`      |    ✖️    | `#d4d4d4` | CSS color of axis and scale numbers                                |
-| `height`          |    ✖️    |   `200`   | Chart height in pixel                                              |
-| `bar-width`       |    ✖️    |   `30`    | Bar width in pixel                                                 |
-| `separator-width` |    ✖️    |   `30`    | Separator width in pixel between datasets                          |
-| `step-count`      |    ✖️    |    `5`    | Step number on the chart scale, below 2 no steps will be displayed |
-| `show-values`     |    ✖️    |  `true`   | Whether or not it should display values above each bar             |
+| attribute         | required |             default value              | description                                                        |
+|:------------------|:--------:|:--------------------------------------:|:-------------------------------------------------------------------|
+| `title`           |    ✖️    |                 `null`                 | Chart title, will not be displayed if null                         |
+| `dataset-labels`  |    ✔️    |                 `null`                 | Comma separated labels of each dataset                             |
+| `datasets`        |    ✔️    |                 `null`                 | Valid JSON array of same length integer array                      |
+| `groups`          |    ✔️    |                 `null`                 | Comma separated data group names                                   |
+| `colors`          |    ✔️    |                 `null`                 | Comma separated CSS colors of each group                           |
+| `axis-color`      |    ✖️    |               `#d4d4d4`                | CSS color of axis and scale numbers                                |
+| `height`          |    ✖️    |                 `200`                  | Chart height in pixel                                              |
+| `bar-width`       |    ✖️    |                  `30`                  | Bar width in pixel                                                 |
+| `separator-width` |    ✖️    |                  `30`                  | Separator width in pixel between datasets                          |
+| `step-count`      |    ✖️    |                  `5`                   | Step number on the chart scale, below 2 no steps will be displayed |
+| `show-values`     |    ✖️    |                 `true`                 | Whether or not it should display values above each bar             |
+| `font-family`     |    ✖️    | `Ubuntu, Helvetica, Arial, sans-serif` | Font to use for chart title and labels                             |

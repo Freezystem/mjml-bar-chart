@@ -19,11 +19,17 @@ interface Attributes {
     "separator-width"?: string;
     "step-count"?: string;
     "show-values"?: string;
+    "font-family"?: string;
 }
 
 interface InitialData {
-    attributes: Attributes;
-    [key: string]: unknown;
+    attributes?: Attributes;
+    children?: string[];
+    content?: string;
+    context?: object;
+    props?: object;
+    globalAttributes?: object;
+    absoluteFilePath?: string | null;
 }
 
 export default class MjBarChart extends BodyComponent {
@@ -40,6 +46,7 @@ export default class MjBarChart extends BodyComponent {
     private readonly datasets: Dataset[];
     private readonly higherValue: number;
     private readonly chartWidth: number;
+    private readonly fontFamily: string;
 
     constructor(initialData: InitialData) {
         super(initialData);
@@ -56,17 +63,15 @@ export default class MjBarChart extends BodyComponent {
         );
         this.stepCount = Number.parseInt(this.getAttribute("step-count"), 10);
         this.showValues = this.getAttribute("show-values") === "true";
-
         this.datasetValues = JSON.parse(this.getAttribute("datasets"));
-
         this.datasets = this.getAttribute("dataset-labels")
             .split(",")
             .map((label: string, idx: number) => ({
                 label,
                 data: this.datasetValues[idx],
             }));
-
         this.higherValue = Math.max(0, ...this.datasetValues.flat());
+        this.fontFamily = this.getAttribute("font-family");
 
         this.chartWidth =
             2 +
@@ -75,8 +80,6 @@ export default class MjBarChart extends BodyComponent {
     }
 
     static componentName = "mj-bar-chart";
-
-    static endingTag = true;
 
     static dependencies: Record<string, string[]> = {
         "mj-column": ["mj-bar-chart"],
@@ -95,6 +98,7 @@ export default class MjBarChart extends BodyComponent {
         "separator-width": "integer",
         "step-count": "enum(0,2,3,4,5,6,7,8)",
         "show-values": "boolean",
+        "font-family": "string",
     };
 
     static override defaultAttributes = {
@@ -104,6 +108,7 @@ export default class MjBarChart extends BodyComponent {
         "separator-width": "30",
         "step-count": "5",
         "show-values": "true",
+        "font-family": "Ubuntu, Helvetica, Arial, sans-serif",
     };
 
     private getChartTitle(): JsonNode | undefined {
@@ -401,6 +406,7 @@ export default class MjBarChart extends BodyComponent {
                 "font-weight": "bold",
                 "text-align": "center",
                 "font-size": "20px",
+                "font-family": `${this.fontFamily}`,
             },
             chartBarSeparator: {
                 padding: "0",
@@ -423,6 +429,7 @@ export default class MjBarChart extends BodyComponent {
             emptyCell: {
                 padding: "0",
                 "font-size": "12px",
+                "font-family": `${this.fontFamily}`,
                 "vertical-align": "bottom",
                 "text-align": "center",
                 "line-height": "16px",
@@ -435,6 +442,7 @@ export default class MjBarChart extends BodyComponent {
                 height: "30px",
                 padding: "0",
                 "font-size": "14px",
+                "font-family": `${this.fontFamily}`,
                 "text-align": "center",
                 overflow: "hidden",
                 "min-width": `${this.barWidth * this.groups.length}px`,
@@ -455,6 +463,7 @@ export default class MjBarChart extends BodyComponent {
                 padding: "0 10px",
                 height: "20px",
                 "font-size": "14px",
+                "font-family": `${this.fontFamily}`,
             },
             firstStep: {
                 padding: "0 5px 0 0",
@@ -462,6 +471,7 @@ export default class MjBarChart extends BodyComponent {
                 "vertical-align": "bottom",
                 "text-align": "right",
                 "font-size": "14px",
+                "font-family": `${this.fontFamily}`,
                 color: this.axisColor,
             },
             otherStep: {
@@ -470,6 +480,7 @@ export default class MjBarChart extends BodyComponent {
                 "vertical-align": "bottom",
                 "text-align": "right",
                 "font-size": "14px",
+                "font-family": `${this.fontFamily}`,
                 color: this.axisColor,
             },
         };
