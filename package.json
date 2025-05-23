@@ -1,11 +1,13 @@
 {
-	"$schema": "https://json.schemastore.org/package.json",
 	"name": "@freezystem/mjml-bar-chart",
+	"version": "1.2.6",
+	"author": "freezystem <freezystem@gmail.com>",
+	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Freezystem/mjml-bar-chart.git"
 	},
-	"version": "1.2.6",
+	"bugs": "https://github.com/Freezystem/mjml-bar-chart/issues",
 	"description": "A simple MJML component to make static bar charts",
 	"keywords": [
 		"mjml",
@@ -15,25 +17,23 @@
 		"bars",
 		"email"
 	],
+	"license": "MIT",
 	"type": "module",
-	"main": "./build/umd/index.js",
-	"module": "./build/esm/index.js",
-	"types": "./build/types/index.d.ts",
 	"exports": {
-		"node": {
-			"require": "./build/umd/index.js",
-			"import": "./build/esm/index.js"
-		},
 		"types": "./build/types/index.d.ts",
 		"require": "./build/umd/index.js",
 		"import": "./build/esm/index.js",
 		"browser": "./build/umd/index.js",
-		"default": "./build/umd/index.js"
+		"default": "./src/index.ts"
 	},
 	"files": [
 		"build/**/*",
 		"src/**/*"
 	],
+	"engines": {
+		"node": ">=20",
+		"npm": ">=9"
+	},
 	"scripts": {
 		"watch": "tsc --watch",
 		"prebuild": "rm -rf build",
@@ -54,25 +54,20 @@
 		"tag:push": "git push && git push --tags",
 		"tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
 	},
-	"author": "freezystem",
-	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
-	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/jest": "^29.5.14",
 		"@types/mjml": "^4.7.4",
 		"@types/mjml-core": "^4.15.1",
-		"@types/mjml-validator": "^4.13.4",
 		"@types/node": "^22.15.21",
 		"jest": "^29.7.0",
 		"npm-check-updates": "^18.0.1",
 		"ts-jest": "^29.3.4",
 		"typescript": "^5.8.3"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"mjml": "^4.15.3",
-		"mjml-core": "^4.15.3",
-		"mjml-validator": "^4.15.3"
+		"mjml-core": "^4.15.3"
 	},
 	"jest": {
 		"detectOpenHandles": true,
