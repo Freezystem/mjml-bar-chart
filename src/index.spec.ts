@@ -79,7 +79,7 @@ describe("mjml-bar-chart", () => {
                                             {
                                                 tagName: "td",
                                                 attributes: {
-                                                    style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
+                                                    style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;font-family:Ubuntu, Helvetica, Arial, sans-serif;",
                                                 },
                                                 content:
                                                     "Sum of Requests by Department",
@@ -97,7 +97,7 @@ describe("mjml-bar-chart", () => {
                     '  <td style="padding:0">\n' +
                     '    <table style="width:100%;border-collapse:collapse;">\n' +
                     "      <tr>\n" +
-                    '        <td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>\n' +
+                    '        <td style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;font-family:Ubuntu, Helvetica, Arial, sans-serif;">Sum of Requests by Department</td>\n' +
                     "      </tr>\n" +
                     "    </table>\n" +
                     "  </td>\n" +
@@ -116,7 +116,7 @@ describe("mjml-bar-chart", () => {
                 '<td style="padding:0">\n' +
                     '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
                     "    <tr>\n" +
-                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
+                    '      <td style="padding:0;font-size:12px;font-family:Ubuntu, Helvetica, Arial, sans-serif;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
                     "    </tr>\n" +
                     "    <tr>\n" +
                     '      <td style="padding:0;height:127px;background-color:#fb6f92;"></td>\n' +
@@ -143,7 +143,7 @@ describe("mjml-bar-chart", () => {
                 '<td style="padding:0">\n' +
                     '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
                     "    <tr>\n" +
-                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
+                    '      <td style="padding:0;font-size:12px;font-family:Ubuntu, Helvetica, Arial, sans-serif;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
                     "    </tr>\n" +
                     "    <tr>\n" +
                     '      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>\n' +
@@ -227,12 +227,12 @@ describe("mjml-bar-chart", () => {
             expect(json).toStrictEqual({
                 tagName: "td",
                 attributes: {
-                    style: "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                    style: "height:30px;padding:0;font-size:14px;font-family:Ubuntu, Helvetica, Arial, sans-serif;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
                 },
                 content: "March",
             });
             expect(html).toBe(
-                '<td style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>',
+                '<td style="height:30px;padding:0;font-size:14px;font-family:Ubuntu, Helvetica, Arial, sans-serif;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>',
             );
         });
     });
@@ -269,12 +269,12 @@ describe("mjml-bar-chart", () => {
             expect(json).toStrictEqual({
                 tagName: "span",
                 attributes: {
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                    style: "padding:0 10px;height:20px;font-size:14px;font-family:Ubuntu, Helvetica, Arial, sans-serif;border-left:30px solid #ffb3c6;",
                 },
                 content: "sales",
             });
             expect(html).toBe(
-                '<span style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>',
+                '<span style="padding:0 10px;height:20px;font-size:14px;font-family:Ubuntu, Helvetica, Arial, sans-serif;border-left:30px solid #ffb3c6;">sales</span>',
             );
         });
 
@@ -283,6 +283,7 @@ describe("mjml-bar-chart", () => {
                 attributes: {
                     ...attributes,
                     "bar-width": "40",
+                    "font-family": "Menlo",
                 },
             });
             const json = barChart["getLegend"](2);
@@ -291,12 +292,12 @@ describe("mjml-bar-chart", () => {
             expect(json).toStrictEqual({
                 tagName: "span",
                 attributes: {
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;",
+                    style: "padding:0 10px;height:20px;font-size:14px;font-family:Menlo;border-left:40px solid #fb6f92;",
                 },
                 content: "tech",
             });
             expect(html).toBe(
-                '<span style="padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;">tech</span>',
+                '<span style="padding:0 10px;height:20px;font-size:14px;font-family:Menlo;border-left:40px solid #fb6f92;">tech</span>',
             );
         });
     });
