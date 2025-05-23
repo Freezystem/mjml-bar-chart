@@ -79,12 +79,14 @@
 		"verbose": true,
 		"coverageDirectory": "<rootDir>/coverage",
 		"coverageReporters": [
+			"text",
 			"text-summary",
-			"json-summary"
+			"json-summary",
+			"html-spa"
 		],
 		"coverageThreshold": {
 			"global": {
-				"branches": 90,
+				"branches": 100,
 				"functions": 100,
 				"lines": 100,
 				"statements": 100
@@ -93,6 +95,7 @@
 		"preset": "ts-jest",
 		"testEnvironment": "node",
 		"reporters": [
+			"default",
 			[
 				"github-actions",
 				{
