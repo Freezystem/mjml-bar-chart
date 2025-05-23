@@ -39,7 +39,7 @@
 		"prebuild": "rm -rf build",
 		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
 		"test": "jest",
-		"test:coverage": "jest --coverage --coverageReporters=html-spa --coverageDirectory=coverage",
+		"test:coverage": "jest --coverage",
 		"test:snap": "jest --updateSnapshot",
 		"deps": "ncu -i --format group --install always --peer",
 		"postdeps": "npm audit fix",
@@ -79,8 +79,10 @@
 		"verbose": true,
 		"coverageDirectory": "<rootDir>/coverage",
 		"coverageReporters": [
+			"text",
 			"text-summary",
-			"json-summary"
+			"json-summary",
+			"html-spa"
 		],
 		"coverageThreshold": {
 			"global": {
@@ -93,6 +95,7 @@
 		"preset": "ts-jest",
 		"testEnvironment": "node",
 		"reporters": [
+			"default",
 			[
 				"github-actions",
 				{
