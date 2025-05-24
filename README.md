@@ -7,7 +7,7 @@
 First you'll have to install `mjml-bar-chart` in your project.
 
 ```sh
-npm install --save-dev mjml mjml-core @freezystem/mjml-bar-chart
+npm install --save-dev mjml mjml-core mjml-bar-chart
 ```
 
 Then import it and manually register the plugin.
@@ -16,7 +16,7 @@ with **ESM**:
 
 ```js
 import { registerComponent } from "mjml-core";
-import MjBarChart from "@freezystem/mjml-bar-chart";
+import MjBarChart from "mjml-bar-chart";
 
 registerComponent(MjBarChart);
 ```
@@ -25,7 +25,7 @@ with **CJS**:
 
 ```js
 const { registerComponent } = require("mjml-core");
-const MjBarChart = require("@freezystem/mjml-bar-chart").default;
+const MjBarChart = require("mjml-bar-chart").default;
 
 registerComponent(MjBarChart);
 ```
