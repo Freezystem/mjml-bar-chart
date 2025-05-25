@@ -1,7 +1,7 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
 import jsonToXML, { type JsonNode } from "./helpers/jsonToXML";
-import MjBarChart from "./index";
+import MjBarChart, { type Chart } from "./index";
 
 function toHtml(mjml: string): string {
     const { html, errors } = mjml2html(mjml);
@@ -14,13 +14,48 @@ describe("mjml-bar-chart", () => {
         registerComponent(MjBarChart, { registerDependencies: true });
     });
 
-    const attributes = {
-        "dataset-labels": "January,February,March",
-        datasets: "[[33,14,27],[18,66,42],[7,15,21]]",
-        groups: "support,sales,tech",
-        colors: "#ffe5ec,#ffb3c6,#fb6f92",
+    const chart1: Chart = {
+        title: "Sum of Requests by Department",
+        datasets: ["January", "February", "March"],
+        series: [
+            {
+                label: "support",
+                color: "#ffe5ec",
+                data: [33, 18, 7],
+            },
+            {
+                label: "sales",
+                color: "#ffb3c6",
+                data: [14, 66, 15],
+            },
+            {
+                label: "tech",
+                color: "#fb6f92",
+                data: [27, 42, 21],
+            },
+        ],
     };
-    const barChart = new MjBarChart({ attributes });
+
+    const chart2 = {
+        title: "Some Stats",
+        datasets: ["September", "October", "November"],
+        series: [
+            {
+                label: "legal",
+                color: "#95d5b2",
+                data: [12, 38, 64],
+            },
+            {
+                label: "hr",
+                color: "#52b788",
+                data: [76, 20, 39],
+            },
+        ],
+    };
+
+    const barChart = new MjBarChart({
+        content: JSON.stringify(chart1),
+    });
 
     describe("mjml markup", () => {
         it("should render the bar chart", () => {
@@ -34,13 +69,7 @@ describe("mjml-bar-chart", () => {
 				<mj-body>
 				  <mj-section>
 					<mj-column>
-					  <mj-bar-chart
-						title="Sum of Requests by Department"
-						dataset-labels="January,February,March" 
-						datasets="[[33,14,27],[18,66,42],[7,15,21]]"
-						groups="support,sales,tech"
-						colors="#ffe5ec,#ffb3c6,#fb6f92"
-						instance-id="1"/>
+					  <mj-bar-chart uid="1">${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -52,17 +81,9 @@ describe("mjml-bar-chart", () => {
     });
 
     describe("getChartTitle", () => {
-        it("should not render chart title if empty", () => {
-            const json = barChart["getChartTitle"]();
-            expect(json).not.toBeDefined();
-        });
-
         it("should render chart title", () => {
             const barChart = new MjBarChart({
-                attributes: {
-                    ...attributes,
-                    title: "Sum of Requests by Department",
-                },
+                content: JSON.stringify(chart1),
             });
             const json = barChart["getChartTitle"]() as JsonNode;
             const html = jsonToXML(json);
@@ -136,8 +157,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render chart bar with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     height: "100",
                     "show-values": "false",
                     "bar-width": "20",
@@ -180,8 +201,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render chart bar separator with custom width", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     "separator-width": "40",
                 },
             });
@@ -211,8 +232,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render chart bars with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     height: "100",
                     "show-values": "false",
                     "bar-width": "20",
@@ -257,8 +278,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render chart labels with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     "separator-width": "40",
                 },
             });
@@ -290,8 +311,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render legend with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     "bar-width": "40",
                 },
             });
@@ -323,8 +344,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render chart legend with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart1),
                 attributes: {
-                    ...attributes,
                     "bar-width": "20",
                 },
             });
@@ -347,12 +368,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render the chart with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
                 attributes: {
-                    title: "Some Stats",
-                    "dataset-labels": "September,October,November",
-                    datasets: "[[12,76],[38,20],[64,39]]",
-                    groups: "legal,hr",
-                    colors: "#95d5b2,#52b788",
                     "axis-color": "#e3e3e3",
                     height: "250",
                     "bar-width": "32",
@@ -380,11 +397,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render the scale with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
                 attributes: {
-                    ...attributes,
-                    datasets: "[[12,76],[38,20],[64,39]]",
-                    groups: "legal,hr",
-                    colors: "#95d5b2,#52b788",
                     "step-count": "6",
                 },
             });
@@ -397,8 +411,8 @@ describe("mjml-bar-chart", () => {
 
         it("should not render the scale when step count is lower than 2", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
                 attributes: {
-                    ...attributes,
                     "step-count": "0",
                 },
             });
@@ -417,12 +431,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render the bar chart as JSON with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
                 attributes: {
-                    title: "Some Stats",
-                    "dataset-labels": "September,October,November",
-                    datasets: "[[12,76],[38,20],[64,39]]",
-                    groups: "legal,hr",
-                    colors: "#95d5b2,#52b788",
                     "axis-color": "#e3e3e3",
                     height: "250",
                     "bar-width": "32",
@@ -446,12 +456,8 @@ describe("mjml-bar-chart", () => {
 
         it("should render the bar chart as HTML with maximum params", () => {
             const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
                 attributes: {
-                    title: "Some Stats",
-                    "dataset-labels": "September,October,November",
-                    datasets: "[[12,76],[38,20],[64,39]]",
-                    groups: "legal,hr",
-                    colors: "#95d5b2,#52b788",
                     "axis-color": "#e3e3e3",
                     height: "100",
                     "bar-width": "20",

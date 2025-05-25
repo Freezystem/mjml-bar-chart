@@ -37,12 +37,17 @@ You can now use the `mjml-bar-chart` component in your MJML templates:
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-bar-chart
-          title="Sum of Requests by Department"
-          dataset-labels="January,February,March"
-          datasets="[[33,14,27],[18,66,42],[7,15,21]]"
-          groups="support,sales,tech"
-          colors="#d8f3dc,#95d5b2,#52b788"/>
+        <mj-bar-chart>
+          {
+            "title":"Sum of Requests by Department",
+            "datasets":["January","February","March"],
+            "series":[
+              {"label":"support","color":"#d8f3dc","data":[33,18,7]},
+              {"label":"sales","color":"#95d5b2","data":[14,66,15]},
+              {"label":"tech","color":"#52b788","data":[27,42,21]}
+            ]
+          }
+        </mj-bar-chart>
       </mj-column>
     </mj-section>
   </mj-body>
@@ -55,22 +60,53 @@ Yay, you're all set!
 
 ## Customize
 
+### Content
+
+The `<mj-bar-chart>` content must be a valid JSON string with the following structure:
+```json
+{
+  "title": "Open-Source contributions per Year",
+  "datasets": ["2022", "2023", "2024", "2025"],
+  "series": 
+    [
+      {
+        "label": "pull requests",
+        "color": "#adb2d4",
+        "data": [3,7,4,15]
+      },
+      {
+        "label": "issues fixed",
+        "color": "#c7d9dd",
+        "data": [23,12,40,38]
+      },
+      {
+        "label": "reviews",
+        "color": "#d5e5d5",
+        "data": [4,15,11,18]
+      }
+    ]
+}
+```
+
+If you're using TypeScript you can import the `Chart` interface to validate your object.
+
+```ts
+import type { Chart } from "mjml-bar-chart";
+
+const chart: Chart = {...}
+```
+
 ### Built-in properties
 
 | attribute         | required | default value | description                                                                                  |
 |:------------------|:--------:|:-------------:|:---------------------------------------------------------------------------------------------|
-| `title`           |    ✖️    |    `null`     | Chart title, will not be displayed if null                                                   |
-| `dataset-labels`  |    ✔️    |    `null`     | Comma separated labels of each dataset                                                       |
-| `datasets`        |    ✔️    |    `null`     | Valid JSON array of same length integer array                                                |
-| `groups`          |    ✔️    |    `null`     | Comma separated data group names                                                             |
-| `colors`          |    ✔️    |    `null`     | Comma separated CSS colors to apply to each group                                            |
+| `uid`             |    ✖️    |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
 | `axis-color`      |    ✖️    |   `#d4d4d4`   | CSS color of axis and scale numbers                                                          |
 | `height`          |    ✖️    |     `200`     | Chart height in pixel                                                                        |
 | `bar-width`       |    ✖️    |     `30`      | Bar width in pixel                                                                           |
-| `separator-width` |    ✖️    |     `30`      | Separator width in pixel between datasets                                                    |
+| `separator-width` |    ✖️    |     `30`      | Datasets separator width in pixel                                                            |
 | `step-count`      |    ✖️    |      `5`      | Step number on the chart scale, below 2 no steps will be displayed                           |
 | `show-values`     |    ✖️    |    `true`     | Whether or not it should display values above each bar                                       |
-| `instance-id`     |    ✖️    |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
 
 ### Styling through CSS classes
 
@@ -79,34 +115,30 @@ There are two ways of providing CSS overrides for your email charts:
  - [`mj-class`](https://documentation.mjml.io/#mj-attributes): (**recommended**) style will be dynamically retrieved and injected into the `style` attribute for high-priority override.
  - [`mj-style`](https://documentation.mjml.io/#mj-style): to provide a custom CSS declaration that will be applied with a low priority (will not override the CSS set from `style` attributes).
 
-These are the generated classes that you can use:
+These are all the generated classes that you can use:
  - `mjbc`: the class of the chart root element.
  - `mjbc__title`: the class of the chart title text.
  - `mjbc__label`: the class of the chart labels.
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
 
-If you have multiple charts in the same email, you can pass an instance id to each one to be able to apply different styles.  
-Class `mjbc` will become `mjbc<instanceId>`, `mjbc__title` will become `mjbc<instanceId>__title`, and so on.
+If you have multiple charts in the same email, you can pass an uid to each one to be able to apply different styles.  
+Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
 
 For example:
 ```mjml
 <mjml>
   <mj-head>
     <mj-attributes>
-      <mj-class name="mjbc1__title" color="#ccc"/>
+      <mj-class name="mjbc1__title" color="lightcoral" font-weight="bold"/>
+      <mj-class name="mjbc2__title" color="rebeccapurple" font-family="Menlo"/>
     </mj-attributes>
   </mj-head>
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-bar-chart
-          instance="1"
-          title="Top 3 contributors"
-          dataset-labels="Tom,Bob,Jane"
-          datasets="[[18,32,12],[45,75,27],[9,33,12]]"
-          groups="pull requests,commits,issues"
-          colors="#adb2d4,#c7d9dd,#d5e5d5"/>
+        <mj-bar-chart uid="1">{{ jsonChart1 }}</mj-bar-chart>
+        <mj-bar-chart uid="2">{{ jsonChart2 }}</mj-bar-chart>
       </mj-column>
     </mj-section>
   </mj-body>
