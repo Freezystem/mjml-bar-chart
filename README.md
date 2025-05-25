@@ -7,7 +7,7 @@
 First you'll have to install `mjml-bar-chart` in your project.
 
 ```sh
-npm install --save-dev mjml mjml-core mjml-bar-chart
+npm install --save mjml mjml-core mjml-bar-chart
 ```
 
 Then import it and manually register the plugin.
@@ -55,17 +55,60 @@ Yay, you're all set!
 
 ## Customize
 
-| attribute         | required |             default value              | description                                                        |
-|:------------------|:--------:|:--------------------------------------:|:-------------------------------------------------------------------|
-| `title`           |    ✖️    |                 `null`                 | Chart title, will not be displayed if null                         |
-| `dataset-labels`  |    ✔️    |                 `null`                 | Comma separated labels of each dataset                             |
-| `datasets`        |    ✔️    |                 `null`                 | Valid JSON array of same length integer array                      |
-| `groups`          |    ✔️    |                 `null`                 | Comma separated data group names                                   |
-| `colors`          |    ✔️    |                 `null`                 | Comma separated CSS colors of each group                           |
-| `axis-color`      |    ✖️    |               `#d4d4d4`                | CSS color of axis and scale numbers                                |
-| `height`          |    ✖️    |                 `200`                  | Chart height in pixel                                              |
-| `bar-width`       |    ✖️    |                  `30`                  | Bar width in pixel                                                 |
-| `separator-width` |    ✖️    |                  `30`                  | Separator width in pixel between datasets                          |
-| `step-count`      |    ✖️    |                  `5`                   | Step number on the chart scale, below 2 no steps will be displayed |
-| `show-values`     |    ✖️    |                 `true`                 | Whether or not it should display values above each bar             |
-| `font-family`     |    ✖️    | `Ubuntu, Helvetica, Arial, sans-serif` | Font to use for chart title and labels                             |
+### Built-in properties
+
+| attribute         | required | default value | description                                                                                  |
+|:------------------|:--------:|:-------------:|:---------------------------------------------------------------------------------------------|
+| `title`           |    ✖️    |    `null`     | Chart title, will not be displayed if null                                                   |
+| `dataset-labels`  |    ✔️    |    `null`     | Comma separated labels of each dataset                                                       |
+| `datasets`        |    ✔️    |    `null`     | Valid JSON array of same length integer array                                                |
+| `groups`          |    ✔️    |    `null`     | Comma separated data group names                                                             |
+| `colors`          |    ✔️    |    `null`     | Comma separated CSS colors to apply to each group                                            |
+| `axis-color`      |    ✖️    |   `#d4d4d4`   | CSS color of axis and scale numbers                                                          |
+| `height`          |    ✖️    |     `200`     | Chart height in pixel                                                                        |
+| `bar-width`       |    ✖️    |     `30`      | Bar width in pixel                                                                           |
+| `separator-width` |    ✖️    |     `30`      | Separator width in pixel between datasets                                                    |
+| `step-count`      |    ✖️    |      `5`      | Step number on the chart scale, below 2 no steps will be displayed                           |
+| `show-values`     |    ✖️    |    `true`     | Whether or not it should display values above each bar                                       |
+| `instance-id`     |    ✖️    |    `null`     | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
+
+### Styling through CSS classes
+
+Bar charts are generated with predefined classes that you can use for styling with custom CSS.
+There are two ways of providing CSS overrides for your email charts:
+ - [`mj-class`](https://documentation.mjml.io/#mj-attributes): (**recommended**) style will be dynamically retrieved and injected into the `style` attribute for high-priority override.
+ - [`mj-style`](https://documentation.mjml.io/#mj-style): to provide a custom CSS declaration that will be applied with a low priority (will not override set CSS within `style` attributes).
+
+These are the generated classes that you can use:
+ - `mjbc`: the class of the chart root element.
+ - `mjbc__title`: the class of the chart title text.
+ - `mjbc__label`: the class of the chart labels.
+ - `mjbc__legend`: the class of the chart legends.
+ - `mjbc__step`: the class of the chart steps.
+
+If you have multiple charts in the same email, you can pass an instance id to each one to be able to apply different styles.
+Class `mjbc` will become `mjbc<instanceId>`, `mjbc__title` will become `mjbc<instanceId>__title`, and so on.
+
+for example:
+```mjml
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-class name="mjbc1__title" color="#ccc"/>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-bar-chart
+          instance="1"
+          title="Top 3 contributors"
+          dataset-labels="Tom,Bob,Jane"
+          datasets="[[18,32,12],[45,75,27],[9,33,12]]"
+          groups="pull requests,commits,issues"
+          colors="#adb2d4,#c7d9dd,#d5e5d5"/>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+```
