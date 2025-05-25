@@ -109,6 +109,7 @@ export default class MjBarChart extends BodyComponent {
     };
 
     static override defaultAttributes = {
+        "instance-id": "",
         "axis-color": "#d4d4d4",
         height: "200",
         "bar-width": "30",

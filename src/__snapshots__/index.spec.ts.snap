@@ -3120,24 +3120,24 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
                 <td
                    style="font-size:0px;word-break:break-word;"
                 >
-                  <table class="mjbc-1" style="border-collapse:collapse;margin:0 auto;">
+                  <table class="mjbc1" style="border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;vertical-align:top;">
       <table style="border-collapse:collapse;">
         <tr>
-          <td class="mjbc-1__step" style="padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">66</td>
+          <td class="mjbc1__step" style="padding:0 5px 0 0;height:56px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">66</td>
         </tr>
         <tr>
-          <td class="mjbc-1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">49</td>
+          <td class="mjbc1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">49</td>
         </tr>
         <tr>
-          <td class="mjbc-1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">33</td>
+          <td class="mjbc1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">33</td>
         </tr>
         <tr>
-          <td class="mjbc-1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">16</td>
+          <td class="mjbc1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">16</td>
         </tr>
         <tr>
-          <td class="mjbc-1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">0</td>
+          <td class="mjbc1__step" style="padding:0 5px 0 0;height:50.5px;vertical-align:bottom;text-align:right;font-size:14px;color:#d4d4d4;">0</td>
         </tr>
       </table>
     </td>
@@ -3147,7 +3147,7 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
           <td style="padding:0">
             <table style="width:100%;border-collapse:collapse;">
               <tr>
-                <td class="mjbc-1__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>
+                <td class="mjbc1__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>
               </tr>
             </table>
           </td>
@@ -3259,11 +3259,11 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
             <table style="border-collapse:collapse;border-left:2px solid transparent;">
               <tr>
                 <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td class="mjbc-1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">January</td>
+                <td class="mjbc1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">January</td>
                 <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td class="mjbc-1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">February</td>
+                <td class="mjbc1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">February</td>
                 <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td class="mjbc-1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>
+                <td class="mjbc1__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>
                 <td style="padding:0;min-width:30px;max-width:30px;"></td>
               </tr>
             </table>
@@ -3278,9 +3278,9 @@ exports[`mjml-bar-chart mjml markup should render the bar chart 1`] = `
               <tr>
                 <td style="padding:0;">
                   <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
-                    <span class="mjbc-1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-                    <span class="mjbc-1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-                    <span class="mjbc-1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
                   </p>
                 </td>
               </tr>
