@@ -122,7 +122,7 @@ These are all the generated classes that you can use:
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
 
-If you have multiple charts in the same email, you can pass an uid to each one to be able to apply different styles.  
+If you have multiple charts in the same email, you can pass an unique identifier to each one to be able to apply different styles.  
 Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
 
 For example:
