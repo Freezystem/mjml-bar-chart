@@ -131,7 +131,7 @@ export default class MjBarChart extends BodyComponent {
         "font-family": "Ubuntu, Helvetica, Arial, sans-serif",
     };
 
-    private getChartTitle(): JsonNode | undefined {
+    private getChartTitle(): JsonNode {
         return {
             tagName: "tr",
             children: [
@@ -367,7 +367,6 @@ export default class MjBarChart extends BodyComponent {
     }
 
     private getChart(): JsonNode {
-        const chartTitle = this.getChartTitle();
         const children = [
             this.getChartBars(),
             this.getChartLabels(),
@@ -381,7 +380,7 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "table",
                     attributes: { style: "border-collapse:collapse;" },
-                    children: chartTitle ? [chartTitle, ...children] : children,
+                    children: [this.getChartTitle(), ...children],
                 },
             ],
         };
