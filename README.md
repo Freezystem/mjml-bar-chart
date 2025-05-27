@@ -66,6 +66,10 @@ The `<mj-bar-chart>` content must be a valid JSON string with the following stru
 ```json
 {
   "title": "Open-Source contributions per Year",
+  "source": {
+    "label": "Source: Trust Me Bro",
+    "url": "https://trustme.bro"
+  },
   "datasets": ["2022", "2023", "2024", "2025"],
   "series": 
     [
@@ -118,6 +122,7 @@ There are two ways of providing CSS overrides for your email charts:
 These are all the generated classes that you can use:
  - `mjbc`: the class of the chart root element.
  - `mjbc__title`: the class of the chart title text.
+ - `mjbc__source`: the class of the chart source link.
  - `mjbc__label`: the class of the chart labels.
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
