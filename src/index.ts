@@ -24,6 +24,8 @@ interface Dataset {
     data: number[];
 }
 
+type BarChartLayout = "bars" | "stacked-bars";
+
 interface Attributes {
     uid?: string;
     "axis-color"?: string;
@@ -32,6 +34,7 @@ interface Attributes {
     "separator-width"?: string;
     "step-count"?: string;
     "show-values"?: string;
+    layout?: BarChartLayout;
 }
 
 type GlobalClasses = Record<string, Record<string, string>>;
@@ -52,6 +55,7 @@ interface InitialData {
 
 export default class MjBarChart extends BodyComponent {
     private readonly uid: string;
+    private readonly layout: BarChartLayout;
     private readonly title: string;
     private readonly source: Source | undefined;
     private readonly colors: string[];
@@ -76,6 +80,7 @@ export default class MjBarChart extends BodyComponent {
         this.title = title;
         this.source = source;
         this.uid = this.getAttribute("uid");
+        this.layout = this.getAttribute("layout");
         this.colors = series.map(({ color }) => color);
         this.dataLabels = series.map(({ label }) => label);
         this.axisColor = this.getAttribute("axis-color");
@@ -112,6 +117,7 @@ export default class MjBarChart extends BodyComponent {
 
     static readonly allowedAttributes = {
         uid: "string",
+        layout: "enum(bars,stacked-bars)",
         "axis-color": "color",
         height: "integer",
         "bar-width": "integer",
@@ -122,6 +128,7 @@ export default class MjBarChart extends BodyComponent {
 
     static override readonly defaultAttributes = {
         uid: "",
+        layout: "bars",
         "axis-color": "#d4d4d4",
         height: "200",
         "bar-width": "30",
