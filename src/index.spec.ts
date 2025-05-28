@@ -16,6 +16,10 @@ describe("mjml-bar-chart", () => {
 
     const chart1: Chart = {
         title: "Sum of Requests by Department",
+        source: {
+            url: "#sources",
+            label: "source: wikipedia ↗",
+        },
         datasets: ["January", "February", "March"],
         series: [
             {
@@ -36,7 +40,7 @@ describe("mjml-bar-chart", () => {
         ],
     };
 
-    const chart2 = {
+    const chart2: Chart = {
         title: "Some Stats",
         datasets: ["September", "October", "November"],
         series: [
@@ -76,7 +80,8 @@ describe("mjml-bar-chart", () => {
 			  </mjml>
 			`;
 
-            expect(toHtml(mjml)).toMatchSnapshot();
+            const html = toHtml(mjml);
+            expect(html).toMatchSnapshot();
         });
     });
 
@@ -93,7 +98,9 @@ describe("mjml-bar-chart", () => {
                 children: [
                     {
                         tagName: "td",
-                        attributes: { style: "padding:0" },
+                        attributes: {
+                            style: "padding:0",
+                        },
                         children: [
                             {
                                 tagName: "table",
@@ -115,23 +122,37 @@ describe("mjml-bar-chart", () => {
                                             },
                                         ],
                                     },
+                                    {
+                                        tagName: "tr",
+                                        children: [
+                                            {
+                                                tagName: "td",
+                                                attributes: {
+                                                    class: "mjbc__source",
+                                                    style: "padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;",
+                                                },
+                                                children: [
+                                                    {
+                                                        tagName: "a",
+                                                        attributes: {
+                                                            href: "#sources",
+                                                            target: "_blank",
+                                                            style: "color:inherit; text-decoration:none;",
+                                                        },
+                                                        content:
+                                                            "source: wikipedia ↗",
+                                                    },
+                                                ],
+                                            },
+                                        ],
+                                    },
                                 ],
                             },
                         ],
                     },
                 ],
             });
-            expect(html).toBe(
-                "<tr>\n" +
-                    '  <td style="padding:0">\n' +
-                    '    <table style="width:100%;border-collapse:collapse;">\n' +
-                    "      <tr>\n" +
-                    '        <td class="mjbc__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>\n' +
-                    "      </tr>\n" +
-                    "    </table>\n" +
-                    "  </td>\n" +
-                    "</tr>",
-            );
+            expect(html).toMatchSnapshot();
         });
     });
 

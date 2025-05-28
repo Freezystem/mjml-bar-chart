@@ -53,7 +53,7 @@ interface InitialData {
 export default class MjBarChart extends BodyComponent {
     private readonly uid: string;
     private readonly title: string;
-    // private readonly source: Source | undefined;
+    private readonly source: Source | undefined;
     private readonly colors: string[];
     private readonly axisColor: string;
     private readonly dataLabels: string[];
@@ -70,11 +70,11 @@ export default class MjBarChart extends BodyComponent {
     constructor(initialData: InitialData) {
         super(initialData);
 
-        const { title, datasets, series } = JSON.parse(
+        const { title, datasets, series, source } = JSON.parse(
             initialData.content?.trim() as string,
         ) as Chart;
         this.title = title;
-        // this.source = source;
+        this.source = source;
         this.uid = this.getAttribute("uid");
         this.colors = series.map(({ color }) => color);
         this.dataLabels = series.map(({ label }) => label);
@@ -131,7 +131,54 @@ export default class MjBarChart extends BodyComponent {
         "font-family": "Ubuntu, Helvetica, Arial, sans-serif",
     };
 
+    private getChartSource(): JsonNode | undefined {
+        if (!this.source) return;
+
+        return {
+            tagName: "tr",
+            children: [
+                {
+                    tagName: "td",
+                    attributes: {
+                        class: `mjbc${this.uid}__source`,
+                        style: this.styles("chartSource"),
+                    },
+                    children: [
+                        {
+                            tagName: "a",
+                            attributes: {
+                                href: this.source.url,
+                                target: "_blank",
+                                style: "color:inherit; text-decoration:none;",
+                            },
+                            content: this.source.label,
+                        },
+                    ],
+                },
+            ],
+        };
+    }
+
     private getChartTitle(): JsonNode {
+        const children: JsonNode[] = [
+            {
+                tagName: "tr",
+                children: [
+                    {
+                        tagName: "td",
+                        attributes: {
+                            class: `mjbc${this.uid}__title`,
+                            style: this.styles("chartTitle"),
+                        },
+                        content: this.title,
+                    },
+                ],
+            },
+        ];
+
+        const source = this.getChartSource();
+        if (source) children.push(source);
+
         return {
             tagName: "tr",
             children: [
@@ -144,23 +191,7 @@ export default class MjBarChart extends BodyComponent {
                             attributes: {
                                 style: this.styles("chartTitleWrapper"),
                             },
-                            children: [
-                                {
-                                    tagName: "tr",
-                                    children: [
-                                        {
-                                            tagName: "td",
-                                            attributes: {
-                                                class: `mjbc${this.uid}__title`,
-                                                style: this.styles(
-                                                    "chartTitle",
-                                                ),
-                                            },
-                                            content: this.title,
-                                        },
-                                    ],
-                                },
-                            ],
+                            children,
                         },
                     ],
                 },
@@ -439,6 +470,15 @@ export default class MjBarChart extends BodyComponent {
                 "font-size": "20px",
                 ...this.globalClasses[`mjbc${this.uid}__title`],
             },
+            chartSource: {
+                padding: "0",
+                height: "20px",
+                "text-align": "center",
+                "font-size": "12px",
+                "vertical-align": "top",
+                color: "#3e3e3e",
+                ...this.globalClasses[`mjbc${this.uid}__source`],
+            },
             chartBarSeparator: {
                 padding: "0",
                 "min-width": `${this.separatorWidth}px`,
@@ -497,7 +537,7 @@ export default class MjBarChart extends BodyComponent {
             },
             firstStep: {
                 padding: "0 5px 0 0",
-                height: "56px",
+                height: this.source ? "76px" : "56px",
                 "vertical-align": "bottom",
                 "text-align": "right",
                 "font-size": "14px",
