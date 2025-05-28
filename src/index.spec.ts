@@ -81,7 +81,6 @@ describe("mjml-bar-chart", () => {
 			`;
 
             const html = toHtml(mjml);
-            // require("node:fs").writeFileSync("test.html", html);
             expect(html).toMatchSnapshot();
         });
     });
