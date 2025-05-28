@@ -18,7 +18,7 @@ describe("mjml-bar-chart", () => {
         title: "Sum of Requests by Department",
         source: {
             url: "#sources",
-            label: "source: wikipedia ↗"
+            label: "source: wikipedia ↗",
         },
         datasets: ["January", "February", "March"],
         series: [
@@ -95,78 +95,65 @@ describe("mjml-bar-chart", () => {
             const html = jsonToXML(json);
 
             expect(json).toStrictEqual({
-                "tagName": "tr",
-                "children": [
+                tagName: "tr",
+                children: [
                     {
-                        "tagName": "td",
-                        "attributes": {
-                            "style": "padding:0"
+                        tagName: "td",
+                        attributes: {
+                            style: "padding:0",
                         },
-                        "children": [
+                        children: [
                             {
-                                "tagName": "table",
-                                "attributes": {
-                                    "style": "width:100%;border-collapse:collapse;"
+                                tagName: "table",
+                                attributes: {
+                                    style: "width:100%;border-collapse:collapse;",
                                 },
-                                "children": [
+                                children: [
                                     {
-                                        "tagName": "tr",
-                                        "children": [
+                                        tagName: "tr",
+                                        children: [
                                             {
-                                                "tagName": "td",
-                                                "attributes": {
-                                                    "class": "mjbc__title",
-                                                    "style": "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;"
+                                                tagName: "td",
+                                                attributes: {
+                                                    class: "mjbc__title",
+                                                    style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
                                                 },
-                                                "content": "Sum of Requests by Department"
-                                            }
-                                        ]
+                                                content:
+                                                    "Sum of Requests by Department",
+                                            },
+                                        ],
                                     },
                                     {
-                                        "tagName": "tr",
-                                        "children": [
+                                        tagName: "tr",
+                                        children: [
                                             {
-                                                "tagName": "td",
-                                                "attributes": {
-                                                    "class": "mjbc__source",
-                                                    "style": "padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;"
+                                                tagName: "td",
+                                                attributes: {
+                                                    class: "mjbc__source",
+                                                    style: "padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;",
                                                 },
-                                                "children": [
+                                                children: [
                                                     {
-                                                        "tagName": "a",
-                                                        "attributes": {
-                                                            "href": "#sources",
-                                                            "target": "_blank",
-                                                            "style": "color:inherit; text-decoration:none;"
+                                                        tagName: "a",
+                                                        attributes: {
+                                                            href: "#sources",
+                                                            target: "_blank",
+                                                            style: "color:inherit; text-decoration:none;",
                                                         },
-                                                        "content": "source: wikipedia ↗"
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                                                        content:
+                                                            "source: wikipedia ↗",
+                                                    },
+                                                ],
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ],
             });
-            expect(html).toBe(
-                "<tr>\n" +
-                '  <td style="padding:0">\n' +
-                '    <table style="width:100%;border-collapse:collapse;">\n' +
-                "      <tr>\n" +
-                '        <td class="mjbc__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;">Sum of Requests by Department</td>\n' +
-                "      </tr>\n" +
-                "      <tr>\n" +
-                '        <td class="mjbc__source" style="padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;">\n' +
-                '          <a href="#sources" target="_blank" style="color:inherit; text-decoration:none;">source: wikipedia ↗</a>\n' +
-                '        </td>\n' +
-                "      </tr>\n" +
-                "    </table>\n" +
-                "  </td>\n" +
-                "</tr>",
-            );
+            expect(html).toMatchSnapshot();
         });
     });
 
