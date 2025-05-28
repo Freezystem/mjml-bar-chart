@@ -472,9 +472,10 @@ export default class MjBarChart extends BodyComponent {
             },
             chartSource: {
                 padding: "0",
-                height: "40px",
+                height: "20px",
                 "text-align": "center",
-                "font-size": "16px",
+                "font-size": "12px",
+                "vertical-align": "top",
                 color: "#3e3e3e",
                 ...this.globalClasses[`mjbc${this.uid}__source`],
             },
@@ -536,7 +537,7 @@ export default class MjBarChart extends BodyComponent {
             },
             firstStep: {
                 padding: "0 5px 0 0",
-                height: "56px",
+                height: this.source ? "76px" : "56px",
                 "vertical-align": "bottom",
                 "text-align": "right",
                 "font-size": "14px",
