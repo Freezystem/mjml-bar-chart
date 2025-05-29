@@ -86,14 +86,14 @@ export default class MjBarChart extends BodyComponent {
         this.globalClasses = this.context?.globalData?.classes ?? {};
     }
 
-    static componentName = "mj-bar-chart";
+    static readonly componentName = "mj-bar-chart";
 
-    static dependencies: Record<string, string[]> = {
+    static readonly dependencies: Record<string, string[]> = {
         "mj-column": ["mj-bar-chart"],
         "mj-bar-chart": [],
     };
 
-    static allowedAttributes = {
+    static readonly allowedAttributes = {
         title: "string",
         "dataset-labels": "string",
         datasets: "string",
@@ -108,7 +108,7 @@ export default class MjBarChart extends BodyComponent {
         "instance-id": "string",
     };
 
-    static override defaultAttributes = {
+    static override readonly defaultAttributes = {
         "instance-id": "",
         "axis-color": "#d4d4d4",
         height: "200",

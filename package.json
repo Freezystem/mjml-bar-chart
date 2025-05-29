@@ -77,7 +77,8 @@
 			"text",
 			"text-summary",
 			"json-summary",
-			"html-spa"
+			"html-spa",
+			"lcov"
 		],
 		"coverageThreshold": {
 			"global": {
