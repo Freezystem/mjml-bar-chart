@@ -1,6 +1,8 @@
 # MJML Bar Chart
 [![Workflow](https://img.shields.io/github/actions/workflow/status/Freezystem/mjml-bar-chart/test.yml?logo=github)](https://github.com/Freezystem/mjml-bar-chart/actions/workflows/test.yml?query=branch%3Amain)
-![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/wiki/Freezystem/mjml-bar-chart/coverage-diff-badge.json&logo=jest)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
 
 ## Getting started
 
