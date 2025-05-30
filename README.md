@@ -107,6 +107,7 @@ const chart: Chart = {...}
 | attribute         | required | default value | description                                                                                  |
 |:------------------|:--------:|:-------------:|:---------------------------------------------------------------------------------------------|
 | `uid`             |    ✖️    |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
+| `layout`          |    ✖️    |   `default`   | Layout to render, can be either "stacked" or "default"                                       |
 | `axis-color`      |    ✖️    |   `#d4d4d4`   | CSS color of axis and scale numbers                                                          |
 | `height`          |    ✖️    |     `200`     | Chart height in pixel                                                                        |
 | `bar-width`       |    ✖️    |     `30`      | Bar width in pixel                                                                           |

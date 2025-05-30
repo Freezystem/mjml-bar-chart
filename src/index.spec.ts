@@ -60,9 +60,13 @@ describe("mjml-bar-chart", () => {
     const barChart = new MjBarChart({
         content: JSON.stringify(chart1),
     });
+    const stackedBarChart = new MjBarChart({
+        content: JSON.stringify(chart1),
+        attributes: { layout: "stacked" },
+    });
 
     describe("mjml markup", () => {
-        it("should render the bar chart", () => {
+        it("should render the default bar chart", () => {
             const mjml = `
 			  <mjml>
 			    <mj-head>
@@ -74,6 +78,28 @@ describe("mjml-bar-chart", () => {
 				  <mj-section>
 					<mj-column>
 					  <mj-bar-chart uid="1">${JSON.stringify(chart1)}</mj-bar-chart>
+					</mj-column>
+				  </mj-section>
+				</mj-body>
+			  </mjml>
+			`;
+
+            const html = toHtml(mjml);
+            expect(html).toMatchSnapshot();
+        });
+
+        it("should render the stacked bar chart", () => {
+            const mjml = `
+			  <mjml>
+			    <mj-head>
+                  <mj-attributes>
+                    <mj-class name="mjbc__title" color="#333"/>
+                  </mj-attributes>
+                </mj-head>
+				<mj-body>
+				  <mj-section>
+					<mj-column>
+					  <mj-bar-chart uid="1" layout="stacked">${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -139,6 +165,67 @@ describe("mjml-bar-chart", () => {
                     "    </tr>\n" +
                     "    <tr>\n" +
                     '      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "  </table>\n" +
+                    "</td>",
+            );
+        });
+    });
+
+    describe("getStackedChartBar", () => {
+        it("should render chart bar with minimum params", () => {
+            const json = stackedBarChart["getStackedChartBar"](1);
+            const html = jsonToXML(json);
+
+            expect(json).toMatchSnapshot();
+            expect(html).toBe(
+                '<td style="padding:0">\n' +
+                    '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">126</td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:29px;background-color:#ffe5ec;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:105px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:67px;background-color:#fb6f92;"></td>\n' +
+                    "    </tr>\n" +
+                    "  </table>\n" +
+                    "</td>",
+            );
+        });
+
+        it("should render chart bar with maximum params", () => {
+            const stackedBarChart = new MjBarChart({
+                content: JSON.stringify(chart1),
+                attributes: {
+                    layout: "stacked",
+                    height: "100",
+                    "show-values": "false",
+                    "bar-width": "20",
+                },
+            });
+            const json = stackedBarChart["getStackedChartBar"](0);
+            const html = jsonToXML(json);
+
+            expect(json).toMatchSnapshot();
+            expect(html).toBe(
+                '<td style="padding:0">\n' +
+                    '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:57px;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:26px;background-color:#ffe5ec;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:11px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:22px;background-color:#fb6f92;"></td>\n' +
                     "    </tr>\n" +
                     "  </table>\n" +
                     "</td>",
