@@ -81,7 +81,6 @@ describe("mjml-bar-chart", () => {
 			`;
 
             const html = toHtml(mjml);
-            // require("node:fs").writeFileSync("test.html", html);
             expect(html).toMatchSnapshot();
         });
     });
@@ -94,65 +93,7 @@ describe("mjml-bar-chart", () => {
             const json = barChart["getChartTitle"]() as JsonNode;
             const html = jsonToXML(json);
 
-            expect(json).toStrictEqual({
-                tagName: "tr",
-                children: [
-                    {
-                        tagName: "td",
-                        attributes: {
-                            style: "padding:0",
-                        },
-                        children: [
-                            {
-                                tagName: "table",
-                                attributes: {
-                                    style: "width:100%;border-collapse:collapse;",
-                                },
-                                children: [
-                                    {
-                                        tagName: "tr",
-                                        children: [
-                                            {
-                                                tagName: "td",
-                                                attributes: {
-                                                    class: "mjbc__title",
-                                                    style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
-                                                },
-                                                content:
-                                                    "Sum of Requests by Department",
-                                            },
-                                        ],
-                                    },
-                                    {
-                                        tagName: "tr",
-                                        children: [
-                                            {
-                                                tagName: "td",
-                                                attributes: {
-                                                    class: "mjbc__source",
-                                                    style: "padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;",
-                                                },
-                                                children: [
-                                                    {
-                                                        tagName: "a",
-                                                        attributes: {
-                                                            href: "#sources",
-                                                            target: "_blank",
-                                                            style: "color:inherit; text-decoration:none;",
-                                                        },
-                                                        content:
-                                                            "source: wikipedia ↗",
-                                                    },
-                                                ],
-                                            },
-                                        ],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            });
+            expect(json).toMatchSnapshot();
             expect(html).toMatchSnapshot();
         });
     });
@@ -279,12 +220,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "td",
                 attributes: {
                     class: "mjbc__label",
-                    style: "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                    style: "height:30px;padding:0;font-size:14px;text-align:center;min-width:120px;max-width:120px;",
                 },
                 content: "March",
             });
             expect(html).toBe(
-                '<td class="mjbc__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>',
+                '<td class="mjbc__label" style="height:30px;padding:0;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td>',
             );
         });
     });
