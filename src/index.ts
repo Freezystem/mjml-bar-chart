@@ -35,6 +35,7 @@ interface Attributes {
     "font-family"?: string;
     stacked?: string;
     "align-legends"?: string;
+    "max-width"?: string;
 }
 
 type GlobalClasses = Record<string, Record<string, string>>;
@@ -119,11 +120,21 @@ export default class MjBarChart extends BodyComponent {
             );
         }
 
-        const barCount = this.stacked ? 1 : this.dataLabels.length;
+        const maxWidth = Number.parseInt(this.getAttribute("max-width"), 10);
+        const separatorCount = this.datasets.length + 1;
+        const barCount =
+            this.datasets.length * (this.stacked ? 1 : this.dataLabels.length);
+
         this.chartWidth =
-            2 +
-            this.separatorWidth * (this.dataLabels.length + 1) +
-            this.barWidth * this.datasets.length * barCount;
+            2 + this.separatorWidth * separatorCount + this.barWidth * barCount;
+
+        if (this.chartWidth > maxWidth) {
+            this.stepCount = 0;
+            this.chartWidth = maxWidth;
+            this.barWidth = this.separatorWidth =
+                (maxWidth - 2) / (separatorCount + barCount);
+        }
+
         this.globalClasses = this.context?.globalData?.classes ?? {};
         this.fontFamily = this.getAttribute("font-family");
     }
@@ -147,6 +158,7 @@ export default class MjBarChart extends BodyComponent {
         stacked: "string",
         "show-values": "string",
         "align-legends": "string",
+        "max-width": "string",
     };
 
     static override readonly defaultAttributes = {
@@ -160,6 +172,7 @@ export default class MjBarChart extends BodyComponent {
         "show-values": "true",
         "align-legends": "false",
         "font-family": "inherit",
+        "max-width": "600",
     };
 
     private getChartSource(): JsonNode | undefined {
@@ -610,6 +623,12 @@ export default class MjBarChart extends BodyComponent {
                 "min-width": `${this.barWidth}px`,
                 "max-width": `${this.barWidth}px`,
             },
+            chart: {
+                "max-width": `${this.chartWidth}px`,
+                "min-width": `${this.chartWidth}px`,
+                "border-collapse": "collapse",
+                margin: "0 auto",
+            },
             barChart: {
                 "border-collapse": "collapse",
                 "border-left": `2px solid ${this.axisColor}`,
@@ -625,6 +644,10 @@ export default class MjBarChart extends BodyComponent {
                 "vertical-align": "bottom",
                 "text-align": "center",
                 "line-height": "16px",
+                overflow: "hidden",
+                "white-space": "nowrap",
+                "min-width": `${this.barWidth}px`,
+                "max-width": `${this.barWidth}px`,
             },
             chartLabelWrapper: {
                 "border-collapse": "collapse",
@@ -688,7 +711,7 @@ export default class MjBarChart extends BodyComponent {
             tagName: "table",
             attributes: {
                 class: `mjbc${this.uid}`,
-                style: "border-collapse:collapse;margin:0 auto;",
+                style: this.styles("chart"),
             },
             children: [
                 { tagName: "tr", children: scale ? [scale, chart] : [chart] },
