@@ -400,7 +400,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
               "children": [
                 {
                   "attributes": {
-                    "style": "border-collapse:collapse;width:100%;",
+                    "style": "border-collapse:collapse;max-width:266px;margin:0 auto;",
                   },
                   "children": [
                     {
@@ -567,7 +567,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
     </tr>
     <tr>
       <td style="padding:0;">
-        <table style="border-collapse:collapse;width:100%;">
+        <table style="border-collapse:collapse;max-width:266px;margin:0 auto;">
           <tr>
             <td style="padding:0;height:10px;"></td>
           </tr>
@@ -1126,7 +1126,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
               "children": [
                 {
                   "attributes": {
-                    "style": "border-collapse:collapse;width:100%;",
+                    "style": "border-collapse:collapse;max-width:392px;margin:0 auto;",
                   },
                   "children": [
                     {
@@ -1336,7 +1336,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
     </tr>
     <tr>
       <td style="padding:0;">
-        <table style="border-collapse:collapse;width:100%;">
+        <table style="border-collapse:collapse;max-width:392px;margin:0 auto;">
           <tr>
             <td style="padding:0;height:10px;"></td>
           </tr>
@@ -2630,7 +2630,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
       "children": [
         {
           "attributes": {
-            "style": "border-collapse:collapse;width:100%;",
+            "style": "border-collapse:collapse;max-width:302px;margin:0 auto;",
           },
           "children": [
             {
@@ -2719,7 +2719,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
 exports[`mjml-bar-chart getChartLegend should render chart legend with maximum params 2`] = `
 "<tr>
   <td style="padding:0;">
-    <table style="border-collapse:collapse;width:100%;">
+    <table style="border-collapse:collapse;max-width:302px;margin:0 auto;">
       <tr>
         <td style="padding:0;height:10px;"></td>
       </tr>
@@ -2751,7 +2751,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
       "children": [
         {
           "attributes": {
-            "style": "border-collapse:collapse;width:100%;",
+            "style": "border-collapse:collapse;max-width:392px;margin:0 auto;",
           },
           "children": [
             {
@@ -2824,7 +2824,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
 exports[`mjml-bar-chart getChartLegend should render chart legend with minimum params 2`] = `
 "<tr>
   <td style="padding:0;">
-    <table style="border-collapse:collapse;width:100%;">
+    <table style="border-collapse:collapse;max-width:392px;margin:0 auto;">
       <tr>
         <td style="padding:0;height:10px;"></td>
       </tr>
@@ -3514,7 +3514,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
         </tr>
         <tr>
           <td style="padding:0;">
-            <table style="border-collapse:collapse;width:100%;">
+            <table style="border-collapse:collapse;max-width:392px;margin:0 auto;">
               <tr>
                 <td style="padding:0;height:10px;"></td>
               </tr>
@@ -3758,7 +3758,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
         </tr>
         <tr>
           <td style="padding:0;">
-            <table style="border-collapse:collapse;width:100%;">
+            <table style="border-collapse:collapse;max-width:212px;margin:0 auto;">
               <tr>
                 <td style="padding:0;height:10px;"></td>
               </tr>
@@ -3910,7 +3910,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
         </tr>
         <tr>
           <td style="padding:0;">
-            <table style="border-collapse:collapse;width:100%;">
+            <table style="border-collapse:collapse;max-width:242px;margin:0 auto;">
               <tr>
                 <td style="padding:0;height:10px;"></td>
               </tr>
@@ -4086,7 +4086,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
         </tr>
         <tr>
           <td style="padding:0;">
-            <table style="border-collapse:collapse;width:100%;">
+            <table style="border-collapse:collapse;max-width:392px;margin:0 auto;">
               <tr>
                 <td style="padding:0;height:10px;"></td>
               </tr>
@@ -4636,7 +4636,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                       "children": [
                         {
                           "attributes": {
-                            "style": "border-collapse:collapse;width:100%;",
+                            "style": "border-collapse:collapse;max-width:266px;margin:0 auto;",
                           },
                           "children": [
                             {
@@ -5339,7 +5339,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                       "children": [
                         {
                           "attributes": {
-                            "style": "border-collapse:collapse;width:100%;",
+                            "style": "border-collapse:collapse;max-width:392px;margin:0 auto;",
                           },
                           "children": [
                             {

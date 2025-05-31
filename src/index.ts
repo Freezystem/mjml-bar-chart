@@ -640,7 +640,8 @@ export default class MjBarChart extends BodyComponent {
             },
             chartLegendWrapper: {
                 "border-collapse": "collapse",
-                width: "100%",
+                "max-width": `${this.chartWidth}px`,
+                margin: "0 auto",
             },
             chartLegend: {
                 margin: "0",
