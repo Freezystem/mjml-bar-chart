@@ -104,16 +104,19 @@ const chart: Chart = {...}
 
 ### Built-in properties
 
-| attribute         | required | default value | description                                                                                  |
-|:------------------|:--------:|:-------------:|:---------------------------------------------------------------------------------------------|
-| `uid`             |    ✖️    |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
-| `layout`          |    ✖️    |   `default`   | Layout to render, can be either "stacked" or "default"                                       |
-| `axis-color`      |    ✖️    |   `#d4d4d4`   | CSS color of axis and scale numbers                                                          |
-| `height`          |    ✖️    |     `200`     | Chart height in pixel                                                                        |
-| `bar-width`       |    ✖️    |     `30`      | Bar width in pixel                                                                           |
-| `separator-width` |    ✖️    |     `30`      | Datasets separator width in pixel                                                            |
-| `step-count`      |    ✖️    |      `5`      | Step number on the chart scale, below 2 no steps will be displayed                           |
-| `show-values`     |    ✖️    |    `true`     | Whether or not it should display values above each bar                                       |
+All the following attributes are optional
+
+| attribute         | coerced type | default value | description                                                                                  |
+|:------------------|:------------:|:-------------:|:---------------------------------------------------------------------------------------------|
+| `uid`             |   `string`   |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
+| `layout`          |   `string`   |  `"default"`  | Layout to render, can be either "stacked" or "default"                                       |
+| `font-family`     |   `string`   |  `"inherit"`  | Font family to apply to every text element. Can also be set from `<mj-all>` markup           |
+| `axis-color`      |   `string`   |  `"#d4d4d4"`  | CSS color of axis and scale numbers                                                          |
+| `height`          |   `number`   |    `"200"`    | Chart height in pixel                                                                        |
+| `bar-width`       |   `number`   |    `"30"`     | Bar width in pixel                                                                           |
+| `separator-width` |   `number`   |    `"30"`     | Datasets separator width in pixel                                                            |
+| `step-count`      |   `number`   |     `"5"`     | Step number on the chart scale, below 2 no steps will be displayed                           |
+| `show-values`     |  `boolean`   |   `"true"`    | Whether or not it should display values above each bar                                       |
 
 ### Styling through CSS classes
 
