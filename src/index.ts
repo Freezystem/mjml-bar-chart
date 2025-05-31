@@ -449,7 +449,7 @@ export default class MjBarChart extends BodyComponent {
         const children: JsonNode[] = [];
 
         if (this.alignLegends) {
-            legends.map((legend) => {
+            for (const legend of legends) {
                 const line = {
                     tagName: "p",
                     attributes: {
@@ -458,7 +458,7 @@ export default class MjBarChart extends BodyComponent {
                     children: [legend],
                 };
                 children.push(line);
-            });
+            }
         } else {
             children.push({
                 tagName: "p",
