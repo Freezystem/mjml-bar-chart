@@ -25,7 +25,7 @@ describe("mjml-bar-chart", () => {
             {
                 label: "support",
                 color: "#ffe5ec",
-                data: [33, 18, 7],
+                data: [33, 18, -7],
             },
             {
                 label: "sales",
