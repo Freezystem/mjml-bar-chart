@@ -630,6 +630,7 @@ export default class MjBarChart extends BodyComponent {
                 padding: "0 10px",
                 height: "20px",
                 "font-size": "14px",
+                "white-space": "nowrap",
                 ...this.globalClasses[`mjbc${this.uid}__legend`],
             },
             firstStep: {

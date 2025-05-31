@@ -350,12 +350,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "span",
                 attributes: {
                     class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                    style: "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
                 },
                 content: "sales",
             });
             expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>',
+                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>',
             );
         });
 
@@ -373,12 +373,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "span",
                 attributes: {
                     class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;",
+                    style: "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;",
                 },
                 content: "tech",
             });
             expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;">tech</span>',
+                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;">tech</span>',
             );
         });
     });

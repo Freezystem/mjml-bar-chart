@@ -429,7 +429,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                 {
                                   "attributes": {
                                     "class": "mjbc__legend",
-                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #95d5b2;",
+                                    "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #95d5b2;",
                                   },
                                   "content": "legal",
                                   "tagName": "span",
@@ -437,7 +437,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                 {
                                   "attributes": {
                                     "class": "mjbc__legend",
-                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #52b788;",
+                                    "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #52b788;",
                                   },
                                   "content": "hr",
                                   "tagName": "span",
@@ -574,8 +574,8 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
           <tr>
             <td style="padding:0;">
               <p style="margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;">
-                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:32px solid #95d5b2;">legal</span>
-                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:32px solid #52b788;">hr</span>
+                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #95d5b2;">legal</span>
+                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #52b788;">hr</span>
               </p>
             </td>
           </tr>
@@ -1155,7 +1155,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                 {
                                   "attributes": {
                                     "class": "mjbc__legend",
-                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;",
+                                    "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;",
                                   },
                                   "content": "support",
                                   "tagName": "span",
@@ -1163,7 +1163,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                 {
                                   "attributes": {
                                     "class": "mjbc__legend",
-                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                                    "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
                                   },
                                   "content": "sales",
                                   "tagName": "span",
@@ -1171,7 +1171,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                 {
                                   "attributes": {
                                     "class": "mjbc__legend",
-                                    "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;",
+                                    "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;",
                                   },
                                   "content": "tech",
                                   "tagName": "span",
@@ -1343,9 +1343,9 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
           <tr>
             <td style="padding:0;">
               <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
-                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;">support</span>
+                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>
+                <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;">tech</span>
               </p>
             </td>
           </tr>
@@ -2659,7 +2659,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffe5ec;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #ffe5ec;",
                           },
                           "content": "support",
                           "tagName": "span",
@@ -2667,7 +2667,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffb3c6;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #ffb3c6;",
                           },
                           "content": "sales",
                           "tagName": "span",
@@ -2675,7 +2675,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:20px solid #fb6f92;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #fb6f92;",
                           },
                           "content": "tech",
                           "tagName": "span",
@@ -2710,9 +2710,9 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
       <tr>
         <td style="padding:0;">
           <p style="margin:0;padding:0;max-width:302px;line-height:20px;text-align:center;">
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffe5ec;">support</span>
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #ffb3c6;">sales</span>
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #fb6f92;">tech</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #ffe5ec;">support</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #ffb3c6;">sales</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #fb6f92;">tech</span>
           </p>
         </td>
       </tr>
@@ -2760,7 +2760,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;",
                           },
                           "content": "support",
                           "tagName": "span",
@@ -2768,7 +2768,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
                           },
                           "content": "sales",
                           "tagName": "span",
@@ -2776,7 +2776,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
                         {
                           "attributes": {
                             "class": "mjbc__legend",
-                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;",
+                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;",
                           },
                           "content": "tech",
                           "tagName": "span",
@@ -2811,9 +2811,9 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
       <tr>
         <td style="padding:0;">
           <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;">support</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>
+            <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;">tech</span>
           </p>
         </td>
       </tr>
@@ -3501,9 +3501,9 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
               <tr>
                 <td style="padding:0;">
                   <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;">support</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;">tech</span>
                   </p>
                 </td>
               </tr>
@@ -3745,9 +3745,9 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
               <tr>
                 <td style="padding:0;">
                   <p style="margin:0;padding:0;max-width:212px;line-height:20px;text-align:center;">
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;">support</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>
+                    <span class="mjbc1__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;">tech</span>
                   </p>
                 </td>
               </tr>
@@ -3893,8 +3893,8 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
               <tr>
                 <td style="padding:0;">
                   <p style="margin:0;padding:0;max-width:242px;line-height:20px;text-align:center;">
-                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #95d5b2;">legal</span>
-                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:20px solid #52b788;">hr</span>
+                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #95d5b2;">legal</span>
+                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:20px solid #52b788;">hr</span>
                   </p>
                 </td>
               </tr>
@@ -4069,9 +4069,9 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
               <tr>
                 <td style="padding:0;">
                   <p style="margin:0;padding:0;max-width:392px;line-height:20px;text-align:center;">
-                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;">support</span>
-                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>
-                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;">tech</span>
+                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;">support</span>
+                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>
+                    <span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;">tech</span>
                   </p>
                 </td>
               </tr>
@@ -4641,7 +4641,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                         {
                                           "attributes": {
                                             "class": "mjbc__legend",
-                                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #95d5b2;",
+                                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #95d5b2;",
                                           },
                                           "content": "legal",
                                           "tagName": "span",
@@ -4649,7 +4649,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                         {
                                           "attributes": {
                                             "class": "mjbc__legend",
-                                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:32px solid #52b788;",
+                                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:32px solid #52b788;",
                                           },
                                           "content": "hr",
                                           "tagName": "span",
@@ -5344,7 +5344,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                         {
                                           "attributes": {
                                             "class": "mjbc__legend",
-                                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffe5ec;",
+                                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;",
                                           },
                                           "content": "support",
                                           "tagName": "span",
@@ -5352,7 +5352,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                         {
                                           "attributes": {
                                             "class": "mjbc__legend",
-                                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
                                           },
                                           "content": "sales",
                                           "tagName": "span",
@@ -5360,7 +5360,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                         {
                                           "attributes": {
                                             "class": "mjbc__legend",
-                                            "style": "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #fb6f92;",
+                                            "style": "padding:0 10px;height:20px;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;",
                                           },
                                           "content": "tech",
                                           "tagName": "span",
