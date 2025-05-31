@@ -24,8 +24,6 @@ interface Dataset {
     data: number[];
 }
 
-type BarChartLayout = "default" | "stacked";
-
 interface Attributes {
     uid?: string;
     "axis-color"?: string;
@@ -35,7 +33,8 @@ interface Attributes {
     "step-count"?: string;
     "show-values"?: string;
     "font-family"?: string;
-    layout?: BarChartLayout;
+    stacked?: string;
+    "align-legends"?: string;
 }
 
 type GlobalClasses = Record<string, Record<string, string>>;
@@ -54,9 +53,11 @@ interface InitialData {
     absoluteFilePath?: string | null;
 }
 
+const truthyValues = new Set(["", "true", "1"]);
+
 export default class MjBarChart extends BodyComponent {
     private readonly uid: string;
-    private readonly layout: BarChartLayout;
+    private readonly stacked: boolean;
     private readonly title: string;
     private readonly source: Source | undefined;
     private readonly colors: string[];
@@ -67,6 +68,7 @@ export default class MjBarChart extends BodyComponent {
     private readonly separatorWidth: number;
     private readonly stepCount: number;
     private readonly showValues: boolean;
+    private readonly alignLegends: boolean;
     private readonly datasets: Dataset[];
     private readonly higherValue: number;
     private readonly chartWidth: number;
@@ -82,7 +84,7 @@ export default class MjBarChart extends BodyComponent {
         this.title = title;
         this.source = source;
         this.uid = this.getAttribute("uid");
-        this.layout = this.getAttribute("layout");
+        this.stacked = truthyValues.has(this.getAttribute("stacked"));
         this.colors = series.map(({ color }) => color);
         this.dataLabels = series.map(({ label }) => label);
         this.axisColor = this.getAttribute("axis-color");
@@ -93,33 +95,32 @@ export default class MjBarChart extends BodyComponent {
             10,
         );
         this.stepCount = Number.parseInt(this.getAttribute("step-count"), 10);
-        this.showValues = this.getAttribute("show-values") === "true";
+        this.showValues = truthyValues.has(this.getAttribute("show-values"));
+        this.alignLegends = truthyValues.has(
+            this.getAttribute("align-legends"),
+        );
         this.datasets = datasets.map((label: string, idx: number) => ({
             label,
             data: series.map(({ data }) => data[idx]),
         }));
 
-        switch (this.layout) {
-            case "stacked": {
-                this.higherValue = Math.max(
-                    ...this.datasets.map(({ data }) =>
-                        data.reduce((a, b) => a + Math.max(b, 0), 0),
-                    ),
-                );
-                break;
-            }
-            default: {
-                this.higherValue = Math.max(
-                    0,
-                    ...series.reduce(
-                        (vs, { data }) => vs.concat(data),
-                        [] as number[],
-                    ),
-                );
-            }
+        if (this.stacked) {
+            this.higherValue = Math.max(
+                ...this.datasets.map(({ data }) =>
+                    data.reduce((a, b) => a + Math.max(b, 0), 0),
+                ),
+            );
+        } else {
+            this.higherValue = Math.max(
+                0,
+                ...series.reduce(
+                    (vs, { data }) => vs.concat(data),
+                    [] as number[],
+                ),
+            );
         }
 
-        const barCount = this.layout === "stacked" ? 1 : this.dataLabels.length;
+        const barCount = this.stacked ? 1 : this.dataLabels.length;
         this.chartWidth =
             2 +
             this.separatorWidth * (this.dataLabels.length + 1) +
@@ -137,25 +138,27 @@ export default class MjBarChart extends BodyComponent {
 
     static readonly allowedAttributes = {
         uid: "string",
-        layout: "enum(default,stacked)",
+        stacked: "boolean",
         "axis-color": "color",
         height: "integer",
         "bar-width": "integer",
         "separator-width": "integer",
         "step-count": "enum(0,2,3,4,5,6,7,8)",
         "show-values": "boolean",
+        "align-legends": "boolean",
         "font-family": "string",
     };
 
     static override readonly defaultAttributes = {
         uid: "",
-        layout: "default",
+        stacked: "false",
         "axis-color": "#d4d4d4",
         height: "200",
         "bar-width": "30",
         "separator-width": "30",
         "step-count": "5",
         "show-values": "true",
+        "align-legends": "false",
         "font-family": "inherit",
     };
 
@@ -341,7 +344,7 @@ export default class MjBarChart extends BodyComponent {
     private getChartBars(): JsonNode {
         let bars: JsonNode[] = [];
 
-        if (this.layout === "stacked") {
+        if (this.stacked) {
             bars = this.datasets.flatMap((_, dsi) => [
                 this.getStackedChartBar(dsi),
                 this.getChartBarSeparator(),
@@ -380,7 +383,7 @@ export default class MjBarChart extends BodyComponent {
     }
 
     private getDatasetLabel(index: number): JsonNode {
-        const barCount = this.layout === "stacked" ? 1 : this.dataLabels.length;
+        const barCount = this.stacked ? 1 : this.dataLabels.length;
         const width = `${this.barWidth * barCount + this.separatorWidth}px`;
         const style = `${this.styles("chartLabel")}min-width:${width};max-width:${width};`;
 
@@ -443,6 +446,28 @@ export default class MjBarChart extends BodyComponent {
 
     private getChartLegend(): JsonNode {
         const legends = this.dataLabels.map((_, i) => this.getLegend(i));
+        const children: JsonNode[] = [];
+
+        if (this.alignLegends) {
+            legends.map((legend) => {
+                const line = {
+                    tagName: "p",
+                    attributes: {
+                        style: `${this.styles("chartLegend")}text-align:left;`,
+                    },
+                    children: [legend],
+                };
+                children.push(line);
+            });
+        } else {
+            children.push({
+                tagName: "p",
+                attributes: {
+                    style: `${this.styles("chartLegend")}text-align:center;`,
+                },
+                children: legends,
+            });
+        }
 
         return {
             tagName: "tr",
@@ -474,17 +499,7 @@ export default class MjBarChart extends BodyComponent {
                                         {
                                             tagName: "td",
                                             attributes: { style: "padding:0;" },
-                                            children: [
-                                                {
-                                                    tagName: "p",
-                                                    attributes: {
-                                                        style: this.styles(
-                                                            "chartLegend",
-                                                        ),
-                                                    },
-                                                    children: legends,
-                                                },
-                                            ],
+                                            children,
                                         },
                                     ],
                                 },
@@ -632,7 +647,6 @@ export default class MjBarChart extends BodyComponent {
                 padding: "0",
                 "max-width": `${this.chartWidth}px`,
                 "line-height": "20px",
-                "text-align": "center",
             },
             legend: {
                 padding: "0 10px",
