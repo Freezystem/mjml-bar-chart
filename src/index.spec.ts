@@ -126,18 +126,7 @@ describe("mjml-bar-chart", () => {
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
-            expect(html).toBe(
-                '<td style="padding:0">\n' +
-                    '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:127px;background-color:#fb6f92;"></td>\n' +
-                    "    </tr>\n" +
-                    "  </table>\n" +
-                    "</td>",
-            );
+            expect(html).toMatchSnapshot();
         });
 
         it("should render chart bar with maximum params", () => {
@@ -153,18 +142,7 @@ describe("mjml-bar-chart", () => {
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
-            expect(html).toBe(
-                '<td style="padding:0">\n' +
-                    '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>\n' +
-                    "    </tr>\n" +
-                    "  </table>\n" +
-                    "</td>",
-            );
+            expect(html).toMatchSnapshot();
         });
     });
 
@@ -174,24 +152,7 @@ describe("mjml-bar-chart", () => {
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
-            expect(html).toBe(
-                '<td style="padding:0">\n' +
-                    '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">126</td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:29px;background-color:#ffe5ec;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:105px;background-color:#ffb3c6;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:67px;background-color:#fb6f92;"></td>\n' +
-                    "    </tr>\n" +
-                    "  </table>\n" +
-                    "</td>",
-            );
+            expect(html).toMatchSnapshot();
         });
 
         it("should render chart bar with maximum params", () => {
@@ -208,24 +169,7 @@ describe("mjml-bar-chart", () => {
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
-            expect(html).toBe(
-                '<td style="padding:0">\n' +
-                    '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:57px;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:26px;background-color:#ffe5ec;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:11px;background-color:#ffb3c6;"></td>\n' +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    '      <td style="padding:0;height:22px;background-color:#fb6f92;"></td>\n' +
-                    "    </tr>\n" +
-                    "  </table>\n" +
-                    "</td>",
-            );
+            expect(html).toMatchSnapshot();
         });
     });
 

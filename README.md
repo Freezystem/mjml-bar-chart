@@ -94,7 +94,7 @@ The `<mj-bar-chart>` content must be a valid JSON string with the following stru
 }
 ```
 
-If you're using TypeScript you can import the `Chart` interface to validate your object.
+If you're using TypeScript you can import the `Chart` interface to validate your data structure.
 
 ```ts
 import type { Chart } from "mjml-bar-chart";
@@ -106,18 +106,19 @@ const chart: Chart = {...}
 
 All the following attributes are optional
 
-| attribute         | coerced type | default value | description                                                                                  |
-|:------------------|:------------:|:-------------:|:---------------------------------------------------------------------------------------------|
-| `uid`             |   `string`   |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
-| `stacked`         |  `boolean`   |   `"false"`   | Whether to stack dataset values in a single column                                           |
-| `font-family`     |   `string`   |  `"inherit"`  | Font family to apply to every text element. Can also be set from `<mj-all>` markup           |
-| `axis-color`      |   `string`   |  `"#d4d4d4"`  | CSS color of axis and scale numbers                                                          |
-| `height`          |   `number`   |    `"200"`    | Chart height in pixel                                                                        |
-| `bar-width`       |   `number`   |    `"30"`     | Bar width in pixel                                                                           |
-| `separator-width` |   `number`   |    `"30"`     | Datasets separator width in pixel                                                            |
-| `step-count`      |   `number`   |     `"5"`     | Step number on the chart scale, below 2 no steps will be displayed                           |
-| `show-values`     |  `boolean`   |   `"true"`    | Whether it should display values above each bar                                              |
-| `align-legends`   |  `boolean`   |   `"false"`   | Whether it should vertically align legend labels                                             |
+| attribute         | coerced type | default value | description                                                                                                                 |
+|:------------------|:------------:|:-------------:|:----------------------------------------------------------------------------------------------------------------------------|
+| `uid`             |   `string`   |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email                                |
+| `stacked`         |  `boolean`   |   `"false"`   | Whether to stack dataset values in a single column                                                                          |
+| `font-family`     |   `string`   |  `"inherit"`  | Font family to apply to every text element. Can also be set from `<mj-all>` markup                                          |
+| `axis-color`      |   `string`   |  `"#d4d4d4"`  | CSS color of axis and scale numbers                                                                                         |
+| `height`          |   `number`   |    `"200"`    | Chart height in pixel                                                                                                       |
+| `bar-width`       |   `number`   |    `"30"`     | Bar width in pixel                                                                                                          |
+| `separator-width` |   `number`   |    `"30"`     | Datasets separator width in pixel                                                                                           |
+| `step-count`      |   `number`   |     `"5"`     | Step number on the chart scale, below 2 no steps will be displayed                                                          |
+| `show-values`     |  `boolean`   |   `"true"`    | Whether it should display values above each bar                                                                             |
+| `align-legends`   |  `boolean`   |   `"false"`   | Whether it should vertically align legend labels                                                                            |
+| `max-width`       |   `number`   |    `"600"`    | The max width the chart should take. <br/>If it overflows `bar-width` and `separator-width` are dynamically computed to fit |
 
 ### Styling through CSS classes
 
@@ -134,7 +135,7 @@ These are all the generated classes that you can use:
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
 
-If you have multiple charts in the same email, you can pass an unique identifier to each one to be able to apply different styles.  
+If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
 Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
 
 For example:

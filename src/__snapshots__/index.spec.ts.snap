@@ -20,7 +20,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
               "children": [
                 {
                   "attributes": {
-                    "style": "width:266px;border-collapse:collapse;",
+                    "style": "width:290px;border-collapse:collapse;",
                   },
                   "children": [
                     {
@@ -79,7 +79,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:227px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:227px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -118,7 +118,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:16px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -163,7 +163,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:141px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:141px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -202,7 +202,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:200px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:200px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -247,7 +247,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:55px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:55px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -286,7 +286,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:138px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:138px;",
                                       },
                                       "content": "",
                                       "tagName": "td",
@@ -400,7 +400,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
               "children": [
                 {
                   "attributes": {
-                    "style": "border-collapse:collapse;max-width:266px;margin:0 auto;",
+                    "style": "border-collapse:collapse;max-width:290px;margin:0 auto;",
                   },
                   "children": [
                     {
@@ -423,7 +423,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 1`]
                           "children": [
                             {
                               "attributes": {
-                                "style": "margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;",
+                                "style": "margin:0;padding:0;max-width:290px;line-height:20px;text-align:center;",
                               },
                               "children": [
                                 {
@@ -473,7 +473,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
   <table style="border-collapse:collapse;">
     <tr>
       <td style="padding:0">
-        <table style="width:266px;border-collapse:collapse;">
+        <table style="width:290px;border-collapse:collapse;">
           <tr>
             <td class="mjbc__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Some Stats</td>
           </tr>
@@ -488,7 +488,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:227px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:227px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:39px;background-color:#95d5b2;"></td>
@@ -498,7 +498,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:16px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:250px;background-color:#52b788;"></td>
@@ -509,7 +509,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:141px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:141px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:125px;background-color:#95d5b2;"></td>
@@ -519,7 +519,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:200px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:200px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:66px;background-color:#52b788;"></td>
@@ -530,7 +530,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:55px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:55px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:211px;background-color:#95d5b2;"></td>
@@ -540,7 +540,7 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:32px;max-width:32px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:138px;"></td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:138px;"></td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:128px;background-color:#52b788;"></td>
@@ -567,13 +567,13 @@ exports[`mjml-bar-chart getChart should render the chart with maximum params 2`]
     </tr>
     <tr>
       <td style="padding:0;">
-        <table style="border-collapse:collapse;max-width:266px;margin:0 auto;">
+        <table style="border-collapse:collapse;max-width:290px;margin:0 auto;">
           <tr>
             <td style="padding:0;height:10px;"></td>
           </tr>
           <tr>
             <td style="padding:0;">
-              <p style="margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;">
+              <p style="margin:0;padding:0;max-width:290px;line-height:20px;text-align:center;">
                 <span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:32px solid #95d5b2;">legal</span>
                 <span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:32px solid #52b788;">hr</span>
               </p>
@@ -688,7 +688,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;",
                                       },
                                       "content": "33",
                                       "tagName": "td",
@@ -727,7 +727,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;",
                                       },
                                       "content": "14",
                                       "tagName": "td",
@@ -766,7 +766,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;",
                                       },
                                       "content": "27",
                                       "tagName": "td",
@@ -811,7 +811,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;",
                                       },
                                       "content": "18",
                                       "tagName": "td",
@@ -850,7 +850,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;",
                                       },
                                       "content": "66",
                                       "tagName": "td",
@@ -889,7 +889,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;",
                                       },
                                       "content": "42",
                                       "tagName": "td",
@@ -934,7 +934,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;",
                                       },
                                       "content": "0",
                                       "tagName": "td",
@@ -973,7 +973,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;",
                                       },
                                       "content": "15",
                                       "tagName": "td",
@@ -1012,7 +1012,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 1`]
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;",
+                                        "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;",
                                       },
                                       "content": "21",
                                       "tagName": "td",
@@ -1227,7 +1227,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;">33</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:100px;background-color:#ffe5ec;"></td>
@@ -1237,7 +1237,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;">14</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:42px;background-color:#ffb3c6;"></td>
@@ -1247,7 +1247,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;">27</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:82px;background-color:#fb6f92;"></td>
@@ -1258,7 +1258,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;">18</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:55px;background-color:#ffe5ec;"></td>
@@ -1268,7 +1268,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:200px;background-color:#ffb3c6;"></td>
@@ -1278,7 +1278,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;">42</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
@@ -1289,7 +1289,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;">0</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;">0</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -1299,7 +1299,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;">15</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:45px;background-color:#ffb3c6;"></td>
@@ -1309,7 +1309,7 @@ exports[`mjml-bar-chart getChart should render the chart with minimum params 2`]
             <td style="padding:0">
               <table style="padding:0;min-width:30px;max-width:30px;">
                 <tr>
-                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td>
+                  <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;">21</td>
                 </tr>
                 <tr>
                   <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
@@ -1371,7 +1371,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 
           "children": [
             {
               "attributes": {
-                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;",
+                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:95px;",
               },
               "content": "",
               "tagName": "td",
@@ -1398,6 +1398,19 @@ exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 
 }
 `;
 
+exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 2`] = `
+"<td style="padding:0">
+  <table style="padding:0;min-width:20px;max-width:20px;">
+    <tr>
+      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:95px;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>
+    </tr>
+  </table>
+</td>"
+`;
+
 exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 1`] = `
 {
   "attributes": {
@@ -1413,7 +1426,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 
           "children": [
             {
               "attributes": {
-                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;",
               },
               "content": "42",
               "tagName": "td",
@@ -1438,6 +1451,19 @@ exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 
   ],
   "tagName": "td",
 }
+`;
+
+exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 2`] = `
+"<td style="padding:0">
+  <table style="padding:0;min-width:30px;max-width:30px;">
+    <tr>
+      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;">42</td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
+    </tr>
+  </table>
+</td>"
 `;
 
 exports[`mjml-bar-chart getChartBars should render chart bars with maximum params 1`] = `
@@ -1475,7 +1501,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:66px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:66px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1514,7 +1540,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:95px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1553,7 +1579,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:75px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:75px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1598,7 +1624,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:89px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1637,7 +1663,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1676,7 +1702,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:52px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:52px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1721,7 +1747,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:116px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1760,7 +1786,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:93px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:93px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1799,7 +1825,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:84px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:84px;",
                               },
                               "content": "",
                               "tagName": "td",
@@ -1853,7 +1879,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:66px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:66px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:50px;background-color:#ffe5ec;"></td>
@@ -1863,7 +1889,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:95px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>
@@ -1873,7 +1899,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:75px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:75px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:41px;background-color:#fb6f92;"></td>
@@ -1884,7 +1910,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:89px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:27px;background-color:#ffe5ec;"></td>
@@ -1894,7 +1920,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:100px;background-color:#ffb3c6;"></td>
@@ -1904,7 +1930,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:52px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:52px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
@@ -1915,7 +1941,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:116px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -1925,7 +1951,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:93px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:93px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:23px;background-color:#ffb3c6;"></td>
@@ -1935,7 +1961,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
         <td style="padding:0">
           <table style="padding:0;min-width:20px;max-width:20px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:84px;"></td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:84px;"></td>
             </tr>
             <tr>
               <td style="padding:0;height:32px;background-color:#fb6f92;"></td>
@@ -1984,7 +2010,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;",
                               },
                               "content": "33",
                               "tagName": "td",
@@ -2023,7 +2049,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;",
                               },
                               "content": "14",
                               "tagName": "td",
@@ -2062,7 +2088,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;",
                               },
                               "content": "27",
                               "tagName": "td",
@@ -2107,7 +2133,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;",
                               },
                               "content": "18",
                               "tagName": "td",
@@ -2146,7 +2172,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;",
                               },
                               "content": "66",
                               "tagName": "td",
@@ -2185,7 +2211,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;",
                               },
                               "content": "42",
                               "tagName": "td",
@@ -2230,7 +2256,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;",
                               },
                               "content": "0",
                               "tagName": "td",
@@ -2269,7 +2295,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;",
                               },
                               "content": "15",
                               "tagName": "td",
@@ -2308,7 +2334,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
                           "children": [
                             {
                               "attributes": {
-                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;",
+                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;",
                               },
                               "content": "21",
                               "tagName": "td",
@@ -2362,7 +2388,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;">33</td>
             </tr>
             <tr>
               <td style="padding:0;height:100px;background-color:#ffe5ec;"></td>
@@ -2372,7 +2398,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;">14</td>
             </tr>
             <tr>
               <td style="padding:0;height:42px;background-color:#ffb3c6;"></td>
@@ -2382,7 +2408,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;">27</td>
             </tr>
             <tr>
               <td style="padding:0;height:82px;background-color:#fb6f92;"></td>
@@ -2393,7 +2419,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;">18</td>
             </tr>
             <tr>
               <td style="padding:0;height:55px;background-color:#ffe5ec;"></td>
@@ -2403,7 +2429,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
             </tr>
             <tr>
               <td style="padding:0;height:200px;background-color:#ffb3c6;"></td>
@@ -2413,7 +2439,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;">42</td>
             </tr>
             <tr>
               <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
@@ -2424,7 +2450,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;">0</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;">0</td>
             </tr>
             <tr>
               <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -2434,7 +2460,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;">15</td>
             </tr>
             <tr>
               <td style="padding:0;height:45px;background-color:#ffb3c6;"></td>
@@ -2444,7 +2470,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
         <td style="padding:0">
           <table style="padding:0;min-width:30px;max-width:30px;">
             <tr>
-              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td>
+              <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;">21</td>
             </tr>
             <tr>
               <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
@@ -3162,7 +3188,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum 
           "children": [
             {
               "attributes": {
-                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:57px;",
+                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;",
               },
               "content": "",
               "tagName": "td",
@@ -3211,6 +3237,25 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum 
 }
 `;
 
+exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum params 2`] = `
+"<td style="padding:0">
+  <table style="padding:0;min-width:20px;max-width:20px;">
+    <tr>
+      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:26px;background-color:#ffe5ec;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:11px;background-color:#ffb3c6;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:22px;background-color:#fb6f92;"></td>
+    </tr>
+  </table>
+</td>"
+`;
+
 exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum params 1`] = `
 {
   "attributes": {
@@ -3226,7 +3271,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum 
           "children": [
             {
               "attributes": {
-                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;",
               },
               "content": "126",
               "tagName": "td",
@@ -3273,6 +3318,25 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum 
   ],
   "tagName": "td",
 }
+`;
+
+exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum params 2`] = `
+"<td style="padding:0">
+  <table style="padding:0;min-width:30px;max-width:30px;">
+    <tr>
+      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:29px;background-color:#ffe5ec;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:105px;background-color:#ffb3c6;"></td>
+    </tr>
+    <tr>
+      <td style="padding:0;height:67px;background-color:#fb6f92;"></td>
+    </tr>
+  </table>
+</td>"
 `;
 
 exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
@@ -3360,7 +3424,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td
                    style="font-size:0px;word-break:break-word;"
                 >
-                  <table class="mjbc" style="border-collapse:collapse;margin:0 auto;">
+                  <table class="mjbc" style="max-width:392px;min-width:392px;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;vertical-align:top;">
       <table style="border-collapse:collapse;">
@@ -3405,7 +3469,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;">33</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:100px;background-color:#ffe5ec;"></td>
@@ -3415,7 +3479,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;">14</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:42px;background-color:#ffb3c6;"></td>
@@ -3425,7 +3489,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;">27</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:82px;background-color:#fb6f92;"></td>
@@ -3436,7 +3500,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;">18</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:55px;background-color:#ffe5ec;"></td>
@@ -3446,7 +3510,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:200px;background-color:#ffb3c6;"></td>
@@ -3456,7 +3520,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;">42</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
@@ -3467,7 +3531,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;">0</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;">0</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -3477,7 +3541,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;">15</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:45px;background-color:#ffb3c6;"></td>
@@ -3487,7 +3551,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;">21</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
@@ -3646,7 +3710,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
                 <td
                    style="font-size:0px;word-break:break-word;"
                 >
-                  <table class="mjbc1" style="border-collapse:collapse;margin:0 auto;">
+                  <table class="mjbc1" style="max-width:212px;min-width:212px;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;vertical-align:top;">
       <table style="border-collapse:collapse;">
@@ -3691,7 +3755,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:99px;">74</td>
+                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:99px;">74</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:52px;background-color:#ffe5ec;"></td>
@@ -3708,7 +3772,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">126</td>
+                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:29px;background-color:#ffe5ec;"></td>
@@ -3725,7 +3789,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:159px;">36</td>
+                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">36</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -3810,13 +3874,13 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
 `;
 
 exports[`mjml-bar-chart render should render the bar chart as HTML with maximum params 1`] = `
-"<table class="mjbc" style="border-collapse:collapse;margin:0 auto;">
+"<table class="mjbc" style="max-width:282px;min-width:282px;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;">
       <table style="border-collapse:collapse;">
         <tr>
           <td style="padding:0">
-            <table style="width:242px;border-collapse:collapse;">
+            <table style="width:282px;border-collapse:collapse;">
               <tr>
                 <td class="mjbc__title" style="padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Some Stats</td>
               </tr>
@@ -3831,7 +3895,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:100px;">12</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:100px;">12</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:16px;background-color:#95d5b2;"></td>
@@ -3841,7 +3905,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">76</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;">76</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:100px;background-color:#52b788;"></td>
@@ -3852,7 +3916,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:66px;">38</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:66px;">38</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:50px;background-color:#95d5b2;"></td>
@@ -3862,7 +3926,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:90px;">20</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:90px;">20</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:26px;background-color:#52b788;"></td>
@@ -3873,7 +3937,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:32px;">64</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:32px;">64</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:84px;background-color:#95d5b2;"></td>
@@ -3883,7 +3947,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:20px;max-width:20px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:65px;">39</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:65px;">39</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:51px;background-color:#52b788;"></td>
@@ -3910,13 +3974,13 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
         </tr>
         <tr>
           <td style="padding:0;">
-            <table style="border-collapse:collapse;max-width:242px;margin:0 auto;">
+            <table style="border-collapse:collapse;max-width:282px;margin:0 auto;">
               <tr>
                 <td style="padding:0;height:10px;"></td>
               </tr>
               <tr>
                 <td style="padding:0;">
-                  <p style="margin:0;padding:0;max-width:242px;line-height:20px;text-align:center;">
+                  <p style="margin:0;padding:0;max-width:282px;line-height:20px;text-align:center;">
                     <span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #95d5b2;">legal</span>
                     <span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #52b788;">hr</span>
                   </p>
@@ -3932,7 +3996,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
 `;
 
 exports[`mjml-bar-chart render should render the bar chart as HTML with minimum params 1`] = `
-"<table class="mjbc" style="border-collapse:collapse;margin:0 auto;">
+"<table class="mjbc" style="max-width:392px;min-width:392px;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td style="padding:0;vertical-align:top;">
       <table style="border-collapse:collapse;">
@@ -3977,7 +4041,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;">33</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;">33</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:100px;background-color:#ffe5ec;"></td>
@@ -3987,7 +4051,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;">14</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;">14</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:42px;background-color:#ffb3c6;"></td>
@@ -3997,7 +4061,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;">27</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;">27</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:82px;background-color:#fb6f92;"></td>
@@ -4008,7 +4072,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;">18</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;">18</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:55px;background-color:#ffe5ec;"></td>
@@ -4018,7 +4082,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">66</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:200px;background-color:#ffb3c6;"></td>
@@ -4028,7 +4092,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;">42</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:127px;background-color:#fb6f92;"></td>
@@ -4039,7 +4103,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;">0</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;">0</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:0px;background-color:#ffe5ec;"></td>
@@ -4049,7 +4113,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;">15</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;">15</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:45px;background-color:#ffb3c6;"></td>
@@ -4059,7 +4123,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
                 <td style="padding:0">
                   <table style="padding:0;min-width:30px;max-width:30px;">
                     <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;">21</td>
+                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;">21</td>
                     </tr>
                     <tr>
                       <td style="padding:0;height:64px;background-color:#fb6f92;"></td>
@@ -4112,7 +4176,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
 {
   "attributes": {
     "class": "mjbc",
-    "style": "border-collapse:collapse;margin:0 auto;",
+    "style": "max-width:290px;min-width:290px;border-collapse:collapse;margin:0 auto;",
   },
   "children": [
     {
@@ -4256,7 +4320,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                       "children": [
                         {
                           "attributes": {
-                            "style": "width:266px;border-collapse:collapse;",
+                            "style": "width:290px;border-collapse:collapse;",
                           },
                           "children": [
                             {
@@ -4315,7 +4379,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:227px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:227px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4354,7 +4418,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:16px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4399,7 +4463,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:141px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:141px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4438,7 +4502,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:200px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:200px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4483,7 +4547,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:55px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:55px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4522,7 +4586,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:138px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:32px;max-width:32px;height:138px;",
                                               },
                                               "content": "",
                                               "tagName": "td",
@@ -4636,7 +4700,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                       "children": [
                         {
                           "attributes": {
-                            "style": "border-collapse:collapse;max-width:266px;margin:0 auto;",
+                            "style": "border-collapse:collapse;max-width:290px;margin:0 auto;",
                           },
                           "children": [
                             {
@@ -4659,7 +4723,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
                                   "children": [
                                     {
                                       "attributes": {
-                                        "style": "margin:0;padding:0;max-width:266px;line-height:20px;text-align:center;",
+                                        "style": "margin:0;padding:0;max-width:290px;line-height:20px;text-align:center;",
                                       },
                                       "children": [
                                         {
@@ -4714,7 +4778,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
 {
   "attributes": {
     "class": "mjbc",
-    "style": "border-collapse:collapse;margin:0 auto;",
+    "style": "max-width:392px;min-width:392px;border-collapse:collapse;margin:0 auto;",
   },
   "children": [
     {
@@ -4901,7 +4965,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:116px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:116px;",
                                               },
                                               "content": "33",
                                               "tagName": "td",
@@ -4940,7 +5004,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:174px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:174px;",
                                               },
                                               "content": "14",
                                               "tagName": "td",
@@ -4979,7 +5043,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:134px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:134px;",
                                               },
                                               "content": "27",
                                               "tagName": "td",
@@ -5024,7 +5088,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:161px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:161px;",
                                               },
                                               "content": "18",
                                               "tagName": "td",
@@ -5063,7 +5127,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;",
                                               },
                                               "content": "66",
                                               "tagName": "td",
@@ -5102,7 +5166,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:89px;",
                                               },
                                               "content": "42",
                                               "tagName": "td",
@@ -5147,7 +5211,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:216px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:216px;",
                                               },
                                               "content": "0",
                                               "tagName": "td",
@@ -5186,7 +5250,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:171px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:171px;",
                                               },
                                               "content": "15",
                                               "tagName": "td",
@@ -5225,7 +5289,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with mini
                                           "children": [
                                             {
                                               "attributes": {
-                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:152px;",
+                                                "style": "padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:152px;",
                                               },
                                               "content": "21",
                                               "tagName": "td",
