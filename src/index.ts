@@ -101,18 +101,17 @@ export default class MjBarChart extends BodyComponent {
         );
         this.datasets = datasets.map((label: string, idx: number) => ({
             label,
-            data: series.map(({ data }) => data[idx]),
+            data: series.map(({ data }) => Math.max(data[idx], 0)),
         }));
 
         if (this.stacked) {
             this.higherValue = Math.max(
                 ...this.datasets.map(({ data }) =>
-                    data.reduce((a, b) => a + Math.max(b, 0), 0),
+                    data.reduce((a, b) => a + b, 0),
                 ),
             );
         } else {
             this.higherValue = Math.max(
-                0,
                 ...series.reduce(
                     (vs, { data }) => vs.concat(data),
                     [] as number[],
@@ -234,7 +233,7 @@ export default class MjBarChart extends BodyComponent {
     private getChartBar(datasetIndex: number, dataIndex: number): JsonNode {
         const value = this.datasets[datasetIndex].data[dataIndex];
         const plainPartHeight = Math.round(
-            (Math.max(value, 0) / this.higherValue) * this.chartHeight,
+            (value / this.higherValue) * this.chartHeight,
         );
         const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
@@ -276,9 +275,9 @@ export default class MjBarChart extends BodyComponent {
 
     private getStackedChartBar(datasetIndex: number): JsonNode {
         const data = this.datasets[datasetIndex].data;
-        const sum = data.reduce((a, b) => a + Math.max(b, 0), 0);
+        const sum = data.reduce((a, b) => a + b, 0);
         const plainPartHeight = Math.round(
-            (Math.max(sum, 0) / this.higherValue) * this.chartHeight,
+            (sum / this.higherValue) * this.chartHeight,
         );
         const emptyPartHeight = this.chartHeight - plainPartHeight + 16;
 
