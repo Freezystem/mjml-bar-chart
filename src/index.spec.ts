@@ -62,7 +62,7 @@ describe("mjml-bar-chart", () => {
     });
     const stackedBarChart = new MjBarChart({
         content: JSON.stringify(chart1),
-        attributes: { layout: "stacked" },
+        attributes: { stacked: "true" },
     });
 
     describe("mjml markup", () => {
@@ -95,7 +95,7 @@ describe("mjml-bar-chart", () => {
 				<mj-body>
 				  <mj-section>
 					<mj-column>
-					  <mj-bar-chart uid="1" layout="stacked">${JSON.stringify(chart1)}</mj-bar-chart>
+					  <mj-bar-chart uid="1" stacked align-legends>${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -198,7 +198,7 @@ describe("mjml-bar-chart", () => {
             const stackedBarChart = new MjBarChart({
                 content: JSON.stringify(chart1),
                 attributes: {
-                    layout: "stacked",
+                    stacked: "true",
                     height: "100",
                     "show-values": "false",
                     "bar-width": "20",
@@ -393,6 +393,7 @@ describe("mjml-bar-chart", () => {
                 content: JSON.stringify(chart1),
                 attributes: {
                     "bar-width": "20",
+                    "align-legends": "true",
                 },
             });
             const json = barChart["getChartLegend"]();

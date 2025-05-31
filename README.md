@@ -109,14 +109,15 @@ All the following attributes are optional
 | attribute         | coerced type | default value | description                                                                                  |
 |:------------------|:------------:|:-------------:|:---------------------------------------------------------------------------------------------|
 | `uid`             |   `string`   |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email |
-| `layout`          |   `string`   |  `"default"`  | Layout to render, can be either "stacked" or "default"                                       |
+| `stacked`         |  `boolean`   |   `"false"`   | Whether to stack dataset values in a single column                                           |
 | `font-family`     |   `string`   |  `"inherit"`  | Font family to apply to every text element. Can also be set from `<mj-all>` markup           |
 | `axis-color`      |   `string`   |  `"#d4d4d4"`  | CSS color of axis and scale numbers                                                          |
 | `height`          |   `number`   |    `"200"`    | Chart height in pixel                                                                        |
 | `bar-width`       |   `number`   |    `"30"`     | Bar width in pixel                                                                           |
 | `separator-width` |   `number`   |    `"30"`     | Datasets separator width in pixel                                                            |
 | `step-count`      |   `number`   |     `"5"`     | Step number on the chart scale, below 2 no steps will be displayed                           |
-| `show-values`     |  `boolean`   |   `"true"`    | Whether or not it should display values above each bar                                       |
+| `show-values`     |  `boolean`   |   `"true"`    | Whether it should display values above each bar                                              |
+| `align-legends`   |  `boolean`   |   `"false"`   | Whether it should vertically align legend labels                                             |
 
 ### Styling through CSS classes
 
@@ -149,7 +150,7 @@ For example:
     <mj-section>
       <mj-column>
         <mj-bar-chart uid="1">{{ jsonChart1 }}</mj-bar-chart>
-        <mj-bar-chart uid="2">{{ jsonChart2 }}</mj-bar-chart>
+        <mj-bar-chart uid="2" stacked align-legends>{{ jsonChart2 }}</mj-bar-chart>
       </mj-column>
     </mj-section>
   </mj-body>
