@@ -138,15 +138,16 @@ export default class MjBarChart extends BodyComponent {
 
     static readonly allowedAttributes = {
         uid: "string",
-        stacked: "boolean",
         "axis-color": "color",
         height: "integer",
         "bar-width": "integer",
         "separator-width": "integer",
         "step-count": "enum(0,2,3,4,5,6,7,8)",
-        "show-values": "boolean",
-        "align-legends": "boolean",
         "font-family": "string",
+        // these last 3 should be booleans, but it breaks mjml-validator when no value is passed
+        stacked: "string",
+        "show-values": "string",
+        "align-legends": "string",
     };
 
     static override readonly defaultAttributes = {
