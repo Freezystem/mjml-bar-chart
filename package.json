@@ -39,7 +39,7 @@
 		"prebuild": "rm -rf build",
 		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
 		"test": "jest",
-		"test:coverage": "jest --workerThreads --coverage",
+		"test:coverage": "rm -rf coverage && jest --workerThreads --coverage",
 		"test:snap": "jest --updateSnapshot",
 		"deps": "ncu -i --format group --install always --peer",
 		"postdeps": "npm audit fix",
@@ -77,7 +77,6 @@
 			"text",
 			"text-summary",
 			"json-summary",
-			"html-spa",
 			"lcov"
 		],
 		"coverageThreshold": {

@@ -60,20 +60,42 @@ describe("mjml-bar-chart", () => {
     const barChart = new MjBarChart({
         content: JSON.stringify(chart1),
     });
+    const stackedBarChart = new MjBarChart({
+        content: JSON.stringify(chart1),
+        attributes: { layout: "stacked" },
+    });
 
     describe("mjml markup", () => {
-        it("should render the bar chart", () => {
+        it("should render the default bar chart", () => {
+            const mjml = `
+			  <mjml>
+				<mj-body>
+				  <mj-section>
+					<mj-column>
+					  <mj-bar-chart>${JSON.stringify(chart1)}</mj-bar-chart>
+					</mj-column>
+				  </mj-section>
+				</mj-body>
+			  </mjml>
+			`;
+
+            const html = toHtml(mjml);
+            expect(html).toMatchSnapshot();
+        });
+
+        it("should render the stacked bar chart", () => {
             const mjml = `
 			  <mjml>
 			    <mj-head>
                   <mj-attributes>
-                    <mj-class name="mjbc__title" color="#333"/>
+                    <mj-all font-family="Arial, sans-serif" />
+                    <mj-class name="mjbc1__source" text-decoration="underlined"/>
                   </mj-attributes>
                 </mj-head>
 				<mj-body>
 				  <mj-section>
 					<mj-column>
-					  <mj-bar-chart uid="1">${JSON.stringify(chart1)}</mj-bar-chart>
+					  <mj-bar-chart uid="1" layout="stacked">${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -93,65 +115,7 @@ describe("mjml-bar-chart", () => {
             const json = barChart["getChartTitle"]() as JsonNode;
             const html = jsonToXML(json);
 
-            expect(json).toStrictEqual({
-                tagName: "tr",
-                children: [
-                    {
-                        tagName: "td",
-                        attributes: {
-                            style: "padding:0",
-                        },
-                        children: [
-                            {
-                                tagName: "table",
-                                attributes: {
-                                    style: "width:100%;border-collapse:collapse;",
-                                },
-                                children: [
-                                    {
-                                        tagName: "tr",
-                                        children: [
-                                            {
-                                                tagName: "td",
-                                                attributes: {
-                                                    class: "mjbc__title",
-                                                    style: "padding:0;height:40px;font-weight:bold;text-align:center;font-size:20px;",
-                                                },
-                                                content:
-                                                    "Sum of Requests by Department",
-                                            },
-                                        ],
-                                    },
-                                    {
-                                        tagName: "tr",
-                                        children: [
-                                            {
-                                                tagName: "td",
-                                                attributes: {
-                                                    class: "mjbc__source",
-                                                    style: "padding:0;height:20px;text-align:center;font-size:12px;vertical-align:top;color:#3e3e3e;",
-                                                },
-                                                children: [
-                                                    {
-                                                        tagName: "a",
-                                                        attributes: {
-                                                            href: "#sources",
-                                                            target: "_blank",
-                                                            style: "color:inherit; text-decoration:none;",
-                                                        },
-                                                        content:
-                                                            "source: wikipedia ↗",
-                                                    },
-                                                ],
-                                            },
-                                        ],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            });
+            expect(json).toMatchSnapshot();
             expect(html).toMatchSnapshot();
         });
     });
@@ -166,7 +130,7 @@ describe("mjml-bar-chart", () => {
                 '<td style="padding:0">\n' +
                     '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
                     "    <tr>\n" +
-                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
+                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:89px;">42</td>\n' +
                     "    </tr>\n" +
                     "    <tr>\n" +
                     '      <td style="padding:0;height:127px;background-color:#fb6f92;"></td>\n' +
@@ -193,10 +157,71 @@ describe("mjml-bar-chart", () => {
                 '<td style="padding:0">\n' +
                     '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
                     "    <tr>\n" +
-                    '      <td style="padding:0;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
+                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:95px;"></td>\n' +
                     "    </tr>\n" +
                     "    <tr>\n" +
                     '      <td style="padding:0;height:21px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "  </table>\n" +
+                    "</td>",
+            );
+        });
+    });
+
+    describe("getStackedChartBar", () => {
+        it("should render chart bar with minimum params", () => {
+            const json = stackedBarChart["getStackedChartBar"](1);
+            const html = jsonToXML(json);
+
+            expect(json).toMatchSnapshot();
+            expect(html).toBe(
+                '<td style="padding:0">\n' +
+                    '  <table style="padding:0;min-width:30px;max-width:30px;">\n' +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:16px;">126</td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:29px;background-color:#ffe5ec;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:105px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:67px;background-color:#fb6f92;"></td>\n' +
+                    "    </tr>\n" +
+                    "  </table>\n" +
+                    "</td>",
+            );
+        });
+
+        it("should render chart bar with maximum params", () => {
+            const stackedBarChart = new MjBarChart({
+                content: JSON.stringify(chart1),
+                attributes: {
+                    layout: "stacked",
+                    height: "100",
+                    "show-values": "false",
+                    "bar-width": "20",
+                },
+            });
+            const json = stackedBarChart["getStackedChartBar"](0);
+            const html = jsonToXML(json);
+
+            expect(json).toMatchSnapshot();
+            expect(html).toBe(
+                '<td style="padding:0">\n' +
+                    '  <table style="padding:0;min-width:20px;max-width:20px;">\n' +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;height:57px;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:26px;background-color:#ffe5ec;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:11px;background-color:#ffb3c6;"></td>\n' +
+                    "    </tr>\n" +
+                    "    <tr>\n" +
+                    '      <td style="padding:0;height:22px;background-color:#fb6f92;"></td>\n' +
                     "    </tr>\n" +
                     "  </table>\n" +
                     "</td>",
@@ -278,12 +303,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "td",
                 attributes: {
                     class: "mjbc__label",
-                    style: "height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;",
+                    style: "height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;",
                 },
                 content: "March",
             });
             expect(html).toBe(
-                '<td class="mjbc__label" style="height:30px;padding:0;font-size:14px;text-align:center;overflow:hidden;min-width:90px;max-width:90px;">March</td>',
+                '<td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td>',
             );
         });
     });
@@ -321,12 +346,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "span",
                 attributes: {
                     class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;",
+                    style: "padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
                 },
                 content: "sales",
             });
             expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:30px solid #ffb3c6;">sales</span>',
+                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>',
             );
         });
 
@@ -344,12 +369,12 @@ describe("mjml-bar-chart", () => {
                 tagName: "span",
                 attributes: {
                     class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;",
+                    style: "padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;",
                 },
                 content: "tech",
             });
             expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-size:14px;border-left:40px solid #fb6f92;">tech</span>',
+                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;">tech</span>',
             );
         });
     });
