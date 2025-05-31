@@ -393,6 +393,7 @@ describe("mjml-bar-chart", () => {
                 content: JSON.stringify(chart1),
                 attributes: {
                     "bar-width": "20",
+                    "align-legends": "true",
                 },
             });
             const json = barChart["getChartLegend"]();
