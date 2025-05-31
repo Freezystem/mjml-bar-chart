@@ -89,7 +89,7 @@ describe("mjml-bar-chart", () => {
 			    <mj-head>
                   <mj-attributes>
                     <mj-all font-family="Arial, sans-serif" />
-                    <mj-class name="mjbc1__title" color="#333"/>
+                    <mj-class name="mjbc1__source" text-decoration="underlined"/>
                   </mj-attributes>
                 </mj-head>
 				<mj-body>
