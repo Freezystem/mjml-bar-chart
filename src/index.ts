@@ -73,6 +73,7 @@ export default class MjBarChart extends BodyComponent {
     private readonly alignLegends: boolean;
     private readonly datasets: Dataset[];
     private readonly higherValue: number;
+    private readonly maxWidth: number;
     private readonly chartWidth: number;
     private readonly globalClasses: GlobalClasses;
     private readonly fontFamily: string;
@@ -122,7 +123,7 @@ export default class MjBarChart extends BodyComponent {
             );
         }
 
-        const maxWidth = Number.parseInt(this.getAttribute("max-width"), 10);
+        this.maxWidth = Number.parseInt(this.getAttribute("max-width"), 10);
         const separatorCount = this.datasets.length + 1;
         const barCount =
             this.datasets.length * (this.stacked ? 1 : this.dataLabels.length);
@@ -132,13 +133,14 @@ export default class MjBarChart extends BodyComponent {
             this.separatorWidth * separatorCount +
             this.barWidth * barCount;
 
-        if (this.chartWidth > maxWidth) {
+        if (this.chartWidth > this.maxWidth) {
             this.stepCount = 0;
             this.showScale = false;
-            this.chartWidth = maxWidth;
+            this.chartWidth = this.maxWidth;
             this.barWidth = this.separatorWidth =
-                maxWidth / (separatorCount + barCount);
+                this.maxWidth / (separatorCount + barCount);
         }
+
         this.globalClasses = this.context?.globalData?.classes ?? {};
         this.fontFamily = this.getAttribute("font-family");
     }
@@ -188,7 +190,6 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "td",
                     attributes: {
-                        colspan: this.showScale ? "2" : undefined,
                         class: `mjbc${this.uid}__source`,
                         style: this.styles("chartSource"),
                     },
@@ -215,7 +216,6 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "td",
                     attributes: {
-                        colspan: this.showScale ? "2" : undefined,
                         class: `mjbc${this.uid}__title`,
                         style: this.styles("chartTitle"),
                     },
@@ -485,7 +485,6 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "td",
                     attributes: {
-                        colspan: this.showScale ? "2" : undefined,
                         style: "padding:10px 0 0 0;",
                     },
                     children,
@@ -558,11 +557,42 @@ export default class MjBarChart extends BodyComponent {
         };
     }
 
+    private getChart(): JsonNode<"tr"> {
+        const children: JsonNode<"td">[] = [];
+
+        if (this.showScale) children.push(this.getScale());
+        children.push(this.getChartBars());
+
+        return {
+            tagName: "tr",
+            children: [
+                {
+                    tagName: "td",
+                    children: [
+                        {
+                            tagName: "table",
+                            attributes: {
+                                style: "border-collapse:collapse;margin:0 auto;",
+                            },
+                            children: [
+                                {
+                                    tagName: "tr",
+                                    children,
+                                },
+                                this.getChartLabels(),
+                            ],
+                        },
+                    ],
+                },
+            ],
+        };
+    }
+
     override getStyles() {
         return {
             chartTitle: {
-                width: "100%",
-                "max-width": `${this.chartWidth}px`,
+                "min-width": "100%",
+                "max-width": "100%",
                 padding: "0",
                 height: "40px",
                 "font-weight": "bold",
@@ -572,7 +602,8 @@ export default class MjBarChart extends BodyComponent {
                 ...this.globalClasses[`mjbc${this.uid}__title`],
             },
             chartSource: {
-                width: "100%",
+                "min-width": "100%",
+                "max-width": "100%",
                 padding: "0",
                 height: "30px",
                 "text-align": "center",
@@ -598,8 +629,14 @@ export default class MjBarChart extends BodyComponent {
                 "max-width": `${this.barWidth}px`,
             },
             chart: {
-                "max-width": `${this.chartWidth}px`,
-                "min-width": `${this.chartWidth}px`,
+                "max-width":
+                    this.chartWidth < this.maxWidth
+                        ? "100%"
+                        : `${this.maxWidth}px`,
+                "min-width":
+                    this.chartWidth < this.maxWidth
+                        ? "100%"
+                        : `${this.maxWidth}px`,
                 "border-collapse": "collapse",
                 margin: "0 auto",
             },
@@ -639,6 +676,7 @@ export default class MjBarChart extends BodyComponent {
                 "max-width": `${this.chartWidth}px`,
                 "line-height": "20px",
                 height: "20px",
+                "min-width": "100%",
             },
             legend: {
                 display: "inline-block",
@@ -679,16 +717,7 @@ export default class MjBarChart extends BodyComponent {
         children.push(this.getChartTitle());
         if (this.source) children.push(this.getChartSource());
 
-        const chart: JsonNode<"tr"> = {
-            tagName: "tr",
-            children: [] as JsonNode<"td">[],
-        };
-
-        if (this.showScale) chart.children?.push(this.getScale());
-        chart.children?.push(this.getChartBars());
-
-        children.push(chart);
-        children.push(this.getChartLabels());
+        children.push(this.getChart());
         children.push(this.getChartLegend());
 
         return {
@@ -697,7 +726,7 @@ export default class MjBarChart extends BodyComponent {
                 class: `mjbc${this.uid}`,
                 style: this.styles("chart"),
             },
-            children: [{ tagName: "tr", children }],
+            children,
         };
     }
 

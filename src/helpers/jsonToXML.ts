@@ -14,9 +14,8 @@ const jsonToXML = (
         ? `\n${children.map((n) => jsonToXML(n, level + 1)).join("\n")}\n${indent}`
         : (content ?? "");
 
-    const stringAttrs = Object.keys(attributes || {}).reduce(
-        (acc, attr) =>
-            attributes?.[attr] ? `${acc} ${attr}="${attributes?.[attr]}"` : acc,
+    const stringAttrs = Object.keys(attributes ?? {}).reduce(
+        (acc, attr) => `${acc} ${attr}="${attributes?.[attr]}"`,
         "",
     );
     return `${indent}<${tagName}${stringAttrs}>${subNode}</${tagName}>`;

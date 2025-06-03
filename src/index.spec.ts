@@ -1,6 +1,6 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
-import jsonToXML, { type JsonNode } from "./helpers/jsonToXML";
+import jsonToXML from "./helpers/jsonToXML";
 import MjBarChart, { type Chart } from "./index";
 
 function toHtml(mjml: string): string {
@@ -20,22 +20,22 @@ describe("mjml-bar-chart", () => {
             url: "#sources",
             label: "source: wikipedia ↗",
         },
-        datasets: ["January", "February", "March"],
+        datasets: ["January", "February", "March", "April"],
         series: [
             {
                 label: "support",
                 color: "#ffe5ec",
-                data: [33, 18, -7],
+                data: [33, 18, -7, 42],
             },
             {
                 label: "sales",
                 color: "#ffb3c6",
-                data: [14, 66, 15],
+                data: [14, 66, 15, 18],
             },
             {
                 label: "tech",
                 color: "#fb6f92",
-                data: [27, 42, 21],
+                data: [27, 42, 21, 11],
             },
         ],
     };
@@ -72,7 +72,7 @@ describe("mjml-bar-chart", () => {
 				<mj-body>
 				  <mj-section>
 					<mj-column>
-					  <mj-bar-chart stacked align-legends>${JSON.stringify(chart1)}</mj-bar-chart>
+					  <mj-bar-chart>${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -80,7 +80,6 @@ describe("mjml-bar-chart", () => {
 			`;
 
             const html = toHtml(mjml);
-            // require("node:fs").writeFileSync("index.html", html);
             expect(html).toMatchSnapshot();
         });
 
@@ -113,7 +112,7 @@ describe("mjml-bar-chart", () => {
             const barChart = new MjBarChart({
                 content: JSON.stringify(chart1),
             });
-            const json = barChart["getChartTitle"]() as JsonNode;
+            const json = barChart["getChartTitle"]();
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
@@ -123,7 +122,7 @@ describe("mjml-bar-chart", () => {
 
     describe("getChartSource", () => {
         it("should render the scale", () => {
-            const json = barChart["getChartSource"]() as JsonNode;
+            const json = barChart["getChartSource"]();
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
@@ -352,7 +351,7 @@ describe("mjml-bar-chart", () => {
 
     describe("getScale", () => {
         it("should render the scale with minimum params", () => {
-            const json = barChart["getScale"]() as JsonNode;
+            const json = barChart["getScale"]();
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
@@ -366,7 +365,7 @@ describe("mjml-bar-chart", () => {
                     "step-count": "6",
                 },
             });
-            const json = barChart["getScale"]() as JsonNode;
+            const json = barChart["getScale"]();
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
