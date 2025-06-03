@@ -58,7 +58,7 @@ You can now use the `mjml-bar-chart` component in your MJML templates:
 
 Yay, you're all set!
 
-![Basic mjml-bar-chart rendering](https://repository-images.githubusercontent.com/398511647/a3509d00-707c-48e4-9686-7c1281b2af10)
+![Basic mjml-bar-chart rendering](https://github.com/user-attachments/assets/a65b4e1c-8780-4df0-aff6-159c332e4b7a)
 
 ## Customize
 
@@ -67,32 +67,39 @@ Yay, you're all set!
 The `<mj-bar-chart>` content must be a valid JSON string with the following structure:
 ```json
 {
-  "title": "Open-Source contributions per Year",
+  "title": "Annual offset mix in tCO2",
   "source": {
-    "label": "Source: Trust Me Bro",
-    "url": "https://trustme.bro"
+    "url": "#trustmebro",
+    "label": "Source: TrustMeBro ↗"
   },
-  "datasets": ["2022", "2023", "2024", "2025"],
-  "series": 
-    [
-      {
-        "label": "pull requests",
-        "color": "#adb2d4",
-        "data": [3,7,4,15]
-      },
-      {
-        "label": "issues fixed",
-        "color": "#c7d9dd",
-        "data": [23,12,40,38]
-      },
-      {
-        "label": "reviews",
-        "color": "#d5e5d5",
-        "data": [4,15,11,18]
-      }
-    ]
+  "datasets": ["2021", "2022", "2023", "2024", "2025"],
+  "series": [
+    {
+      "label": "commute",
+      "color": "#adb2d4",
+      "data": [3.7,7.5,4.3,15,6.9]
+    },
+    {
+      "label": "travels",
+      "color": "#c7d9dd",
+      "data": [13.4,7.2,11,20.4,13.2]
+    },
+    {
+      "label": "carbon balance",
+      "color": "#d5e5d5",
+      "data": [23.4,12.1,40.5,38.1,4]
+    },
+    {
+      "label": "others",
+      "color": "#eef1da",
+      "data": [4.9,15.2,-4.5,18.8,7]
+    }
+  ]
 }
 ```
+Note that all negative values will be floored to zero.
+
+![Stacked rendering with vertically aligned legends](https://github.com/user-attachments/assets/fc34d1c8-3608-4b7f-8bf3-233cd7efe277)
 
 If you're using TypeScript you can import the `Chart` interface to validate your data structure.
 
@@ -120,6 +127,14 @@ All the following attributes are optional
 | `align-legends`   |  `boolean`   |   `"false"`   | Whether it should vertically align legend labels                                                                            |
 | `max-width`       |   `number`   |    `"600"`    | The max width the chart should take. <br/>If it overflows `bar-width` and `separator-width` are dynamically computed to fit |
 
+### Dynamic resizing when data overflows
+
+Providing the chart attribute `max-width` is strongly advised as the graph will automatically resize to fit when data 
+require expanding beyond this threshold.  
+  
+When the limit is overreached the graph will automatically set the `step-count` to `0` to hide the y-axis to gain space 
+and will dynamically recompute the `bar-width` and `separator-width` to fit the limited width.
+
 ### Styling through CSS classes
 
 Bar charts are generated with predefined classes that you can use for styling with custom CSS.  
@@ -134,6 +149,9 @@ These are all the generated classes that you can use:
  - `mjbc__label`: the class of the chart labels.
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
+
+With their location in the generated graph:
+![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/cfaa6ffa-3de4-435b-93b0-6c0b663a6c9b)
 
 If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
 Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
@@ -150,8 +168,10 @@ For example:
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-bar-chart uid="1">{{ jsonChart1 }}</mj-bar-chart>
-        <mj-bar-chart uid="2" stacked align-legends>{{ jsonChart2 }}</mj-bar-chart>
+        <mj-bar-chart uid="1">{{ JSON.stringify(jsonChart1) }}</mj-bar-chart>
+        <mj-bar-chart uid="2" stacked align-legends>
+          {{ JSON.stringify(jsonChart2) }}
+        </mj-bar-chart>
       </mj-column>
     </mj-section>
   </mj-body>

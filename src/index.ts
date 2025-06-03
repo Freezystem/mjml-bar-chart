@@ -236,7 +236,7 @@ export default class MjBarChart extends BodyComponent {
         const emptyPartHeight = this.chartHeight - 2 - plainPartHeight;
 
         const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
-        const plainCellStyle = `${this.styles("plainCell")}height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
+        const plainCellStyle = `padding:0;height:${plainPartHeight}px;background-color:${this.colors[dataIndex]};`;
 
         return {
             tagName: "td",
@@ -282,7 +282,7 @@ export default class MjBarChart extends BodyComponent {
         const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
         const getPlainCellStyleByIndex = (v: number, i: number) => {
             const height = Math.round((v / sum) * plainPartHeight);
-            return `${this.styles("plainCell")}height:${height}px;background-color:${this.colors[i]};`;
+            return `padding:0;height:${height}px;background-color:${this.colors[i]};`;
         };
 
         return {
@@ -360,10 +360,13 @@ export default class MjBarChart extends BodyComponent {
             children: [
                 {
                     tagName: "table",
-                    attributes: { style: this.styles("barChart") },
+                    attributes: { style: "border-collapse:collapse;" },
                     children: [
                         {
                             tagName: "tr",
+                            attributes: {
+                                style: `border-bottom:2px solid ${this.axisColor}`,
+                            },
                             children: [this.getChartBarSeparator(), ...bars],
                         },
                     ],
@@ -406,7 +409,7 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "table",
                     attributes: {
-                        style: this.styles("chartLabelWrapper"),
+                        style: "border-collapse:collapse;",
                     },
                     children: [
                         {
@@ -640,13 +643,6 @@ export default class MjBarChart extends BodyComponent {
                 "border-collapse": "collapse",
                 margin: "0 auto",
             },
-            barChart: {
-                "border-collapse": "collapse",
-                "border-bottom": `2px solid ${this.axisColor}`,
-            },
-            plainCell: {
-                padding: "0",
-            },
             emptyCell: {
                 padding: "0",
                 "font-family": this.fontFamily,
@@ -658,9 +654,6 @@ export default class MjBarChart extends BodyComponent {
                 "white-space": "nowrap",
                 "min-width": `${this.barWidth}px`,
                 "max-width": `${this.barWidth}px`,
-            },
-            chartLabelWrapper: {
-                "border-collapse": "collapse",
             },
             chartLabel: {
                 height: "30px",
