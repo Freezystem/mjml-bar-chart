@@ -150,7 +150,7 @@ These are all the generated classes that you can use:
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
 
-With their location in the generated graph:
+With their location in the generated chart:
 ![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/cfaa6ffa-3de4-435b-93b0-6c0b663a6c9b)
 
 If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
