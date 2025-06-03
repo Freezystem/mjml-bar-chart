@@ -72,7 +72,7 @@ describe("mjml-bar-chart", () => {
 				<mj-body>
 				  <mj-section>
 					<mj-column>
-					  <mj-bar-chart>${JSON.stringify(chart1)}</mj-bar-chart>
+					  <mj-bar-chart stacked align-legends>${JSON.stringify(chart1)}</mj-bar-chart>
 					</mj-column>
 				  </mj-section>
 				</mj-body>
@@ -80,6 +80,7 @@ describe("mjml-bar-chart", () => {
 			`;
 
             const html = toHtml(mjml);
+            // require("node:fs").writeFileSync("index.html", html);
             expect(html).toMatchSnapshot();
         });
 
@@ -117,6 +118,25 @@ describe("mjml-bar-chart", () => {
 
             expect(json).toMatchSnapshot();
             expect(html).toMatchSnapshot();
+        });
+    });
+
+    describe("getChartSource", () => {
+        it("should render the scale", () => {
+            const json = barChart["getChartSource"]() as JsonNode;
+            const html = jsonToXML(json);
+
+            expect(json).toMatchSnapshot();
+            expect(html).toMatchSnapshot();
+        });
+
+        it("should throw when charte source is undefined", () => {
+            const barChart = new MjBarChart({
+                content: JSON.stringify(chart2),
+            });
+            const call = () => barChart["getChartSource"]();
+
+            expect(call).toThrowError("chart source is undefined");
         });
     });
 
@@ -286,17 +306,8 @@ describe("mjml-bar-chart", () => {
             const json = barChart["getLegend"](1);
             const html = jsonToXML(json);
 
-            expect(json).toStrictEqual({
-                tagName: "span",
-                attributes: {
-                    class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;",
-                },
-                content: "sales",
-            });
-            expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;">sales</span>',
-            );
+            expect(json).toMatchSnapshot();
+            expect(html).toMatchSnapshot();
         });
 
         it("should render legend with maximum params", () => {
@@ -309,17 +320,8 @@ describe("mjml-bar-chart", () => {
             const json = barChart["getLegend"](2);
             const html = jsonToXML(json);
 
-            expect(json).toStrictEqual({
-                tagName: "span",
-                attributes: {
-                    class: "mjbc__legend",
-                    style: "padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;",
-                },
-                content: "tech",
-            });
-            expect(html).toBe(
-                '<span class="mjbc__legend" style="padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:40px solid #fb6f92;">tech</span>',
-            );
+            expect(json).toMatchSnapshot();
+            expect(html).toMatchSnapshot();
         });
     });
 
@@ -341,35 +343,6 @@ describe("mjml-bar-chart", () => {
                 },
             });
             const json = barChart["getChartLegend"]();
-            const html = jsonToXML(json);
-
-            expect(json).toMatchSnapshot();
-            expect(html).toMatchSnapshot();
-        });
-    });
-
-    describe("getChart", () => {
-        it("should render the chart with minimum params", () => {
-            const json = barChart["getChart"]();
-            const html = jsonToXML(json);
-
-            expect(json).toMatchSnapshot();
-            expect(html).toMatchSnapshot();
-        });
-
-        it("should render the chart with maximum params", () => {
-            const barChart = new MjBarChart({
-                content: JSON.stringify(chart2),
-                attributes: {
-                    "axis-color": "#e3e3e3",
-                    height: "250",
-                    "bar-width": "32",
-                    "separator-width": "24",
-                    "step-count": "8",
-                    "show-values": "false",
-                },
-            });
-            const json = barChart["getChart"]();
             const html = jsonToXML(json);
 
             expect(json).toMatchSnapshot();
@@ -400,16 +373,16 @@ describe("mjml-bar-chart", () => {
             expect(html).toMatchSnapshot();
         });
 
-        it("should not render the scale when step count is lower than 2", () => {
+        it("should throw when step count is lower than 2", () => {
             const barChart = new MjBarChart({
                 content: JSON.stringify(chart2),
                 attributes: {
                     "step-count": "0",
                 },
             });
-            const json = barChart["getScale"]();
+            const call = () => barChart["getScale"]();
 
-            expect(json).not.toBeDefined();
+            expect(call).toThrowError("stepCount must be greater than 1");
         });
     });
 

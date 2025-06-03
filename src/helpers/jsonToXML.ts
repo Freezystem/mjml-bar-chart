@@ -1,6 +1,6 @@
-export interface JsonNode {
-    tagName: string;
-    attributes?: Record<string, string>;
+export interface JsonNode<T extends string = string> {
+    tagName: T;
+    attributes?: Record<string, string | undefined>;
     children?: JsonNode[];
     content?: string;
 }
@@ -15,7 +15,8 @@ const jsonToXML = (
         : (content ?? "");
 
     const stringAttrs = Object.keys(attributes || {}).reduce(
-        (acc, attr) => `${acc} ${attr}="${attributes?.[attr]}"`,
+        (acc, attr) =>
+            attributes?.[attr] ? `${acc} ${attr}="${attributes?.[attr]}"` : acc,
         "",
     );
     return `${indent}<${tagName}${stringAttrs}>${subNode}</${tagName}>`;
