@@ -20,7 +20,7 @@ with **ESM**:
 import { registerComponent } from "mjml-core";
 import MjBarChart from "mjml-bar-chart";
 
-registerComponent(MjBarChart);
+registerComponent(MjBarChart, { registerDependencies: true });
 ```
 
 with **CJS**:
@@ -29,8 +29,10 @@ with **CJS**:
 const { registerComponent } = require("mjml-core");
 const MjBarChart = require("mjml-bar-chart").default;
 
-registerComponent(MjBarChart);
+registerComponent(MjBarChart, { registerDependencies: true });
 ```
+> Set the `registerDependencies` option to `true` to automatically declare the `mj-bar-chart` component dependencies 
+> to the `mjml-validator` module.
 
 You can now use the `mjml-bar-chart` component in your MJML templates:
 
