@@ -134,7 +134,7 @@ describe("mjml-bar-chart", () => {
             });
             const call = () => barChart["getChartSource"]();
 
-            expect(call).toThrowError("chart source is undefined");
+            expect(call).toThrow("chart source is undefined");
         });
     });
 
@@ -380,7 +380,7 @@ describe("mjml-bar-chart", () => {
             });
             const call = () => barChart["getScale"]();
 
-            expect(call).toThrowError("stepCount must be greater than 1");
+            expect(call).toThrow("stepCount must be greater than 1");
         });
     });
 
