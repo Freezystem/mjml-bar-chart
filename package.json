@@ -1,110 +1,110 @@
 {
-	"name": "mjml-bar-chart",
-	"version": "2.1.0",
-	"author": "freezystem <freezystem@gmail.com>",
-	"homepage": "https://github.com/Freezystem/mjml-bar-chart",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Freezystem/mjml-bar-chart.git"
-	},
-	"bugs": "https://github.com/Freezystem/mjml-bar-chart/issues",
-	"description": "A simple MJML component to make static bar charts",
-	"keywords": [
-		"mjml",
-		"chart",
-		"charts",
-		"bar",
-		"bars",
-		"email"
-	],
-	"license": "MIT",
-	"type": "module",
-	"exports": {
-		"types": "./build/types/index.d.ts",
-		"require": "./build/umd/index.js",
-		"import": "./build/esm/index.js",
-		"browser": "./build/umd/index.js",
-		"default": "./src/index.ts"
-	},
-	"files": [
-		"build/**/*",
-		"src/**/*"
-	],
-	"engines": {
-		"node": ">=20",
-		"npm": ">=9"
-	},
-	"scripts": {
-		"watch": "tsc --watch",
-		"prebuild": "rm -rf build",
-		"build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
-		"test": "jest",
-		"test:coverage": "rm -rf coverage && jest --workerThreads --coverage",
-		"test:snap": "jest --updateSnapshot",
-		"deps": "ncu -i --format group --install always --peer",
-		"postdeps": "npm audit fix",
-		"format": "biome format",
-		"format:fix": "biome format --write",
-		"lint": "biome lint",
-		"lint:fix": "biome lint --write",
-		"fl": "biome check",
-		"fl:fix": "biome check --write",
-		"preversion": "git reset && git switch main && git fetch -p && git pull",
-		"postversion": "npm run tag:push",
-		"tag:push": "git push && git push --tags",
-		"tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/jest": "^29.5.14",
-		"@types/mjml": "^4.7.4",
-		"@types/mjml-core": "^4.15.2",
-		"@types/node": "^24.0.1",
-		"jest": "^30.0.0",
-		"npm-check-updates": "^18.0.1",
-		"ts-jest": "^29.4.0",
-		"typescript": "^5.8.3"
-	},
-	"peerDependencies": {
-		"mjml": "^4.15.3",
-		"mjml-core": "^4.15.3"
-	},
-	"jest": {
-		"detectOpenHandles": true,
-		"verbose": true,
-		"coverageDirectory": "<rootDir>/coverage",
-		"coverageReporters": [
-			"text",
-			"text-summary",
-			"json-summary",
-			"lcov"
-		],
-		"coverageThreshold": {
-			"global": {
-				"branches": 100,
-				"functions": 100,
-				"lines": 100,
-				"statements": 100
-			}
-		},
-		"preset": "ts-jest",
-		"testEnvironment": "node",
-		"reporters": [
-			"default",
-			[
-				"github-actions",
-				{
-					"silent": false
-				}
-			],
-			"summary"
-		],
-		"moduleFileExtensions": [
-			"ts",
-			"js"
-		],
-		"testMatch": [
-			"**/*.spec.ts"
-		]
-	}
+    "name": "mjml-bar-chart",
+    "version": "2.1.0",
+    "author": "freezystem <freezystem@gmail.com>",
+    "homepage": "https://github.com/Freezystem/mjml-bar-chart",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Freezystem/mjml-bar-chart.git"
+    },
+    "bugs": "https://github.com/Freezystem/mjml-bar-chart/issues",
+    "description": "A simple MJML component to make static bar charts",
+    "keywords": [
+        "mjml",
+        "chart",
+        "charts",
+        "bar",
+        "bars",
+        "email"
+    ],
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        "types": "./build/types/index.d.ts",
+        "require": "./build/umd/index.js",
+        "import": "./build/esm/index.js",
+        "browser": "./build/umd/index.js",
+        "default": "./src/index.ts"
+    },
+    "files": [
+        "build/**/*",
+        "src/**/*"
+    ],
+    "engines": {
+        "node": ">=20",
+        "npm": ">=9"
+    },
+    "scripts": {
+        "watch": "tsc --watch",
+        "prebuild": "rm -rf build",
+        "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
+        "test": "jest",
+        "test:coverage": "rm -rf coverage && jest --workerThreads --coverage",
+        "test:snap": "jest --updateSnapshot",
+        "deps": "ncu -i --format group --install always --peer",
+        "postdeps": "npm audit fix",
+        "format": "biome format",
+        "format:fix": "biome format --write",
+        "lint": "biome lint",
+        "lint:fix": "biome lint --write",
+        "fl": "biome check",
+        "fl:fix": "biome check --write",
+        "preversion": "git reset && git switch main && git fetch -p && git pull",
+        "postversion": "npm run tag:push",
+        "tag:push": "git push && git push --tags",
+        "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.0.0",
+        "@types/jest": "^30.0.0",
+        "@types/mjml": "^4.7.4",
+        "@types/mjml-core": "^4.15.2",
+        "@types/node": "^24.0.3",
+        "jest": "^30.0.2",
+        "npm-check-updates": "^18.0.1",
+        "ts-jest": "^29.4.0",
+        "typescript": "^5.8.3"
+    },
+    "peerDependencies": {
+        "mjml": "^4.15.3",
+        "mjml-core": "^4.15.3"
+    },
+    "jest": {
+        "detectOpenHandles": true,
+        "verbose": true,
+        "coverageDirectory": "<rootDir>/coverage",
+        "coverageReporters": [
+            "text",
+            "text-summary",
+            "json-summary",
+            "lcov"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 100,
+                "functions": 100,
+                "lines": 100,
+                "statements": 100
+            }
+        },
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "reporters": [
+            "default",
+            [
+                "github-actions",
+                {
+                    "silent": false
+                }
+            ],
+            "summary"
+        ],
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ],
+        "testMatch": [
+            "**/*.spec.ts"
+        ]
+    }
 }
