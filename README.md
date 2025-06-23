@@ -151,6 +151,7 @@ These are all the generated classes that you can use:
  - `mjbc__label`: the class of the chart labels.
  - `mjbc__legend`: the class of the chart legends.
  - `mjbc__step`: the class of the chart steps.
+ - `mjbc__bar`: the class of the chart bars.
 
 With their location in the generated chart:
 ![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/cfaa6ffa-3de4-435b-93b0-6c0b663a6c9b)
