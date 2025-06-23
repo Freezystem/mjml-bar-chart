@@ -261,7 +261,10 @@ export default class MjBarChart extends BodyComponent {
                             children: [
                                 {
                                     tagName: "td",
-                                    attributes: { style: plainCellStyle },
+                                    attributes: {
+                                        class: `mjbc${this.uid}__bar`,
+                                        style: plainCellStyle,
+                                    },
                                 },
                             ],
                         },
@@ -310,6 +313,7 @@ export default class MjBarChart extends BodyComponent {
                                     {
                                         tagName: "td",
                                         attributes: {
+                                            class: `mjbc${this.uid}__bar`,
                                             style: getPlainCellStyleByIndex(
                                                 v,
                                                 i,
