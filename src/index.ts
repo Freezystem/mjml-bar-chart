@@ -261,7 +261,10 @@ export default class MjBarChart extends BodyComponent {
                             children: [
                                 {
                                     tagName: "td",
-                                    attributes: { style: plainCellStyle },
+                                    attributes: {
+                                        class: `mjbc${this.uid}__bar`,
+                                        style: plainCellStyle,
+                                    },
                                 },
                             ],
                         },
@@ -282,7 +285,7 @@ export default class MjBarChart extends BodyComponent {
         const emptyCellStyle = `${this.styles("emptyCell")}height:${emptyPartHeight}px;`;
         const getPlainCellStyleByIndex = (v: number, i: number) => {
             const height = Math.round((v / sum) * plainPartHeight);
-            return `padding:0;height:${height}px;background-color:${this.colors[i]};`;
+            return `padding:0;height:${height}px;background-color:${this.colors[i]};width:${this.barWidth}px;`;
         };
 
         return {
@@ -303,22 +306,42 @@ export default class MjBarChart extends BodyComponent {
                                 },
                             ],
                         },
-                        ...data.map(
-                            (v, i): JsonNode => ({
-                                tagName: "tr",
-                                children: [
-                                    {
-                                        tagName: "td",
-                                        attributes: {
-                                            style: getPlainCellStyleByIndex(
-                                                v,
-                                                i,
+                        {
+                            tagName: "tr",
+                            children: [
+                                {
+                                    tagName: "td",
+                                    attributes: {
+                                        style: `padding:0;height:${plainPartHeight}px;`,
+                                    },
+                                    children: [
+                                        {
+                                            tagName: "table",
+                                            attributes: {
+                                                style: "border-collapse:collapse;",
+                                                class: `mjbc${this.uid}__bar`,
+                                            },
+                                            children: data.map(
+                                                (v, i): JsonNode => ({
+                                                    tagName: "tr",
+                                                    children: [
+                                                        {
+                                                            tagName: "td",
+                                                            attributes: {
+                                                                style: getPlainCellStyleByIndex(
+                                                                    v,
+                                                                    i,
+                                                                ),
+                                                            },
+                                                        },
+                                                    ],
+                                                }),
                                             ),
                                         },
-                                    },
-                                ],
-                            }),
-                        ),
+                                    ],
+                                },
+                            ],
+                        },
                     ],
                 },
             ],
