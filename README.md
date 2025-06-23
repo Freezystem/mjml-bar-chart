@@ -154,7 +154,7 @@ These are all the generated classes that you can use:
  - `mjbc__bar`: the class of the chart bars.
 
 With their location in the generated chart:
-![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/cfaa6ffa-3de4-435b-93b0-6c0b663a6c9b)
+![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/e3b20e94-edc3-45fa-9a9e-09f05085070e)
 
 If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
 Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
