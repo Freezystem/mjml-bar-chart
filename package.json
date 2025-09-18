@@ -5,7 +5,7 @@
     "homepage": "https://github.com/Freezystem/mjml-bar-chart",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Freezystem/mjml-bar-chart.git"
+        "url": "git+https://github.com/Freezystem/mjml-bar-chart.git"
     },
     "bugs": "https://github.com/Freezystem/mjml-bar-chart/issues",
     "description": "A simple MJML component to make static bar charts",
