@@ -9,18 +9,16 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             contents: read
-            packages: write
+            id-token: write  # Required for OIDC
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
             - name: Setup Node and NPM
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v5
               with:
-                  node-version: 20
+                  node-version: 24
                   registry-url: "https://registry.npmjs.org"
             - name: Install and Build
               run: npm ci && npm run build
             - name: Publish to NPM
               run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
