@@ -2609,7 +2609,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
     
     
       <div
-         style="" lang="und" dir="auto"
+         aria-roledescription="email" style="" role="article" lang="und" dir="auto"
       >
         
       
@@ -2930,7 +2930,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
     
     
       <div
-         style="" lang="und" dir="auto"
+         aria-roledescription="email" style="" role="article" lang="und" dir="auto"
       >
         
       
