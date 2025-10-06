@@ -586,8 +586,8 @@ export default class MjBarChart extends BodyComponent {
     private getChart(): JsonNode<"tr"> {
         const children: JsonNode<"td">[] = [];
 
-        if (this.showScale) children.push(this.getScale());
-        children.push(this.getChartBars());
+        if (this.showScale) children.push(this.getScale(), this.getChartBars());
+        else children.push(this.getChartBars());
 
         return {
             tagName: "tr",
@@ -730,11 +730,20 @@ export default class MjBarChart extends BodyComponent {
     private renderJSON(): JsonNode<"table"> {
         const children: JsonNode<"tr">[] = [];
 
-        children.push(this.getChartTitle());
-        if (this.source) children.push(this.getChartSource());
-
-        children.push(this.getChart());
-        children.push(this.getChartLegend());
+        if (this.source) {
+            children.push(
+                this.getChartTitle(),
+                this.getChartSource(),
+                this.getChart(),
+                this.getChartLegend(),
+            );
+        } else {
+            children.push(
+                this.getChartTitle(),
+                this.getChart(),
+                this.getChartLegend(),
+            );
+        }
 
         return {
             tagName: "table",
