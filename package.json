@@ -66,8 +66,8 @@
         "typescript": "^5.9.3"
     },
     "peerDependencies": {
-        "mjml": "^4.15.3",
-        "mjml-core": "^4.15.3"
+        "mjml": "^4.18.0",
+        "mjml-core": "^4.18.0"
     },
     "jest": {
         "detectOpenHandles": true,
