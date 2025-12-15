@@ -59,9 +59,9 @@
         "@types/jest": "^30.0.0",
         "@types/mjml": "^4.7.4",
         "@types/mjml-core": "^4.15.2",
-        "@types/node": "^24.10.1",
+        "@types/node": "^25.0.2",
         "jest": "^30.2.0",
-        "npm-check-updates": "^19.1.2",
+        "npm-check-updates": "^19.2.0",
         "ts-jest": "^29.4.6",
         "typescript": "^5.9.3"
     },
