@@ -8,11 +8,11 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
             - name: Setup Node and NPM
-              uses: actions/setup-node@v5
+              uses: actions/setup-node@v6
               with:
                   node-version: 24
                   cache: "npm"
@@ -23,7 +23,7 @@ jobs:
             - name: Tests
               run: npm run test:coverage
             - name: SonarQube
-              uses: SonarSource/sonarqube-scan-action@v6
+              uses: SonarSource/sonarqube-scan-action@v7
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
             - name: Generate Changelog
