@@ -55,13 +55,13 @@
         "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.3.12",
+        "@biomejs/biome": "^2.3.13",
         "@types/jest": "^30.0.0",
         "@types/mjml": "^4.7.4",
         "@types/mjml-core": "^4.15.2",
-        "@types/node": "^25.0.10",
+        "@types/node": "^25.2.0",
         "jest": "^30.2.0",
-        "npm-check-updates": "^19.3.1",
+        "npm-check-updates": "^19.3.2",
         "ts-jest": "^29.4.6",
         "typescript": "^5.9.3"
     },
