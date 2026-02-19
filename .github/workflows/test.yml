@@ -19,7 +19,7 @@ jobs:
             - name: Install and Build
               run: npm ci
             - name: Format and Lint
-              run: npm run fl
+              run: npm run fl:ci
             - name: Tests
               run: npm run test:coverage
             - name: SonarQube
