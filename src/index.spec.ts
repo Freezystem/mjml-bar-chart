@@ -4,8 +4,8 @@ import { beforeAll, describe, expect, it } from "vitest";
 import jsonToXML from "./helpers/jsonToXML";
 import MjBarChart, { type Chart } from "./index";
 
-function toHtml(mjml: string): string {
-    const { html, errors } = mjml2html(mjml);
+async function toHtml(mjml: string) {
+    const { html, errors } = await mjml2html(mjml);
     return errors.length > 0 ? errors[0].message : html;
 }
 
@@ -66,7 +66,7 @@ describe("mjml-bar-chart", () => {
     });
 
     describe("mjml markup", () => {
-        it("should render the default bar chart", () => {
+        it("should render the default bar chart", async () => {
             const mjml = `
 			  <mjml>
 				<mj-body>
@@ -79,11 +79,11 @@ describe("mjml-bar-chart", () => {
 			  </mjml>
 			`;
 
-            const html = toHtml(mjml);
+            const html = await toHtml(mjml);
             expect(html).toMatchSnapshot();
         });
 
-        it("should render the stacked bar chart", () => {
+        it("should render the stacked bar chart", async () => {
             const mjml = `
 			  <mjml>
 			    <mj-head>
@@ -102,7 +102,7 @@ describe("mjml-bar-chart", () => {
 			  </mjml>
 			`;
 
-            const html = toHtml(mjml);
+            const html = await toHtml(mjml);
             expect(html).toMatchSnapshot();
         });
     });
