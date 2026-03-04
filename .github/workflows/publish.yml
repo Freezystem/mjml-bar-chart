@@ -19,6 +19,6 @@ jobs:
                   node-version: 24
                   registry-url: "https://registry.npmjs.org"
             - name: Install and Build
-              run: npm ci && npm run build
+              run: npm ci --ignore-scripts && npm run build
             - name: Publish to NPM
               run: npm publish --access public
