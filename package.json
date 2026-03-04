@@ -50,7 +50,7 @@
         "lint:fix": "biome lint --write",
         "fl": "biome check",
         "fl:fix": "biome check --write",
-        "fl:ci": "biome ci --reporter=default --reporter=github",
+        "fl:ci": "biome ci --reporter=github",
         "preversion": "git reset && git switch main && git fetch -p && git pull",
         "postversion": "npm run tag:push",
         "tag:push": "git push && git push --tags",
