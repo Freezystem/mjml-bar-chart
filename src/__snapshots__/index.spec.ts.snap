@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 1`] = `
+exports[`mjml-bar-chart > getChartBar > should render chart bar with maximum params 1`] = `
 {
   "attributes": {
     "style": "padding:0",
@@ -43,7 +43,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 
 }
 `;
 
-exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 2`] = `
+exports[`mjml-bar-chart > getChartBar > should render chart bar with maximum params 2`] = `
 "<td style="padding:0">
   <table style="padding:0;min-width:20px;max-width:20px;">
     <tr>
@@ -56,7 +56,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with maximum params 
 </td>"
 `;
 
-exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 1`] = `
+exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum params 1`] = `
 {
   "attributes": {
     "style": "padding:0",
@@ -99,7 +99,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 
 }
 `;
 
-exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 2`] = `
+exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum params 2`] = `
 "<td style="padding:0">
   <table style="padding:0;min-width:30px;max-width:30px;">
     <tr>
@@ -112,7 +112,7 @@ exports[`mjml-bar-chart getChartBar should render chart bar with minimum params 
 </td>"
 `;
 
-exports[`mjml-bar-chart getChartBars should render chart bars with maximum params 1`] = `
+exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum params 1`] = `
 {
   "attributes": {
     "style": "padding:0;",
@@ -649,7 +649,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
 }
 `;
 
-exports[`mjml-bar-chart getChartBars should render chart bars with maximum params 2`] = `
+exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum params 2`] = `
 "<td style="padding:0;">
   <table style="border-collapse:collapse;">
     <tr style="border-bottom:2px solid #d4d4d4">
@@ -783,7 +783,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with maximum param
 </td>"
 `;
 
-exports[`mjml-bar-chart getChartBars should render chart bars with minimum params 1`] = `
+exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum params 1`] = `
 {
   "attributes": {
     "style": "padding:0;",
@@ -1320,7 +1320,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
 }
 `;
 
-exports[`mjml-bar-chart getChartBars should render chart bars with minimum params 2`] = `
+exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum params 2`] = `
 "<td style="padding:0;">
   <table style="border-collapse:collapse;">
     <tr style="border-bottom:2px solid #d4d4d4">
@@ -1454,7 +1454,7 @@ exports[`mjml-bar-chart getChartBars should render chart bars with minimum param
 </td>"
 `;
 
-exports[`mjml-bar-chart getChartLabels should render chart labels with maximum params 1`] = `
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with maximum params 1`] = `
 {
   "children": [
     {
@@ -1533,7 +1533,7 @@ exports[`mjml-bar-chart getChartLabels should render chart labels with maximum p
 }
 `;
 
-exports[`mjml-bar-chart getChartLabels should render chart labels with maximum params 2`] = `
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with maximum params 2`] = `
 "<tr>
   <td style="padding:0;min-width:40px;max-width:40px;"></td>
   <td style="padding:0;">
@@ -1551,7 +1551,7 @@ exports[`mjml-bar-chart getChartLabels should render chart labels with maximum p
 </tr>"
 `;
 
-exports[`mjml-bar-chart getChartLabels should render chart labels with minimum params 1`] = `
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with minimum params 1`] = `
 {
   "children": [
     {
@@ -1630,7 +1630,7 @@ exports[`mjml-bar-chart getChartLabels should render chart labels with minimum p
 }
 `;
 
-exports[`mjml-bar-chart getChartLabels should render chart labels with minimum params 2`] = `
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with minimum params 2`] = `
 "<tr>
   <td style="padding:0;min-width:40px;max-width:40px;"></td>
   <td style="padding:0;">
@@ -1648,7 +1648,7 @@ exports[`mjml-bar-chart getChartLabels should render chart labels with minimum p
 </tr>"
 `;
 
-exports[`mjml-bar-chart getChartLegend should render chart legend with maximum params 1`] = `
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with maximum params 1`] = `
 {
   "children": [
     {
@@ -1730,7 +1730,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
 }
 `;
 
-exports[`mjml-bar-chart getChartLegend should render chart legend with maximum params 2`] = `
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with maximum params 2`] = `
 "<tr>
   <td style="padding:10px 0 0 0;">
     <table style="margin:0 auto;">
@@ -1752,7 +1752,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with maximum p
 </tr>"
 `;
 
-exports[`mjml-bar-chart getChartLegend should render chart legend with minimum params 1`] = `
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with minimum params 1`] = `
 {
   "children": [
     {
@@ -1800,7 +1800,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
 }
 `;
 
-exports[`mjml-bar-chart getChartLegend should render chart legend with minimum params 2`] = `
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with minimum params 2`] = `
 "<tr>
   <td style="padding:10px 0 0 0;">
     <p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;">
@@ -1812,7 +1812,7 @@ exports[`mjml-bar-chart getChartLegend should render chart legend with minimum p
 </tr>"
 `;
 
-exports[`mjml-bar-chart getChartSource should render the scale 1`] = `
+exports[`mjml-bar-chart > getChartSource > should render the scale 1`] = `
 {
   "children": [
     {
@@ -1838,7 +1838,7 @@ exports[`mjml-bar-chart getChartSource should render the scale 1`] = `
 }
 `;
 
-exports[`mjml-bar-chart getChartSource should render the scale 2`] = `
+exports[`mjml-bar-chart > getChartSource > should render the scale 2`] = `
 "<tr>
   <td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;">
     <a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a>
@@ -1846,7 +1846,7 @@ exports[`mjml-bar-chart getChartSource should render the scale 2`] = `
 </tr>"
 `;
 
-exports[`mjml-bar-chart getChartTitle should render chart title 1`] = `
+exports[`mjml-bar-chart > getChartTitle > should render chart title 1`] = `
 {
   "children": [
     {
@@ -1862,13 +1862,13 @@ exports[`mjml-bar-chart getChartTitle should render chart title 1`] = `
 }
 `;
 
-exports[`mjml-bar-chart getChartTitle should render chart title 2`] = `
+exports[`mjml-bar-chart > getChartTitle > should render chart title 2`] = `
 "<tr>
   <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td>
 </tr>"
 `;
 
-exports[`mjml-bar-chart getLegend should render legend with maximum params 1`] = `
+exports[`mjml-bar-chart > getLegend > should render legend with maximum params 1`] = `
 {
   "attributes": {
     "class": "mjbc__legend",
@@ -1879,9 +1879,9 @@ exports[`mjml-bar-chart getLegend should render legend with maximum params 1`] =
 }
 `;
 
-exports[`mjml-bar-chart getLegend should render legend with maximum params 2`] = `"<span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:35.294117647058826px solid #fb6f92;margin:0 auto;">tech</span>"`;
+exports[`mjml-bar-chart > getLegend > should render legend with maximum params 2`] = `"<span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:35.294117647058826px solid #fb6f92;margin:0 auto;">tech</span>"`;
 
-exports[`mjml-bar-chart getLegend should render legend with minimum params 1`] = `
+exports[`mjml-bar-chart > getLegend > should render legend with minimum params 1`] = `
 {
   "attributes": {
     "class": "mjbc__legend",
@@ -1892,9 +1892,9 @@ exports[`mjml-bar-chart getLegend should render legend with minimum params 1`] =
 }
 `;
 
-exports[`mjml-bar-chart getLegend should render legend with minimum params 2`] = `"<span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>"`;
+exports[`mjml-bar-chart > getLegend > should render legend with minimum params 2`] = `"<span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>"`;
 
-exports[`mjml-bar-chart getScale should render the scale with maximum params 1`] = `
+exports[`mjml-bar-chart > getScale > should render the scale with maximum params 1`] = `
 {
   "attributes": {
     "style": "max-height:200px;padding:0;vertical-align:top;",
@@ -2087,7 +2087,7 @@ exports[`mjml-bar-chart getScale should render the scale with maximum params 1`]
 }
 `;
 
-exports[`mjml-bar-chart getScale should render the scale with maximum params 2`] = `
+exports[`mjml-bar-chart > getScale > should render the scale with maximum params 2`] = `
 "<td style="max-height:200px;padding:0;vertical-align:top;">
   <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
     <tr>
@@ -2133,7 +2133,7 @@ exports[`mjml-bar-chart getScale should render the scale with maximum params 2`]
 </td>"
 `;
 
-exports[`mjml-bar-chart getScale should render the scale with minimum params 1`] = `
+exports[`mjml-bar-chart > getScale > should render the scale with minimum params 1`] = `
 {
   "attributes": {
     "style": "max-height:200px;padding:0;vertical-align:top;",
@@ -2295,7 +2295,7 @@ exports[`mjml-bar-chart getScale should render the scale with minimum params 1`]
 }
 `;
 
-exports[`mjml-bar-chart getScale should render the scale with minimum params 2`] = `
+exports[`mjml-bar-chart > getScale > should render the scale with minimum params 2`] = `
 "<td style="max-height:200px;padding:0;vertical-align:top;">
   <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
     <tr>
@@ -2334,7 +2334,7 @@ exports[`mjml-bar-chart getScale should render the scale with minimum params 2`]
 </td>"
 `;
 
-exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum params 1`] = `
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maximum params 1`] = `
 {
   "attributes": {
     "style": "padding:0",
@@ -2420,7 +2420,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum 
 }
 `;
 
-exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum params 2`] = `
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maximum params 2`] = `
 "<td style="padding:0">
   <table style="padding:0;min-width:20px;max-width:20px;">
     <tr>
@@ -2445,7 +2445,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with maximum 
 </td>"
 `;
 
-exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum params 1`] = `
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with minimum params 1`] = `
 {
   "attributes": {
     "style": "padding:0",
@@ -2531,7 +2531,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum 
 }
 `;
 
-exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum params 2`] = `
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with minimum params 2`] = `
 "<td style="padding:0">
   <table style="padding:0;min-width:30px;max-width:30px;">
     <tr>
@@ -2556,7 +2556,7 @@ exports[`mjml-bar-chart getStackedChartBar should render chart bar with minimum 
 </td>"
 `;
 
-exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
+exports[`mjml-bar-chart > mjml markup > should render the default bar chart 1`] = `
 "<!doctype html>
 <html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
@@ -2877,7 +2877,7 @@ exports[`mjml-bar-chart mjml markup should render the default bar chart 1`] = `
   "
 `;
 
-exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
+exports[`mjml-bar-chart > mjml markup > should render the stacked bar chart 1`] = `
 "<!doctype html>
 <html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
@@ -3176,7 +3176,7 @@ exports[`mjml-bar-chart mjml markup should render the stacked bar chart 1`] = `
   "
 `;
 
-exports[`mjml-bar-chart render should render the bar chart as HTML with maximum params 1`] = `
+exports[`mjml-bar-chart > render > should render the bar chart as HTML with maximum params 1`] = `
 "<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Some Stats</td>
@@ -3283,7 +3283,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with maximum 
 </table>"
 `;
 
-exports[`mjml-bar-chart render should render the bar chart as HTML with minimum params 1`] = `
+exports[`mjml-bar-chart > render > should render the bar chart as HTML with minimum params 1`] = `
 "<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
   <tr>
     <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td>
@@ -3495,7 +3495,7 @@ exports[`mjml-bar-chart render should render the bar chart as HTML with minimum 
 </table>"
 `;
 
-exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maximum params 1`] = `
+exports[`mjml-bar-chart > renderJSON > should render the bar chart as JSON with maximum params 1`] = `
 {
   "attributes": {
     "class": "mjbc",
@@ -4188,7 +4188,7 @@ exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with maxi
 }
 `;
 
-exports[`mjml-bar-chart renderJSON should render the bar chart as JSON with minimum params 1`] = `
+exports[`mjml-bar-chart > renderJSON > should render the bar chart as JSON with minimum params 1`] = `
 {
   "attributes": {
     "class": "mjbc",
