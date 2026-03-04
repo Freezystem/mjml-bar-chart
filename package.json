@@ -21,9 +21,9 @@
     "type": "module",
     "exports": {
         "types": "./build/types/index.d.ts",
-        "require": "./build/umd/index.js",
-        "import": "./build/esm/index.js",
         "browser": "./build/umd/index.js",
+        "import": "./build/esm/index.js",
+        "require": "./build/umd/index.js",
         "default": "./src/index.ts"
     },
     "files": [
@@ -32,15 +32,16 @@
     ],
     "engines": {
         "node": ">=20",
-        "npm": ">=9"
+        "npm": ">=11"
     },
     "scripts": {
         "watch": "tsc --watch",
         "prebuild": "rm -rf build",
         "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
-        "test": "jest",
-        "test:coverage": "rm -rf coverage && jest --workerThreads --coverage",
-        "test:snap": "jest --updateSnapshot",
+        "test": "vitest",
+        "test:watch": "vitest --watch",
+        "test:coverage": "vitest --coverage",
+        "test:snap": "vitest -u",
         "deps": "ncu -i --format group --install always --peer",
         "postdeps": "npm audit fix",
         "format": "biome format",
@@ -56,56 +57,17 @@
         "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.4.4",
-        "@types/jest": "^30.0.0",
+        "@biomejs/biome": "^2.4.5",
         "@types/mjml": "^4.7.4",
         "@types/mjml-core": "^4.15.2",
         "@types/node": "^25.3.3",
-        "jest": "^30.2.0",
+        "@vitest/coverage-v8": "^4.0.18",
         "npm-check-updates": "^19.6.3",
-        "ts-jest": "^29.4.6",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "vitest": "^4.0.18"
     },
     "peerDependencies": {
         "mjml": "^4.18.0",
         "mjml-core": "^4.18.0"
-    },
-    "jest": {
-        "detectOpenHandles": true,
-        "verbose": true,
-        "coverageDirectory": "<rootDir>/coverage",
-        "coverageReporters": [
-            "text",
-            "text-summary",
-            "json-summary",
-            "lcov"
-        ],
-        "coverageThreshold": {
-            "global": {
-                "branches": 100,
-                "functions": 100,
-                "lines": 100,
-                "statements": 100
-            }
-        },
-        "preset": "ts-jest",
-        "testEnvironment": "node",
-        "reporters": [
-            "default",
-            [
-                "github-actions",
-                {
-                    "silent": false
-                }
-            ],
-            "summary"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "js"
-        ],
-        "testMatch": [
-            "**/*.spec.ts"
-        ]
     }
 }
