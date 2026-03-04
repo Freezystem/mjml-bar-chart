@@ -1,5 +1,6 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
+import { beforeAll, describe, expect, it } from "vitest";
 import jsonToXML from "./helpers/jsonToXML";
 import MjBarChart, { type Chart } from "./index";
 

@@ -9,7 +9,6 @@ export default defineConfig({
         fileParallelism: true,
         maxWorkers: "50%",
         include: ["src/**/*.spec.ts"],
-        globals: true,
         coverage: {
             provider: "v8",
             reporter: ["text", "html", "cobertura"],
