@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import jsonToXML from "./jsonToXML";
 
 describe("jsonToXML", () => {
@@ -10,7 +10,7 @@ describe("jsonToXML", () => {
         expect(jsonToXML(json2)).toBe("<p>text</p>");
 
         const json3 = { tagName: "p", content: "text", attributes: {} };
-        expect(jsonToXML(json3)).toBe("<p>fail text</p>");
+        expect(jsonToXML(json3)).toBe("<p>text</p>");
 
         const json4 = {
             tagName: "input",
