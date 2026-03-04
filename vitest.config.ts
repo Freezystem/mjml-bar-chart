@@ -11,7 +11,9 @@ export default defineConfig({
         include: ["src/**/*.spec.ts"],
         coverage: {
             provider: "v8",
-            reporter: ["text", "html", "cobertura"],
+            reporter: process.env.GITHUB_ACTIONS
+                ? ["text", "lcov"]
+                : ["text", "html"],
             reportsDirectory: "./coverage",
             reportOnFailure: true,
             include: ["src/**/*.ts"],
