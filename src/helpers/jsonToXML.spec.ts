@@ -47,12 +47,7 @@ describe("jsonToXML", () => {
             ],
         };
         expect(jsonToXML(json5)).toBe(
-            '<table style="border-collapse:collapse;">\n' +
-                "  <tr>\n" +
-                "    <td>1</td>\n" +
-                "    <td>2</td>\n" +
-                "  </tr>\n" +
-                "</table>",
+            '<table style="border-collapse:collapse;"><tr><td>1</td><td>2</td></tr></table>',
         );
     });
 });

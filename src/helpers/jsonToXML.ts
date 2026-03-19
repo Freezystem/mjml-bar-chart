@@ -5,20 +5,23 @@ export interface JsonNode<T extends string = string> {
     content?: string;
 }
 
-const jsonToXML = (
-    { tagName, attributes, children, content }: JsonNode,
-    level = 0,
-): string => {
-    const indent = new Array(level).fill("  ").join("");
-    const subNode = children?.length
-        ? `\n${children.map((n) => jsonToXML(n, level + 1)).join("\n")}\n${indent}`
-        : (content ?? "");
+const jsonToXML = ({
+    tagName,
+    attributes,
+    children,
+    content,
+}: JsonNode): string => {
+    const subNode =
+        Array.isArray(children) && children.length > 0
+            ? children.map(jsonToXML).join("")
+            : (content ?? "");
 
-    const stringAttrs = Object.keys(attributes ?? {}).reduce(
-        (acc, attr) => `${acc} ${attr}="${attributes?.[attr]}"`,
+    const stringAttrs = Object.entries(attributes ?? {}).reduce(
+        (acc, [attr, value]) => `${acc} ${attr}="${value}"`,
         "",
     );
-    return `${indent}<${tagName}${stringAttrs}>${subNode}</${tagName}>`;
+    
+    return `<${tagName}${stringAttrs}>${subNode}</${tagName}>`;
 };
 
 export default jsonToXML;

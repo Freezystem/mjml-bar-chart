@@ -43,18 +43,7 @@ exports[`mjml-bar-chart > getChartBar > should render chart bar with maximum par
 }
 `;
 
-exports[`mjml-bar-chart > getChartBar > should render chart bar with maximum params 2`] = `
-"<td style="padding:0">
-  <table style="padding:0;min-width:20px;max-width:20px;">
-    <tr>
-      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:81px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__bar" style="padding:0;height:17px;background-color:#ffb3c6;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getChartBar > should render chart bar with maximum params 2`] = `"<td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:81px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:17px;background-color:#ffb3c6;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum params 1`] = `
 {
@@ -99,18 +88,7 @@ exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum par
 }
 `;
 
-exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum params 2`] = `
-"<td style="padding:0">
-  <table style="padding:0;min-width:30px;max-width:30px;">
-    <tr>
-      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-    </tr>
-    <tr>
-      <td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getChartBar > should render chart bar with minimum params 2`] = `"<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum params 1`] = `
 {
@@ -649,139 +627,7 @@ exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum p
 }
 `;
 
-exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum params 2`] = `
-"<td style="padding:0;">
-  <table style="border-collapse:collapse;">
-    <tr style="border-bottom:2px solid #d4d4d4">
-      <td style="padding:0;min-width:40px;max-width:40px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:81px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:17px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:64px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:34px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:40px;max-width:40px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:22px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:82px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:46px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:52px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:40px;max-width:40px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:98px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:79px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:19px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:72px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:26px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:40px;max-width:40px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:46px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:52px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:22px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:20px;max-width:20px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:84px;"></td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:14px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:40px;max-width:40px;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getChartBars > should render chart bars with maximum params 2`] = `"<td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #d4d4d4"><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:81px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:17px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:64px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:34px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:22px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:82px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:46px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:52px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:98px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:79px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:19px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:72px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:26px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:46px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:52px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:22px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:84px;"></td></tr><tr><td class="mjbc__bar" style="padding:0;height:14px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum params 1`] = `
 {
@@ -1320,139 +1166,7 @@ exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum p
 }
 `;
 
-exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum params 2`] = `
-"<td style="padding:0;">
-  <table style="border-collapse:collapse;">
-    <tr style="border-bottom:2px solid #d4d4d4">
-      <td style="padding:0;min-width:30px;max-width:30px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:30px;max-width:30px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:30px;max-width:30px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:30px;max-width:30px;"></td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0">
-        <table style="padding:0;min-width:30px;max-width:30px;">
-          <tr>
-            <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td>
-          </tr>
-          <tr>
-            <td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding:0;min-width:30px;max-width:30px;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getChartBars > should render chart bars with minimum params 2`] = `"<td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #d4d4d4"><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td></tr><tr><td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td></tr><tr><td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td></tr><tr><td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td></tr><tr><td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td></tr><tr><td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td></tr><tr><td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td></tr><tr><td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td></tr><tr><td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getChartLabels > should render chart labels with maximum params 1`] = `
 {
@@ -1533,23 +1247,7 @@ exports[`mjml-bar-chart > getChartLabels > should render chart labels with maxim
 }
 `;
 
-exports[`mjml-bar-chart > getChartLabels > should render chart labels with maximum params 2`] = `
-"<tr>
-  <td style="padding:0;min-width:40px;max-width:40px;"></td>
-  <td style="padding:0;">
-    <table style="border-collapse:collapse;">
-      <tr>
-        <td style="padding:0;min-width:20px;max-width:20px;"></td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">January</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">February</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">March</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">April</td>
-        <td style="padding:0;min-width:20px;max-width:20px;"></td>
-      </tr>
-    </table>
-  </td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with maximum params 2`] = `"<tr><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:20px;max-width:20px;"></td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">January</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">February</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">March</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:130px;max-width:130px;">April</td><td style="padding:0;min-width:20px;max-width:20px;"></td></tr></table></td></tr>"`;
 
 exports[`mjml-bar-chart > getChartLabels > should render chart labels with minimum params 1`] = `
 {
@@ -1630,23 +1328,7 @@ exports[`mjml-bar-chart > getChartLabels > should render chart labels with minim
 }
 `;
 
-exports[`mjml-bar-chart > getChartLabels > should render chart labels with minimum params 2`] = `
-"<tr>
-  <td style="padding:0;min-width:40px;max-width:40px;"></td>
-  <td style="padding:0;">
-    <table style="border-collapse:collapse;">
-      <tr>
-        <td style="padding:0;min-width:15px;max-width:15px;"></td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td>
-        <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td>
-        <td style="padding:0;min-width:15px;max-width:15px;"></td>
-      </tr>
-    </table>
-  </td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartLabels > should render chart labels with minimum params 2`] = `"<tr><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:15px;max-width:15px;"></td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td><td style="padding:0;min-width:15px;max-width:15px;"></td></tr></table></td></tr>"`;
 
 exports[`mjml-bar-chart > getChartLegend > should render chart legend with maximum params 1`] = `
 {
@@ -1730,27 +1412,7 @@ exports[`mjml-bar-chart > getChartLegend > should render chart legend with maxim
 }
 `;
 
-exports[`mjml-bar-chart > getChartLegend > should render chart legend with maximum params 2`] = `
-"<tr>
-  <td style="padding:10px 0 0 0;">
-    <table style="margin:0 auto;">
-      <tr>
-        <td>
-          <p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-            <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #ffe5ec;margin:0 auto;">support</span>
-          </p>
-          <p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-            <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #ffb3c6;margin:0 auto;">sales</span>
-          </p>
-          <p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-            <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #fb6f92;margin:0 auto;">tech</span>
-          </p>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with maximum params 2`] = `"<tr><td style="padding:10px 0 0 0;"><table style="margin:0 auto;"><tr><td><p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #ffe5ec;margin:0 auto;">support</span></p><p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #ffb3c6;margin:0 auto;">sales</span></p><p style="margin:0;padding:0;max-width:430px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #fb6f92;margin:0 auto;">tech</span></p></td></tr></table></td></tr>"`;
 
 exports[`mjml-bar-chart > getChartLegend > should render chart legend with minimum params 1`] = `
 {
@@ -1800,17 +1462,7 @@ exports[`mjml-bar-chart > getChartLegend > should render chart legend with minim
 }
 `;
 
-exports[`mjml-bar-chart > getChartLegend > should render chart legend with minimum params 2`] = `
-"<tr>
-  <td style="padding:10px 0 0 0;">
-    <p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;">
-      <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span>
-      <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>
-      <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span>
-    </p>
-  </td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartLegend > should render chart legend with minimum params 2`] = `"<tr><td style="padding:10px 0 0 0;"><p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span></p></td></tr>"`;
 
 exports[`mjml-bar-chart > getChartSource > should render the scale 1`] = `
 {
@@ -1838,13 +1490,7 @@ exports[`mjml-bar-chart > getChartSource > should render the scale 1`] = `
 }
 `;
 
-exports[`mjml-bar-chart > getChartSource > should render the scale 2`] = `
-"<tr>
-  <td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;">
-    <a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a>
-  </td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartSource > should render the scale 2`] = `"<tr><td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;"><a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a></td></tr>"`;
 
 exports[`mjml-bar-chart > getChartTitle > should render chart title 1`] = `
 {
@@ -1862,11 +1508,7 @@ exports[`mjml-bar-chart > getChartTitle > should render chart title 1`] = `
 }
 `;
 
-exports[`mjml-bar-chart > getChartTitle > should render chart title 2`] = `
-"<tr>
-  <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td>
-</tr>"
-`;
+exports[`mjml-bar-chart > getChartTitle > should render chart title 2`] = `"<tr><td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td></tr>"`;
 
 exports[`mjml-bar-chart > getLegend > should render legend with maximum params 1`] = `
 {
@@ -2087,51 +1729,7 @@ exports[`mjml-bar-chart > getScale > should render the scale with maximum params
 }
 `;
 
-exports[`mjml-bar-chart > getScale > should render the scale with maximum params 2`] = `
-"<td style="max-height:200px;padding:0;vertical-align:top;">
-  <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">76</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:20.8px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">60</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:20.8px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">45</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:20.8px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">30</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:20.8px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">15</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:20.8px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getScale > should render the scale with maximum params 2`] = `"<td style="max-height:200px;padding:0;vertical-align:top;"><table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;"><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">76</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:20.8px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">60</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:20.8px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">45</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:20.8px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">30</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:20.8px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">15</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:20.8px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getScale > should render the scale with minimum params 1`] = `
 {
@@ -2295,44 +1893,7 @@ exports[`mjml-bar-chart > getScale > should render the scale with minimum params
 }
 `;
 
-exports[`mjml-bar-chart > getScale > should render the scale with minimum params 2`] = `
-"<td style="max-height:200px;padding:0;vertical-align:top;">
-  <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-    </tr>
-    <tr>
-      <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td>
-      <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getScale > should render the scale with minimum params 2`] = `"<td style="max-height:200px;padding:0;vertical-align:top;"><table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;"><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maximum params 1`] = `
 {
@@ -2420,30 +1981,7 @@ exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maxi
 }
 `;
 
-exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maximum params 2`] = `
-"<td style="padding:0">
-  <table style="padding:0;min-width:20px;max-width:20px;">
-    <tr>
-      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:50px;"></td>
-    </tr>
-    <tr>
-      <td style="padding:0;height:48px;">
-        <table style="border-collapse:collapse;" class="mjbc__bar">
-          <tr>
-            <td style="padding:0;height:21px;background-color:#ffe5ec;width:20px;"></td>
-          </tr>
-          <tr>
-            <td style="padding:0;height:9px;background-color:#ffb3c6;width:20px;"></td>
-          </tr>
-          <tr>
-            <td style="padding:0;height:18px;background-color:#fb6f92;width:20px;"></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with maximum params 2`] = `"<td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:50px;"></td></tr><tr><td style="padding:0;height:48px;"><table style="border-collapse:collapse;" class="mjbc__bar"><tr><td style="padding:0;height:21px;background-color:#ffe5ec;width:20px;"></td></tr><tr><td style="padding:0;height:9px;background-color:#ffb3c6;width:20px;"></td></tr><tr><td style="padding:0;height:18px;background-color:#fb6f92;width:20px;"></td></tr></table></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with minimum params 1`] = `
 {
@@ -2531,30 +2069,7 @@ exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with mini
 }
 `;
 
-exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with minimum params 2`] = `
-"<td style="padding:0">
-  <table style="padding:0;min-width:30px;max-width:30px;">
-    <tr>
-      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td>
-    </tr>
-    <tr>
-      <td style="padding:0;height:182px;">
-        <table style="border-collapse:collapse;" class="mjbc__bar">
-          <tr>
-            <td style="padding:0;height:26px;background-color:#ffe5ec;width:30px;"></td>
-          </tr>
-          <tr>
-            <td style="padding:0;height:95px;background-color:#ffb3c6;width:30px;"></td>
-          </tr>
-          <tr>
-            <td style="padding:0;height:61px;background-color:#fb6f92;width:30px;"></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</td>"
-`;
+exports[`mjml-bar-chart > getStackedChartBar > should render chart bar with minimum params 2`] = `"<td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td></tr><tr><td style="padding:0;height:182px;"><table style="border-collapse:collapse;" class="mjbc__bar"><tr><td style="padding:0;height:26px;background-color:#ffe5ec;width:30px;"></td></tr><tr><td style="padding:0;height:95px;background-color:#ffb3c6;width:30px;"></td></tr><tr><td style="padding:0;height:61px;background-color:#fb6f92;width:30px;"></td></tr></table></td></tr></table></td>"`;
 
 exports[`mjml-bar-chart > mjml markup > should render the default bar chart 1`] = `
 "<!doctype html>
@@ -2641,215 +2156,7 @@ exports[`mjml-bar-chart > mjml markup > should render the default bar chart 1`] 
                 <td
                    style="font-size:0px;word-break:break-word;"
                 >
-                  <table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
-  <tr>
-    <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td>
-  </tr>
-  <tr>
-    <td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;">
-      <a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <table style="border-collapse:collapse;margin:0 auto;">
-        <tr>
-          <td style="max-height:200px;padding:0;vertical-align:top;">
-            <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-            </table>
-          </td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr style="border-bottom:2px solid #d4d4d4">
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;min-width:40px;max-width:40px;"></td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:10px 0 0 0;">
-      <p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;">
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span>
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span>
-      </p>
-    </td>
-  </tr>
-</table>
+                  <table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;"><tr><td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td></tr><tr><td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;"><a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a></td></tr><tr><td><table style="border-collapse:collapse;margin:0 auto;"><tr><td style="max-height:200px;padding:0;vertical-align:top;"><table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;"><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr></table></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #d4d4d4"><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td></tr><tr><td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td></tr><tr><td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td></tr><tr><td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td></tr><tr><td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td></tr><tr><td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td></tr><tr><td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td></tr><tr><td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td></tr><tr><td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td></tr><tr><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:15px;max-width:15px;"></td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td><td style="padding:0;min-width:15px;max-width:15px;"></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 0 0 0;"><p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span></p></td></tr></table>
                 </td>
               </tr>
             
@@ -2962,193 +2269,7 @@ exports[`mjml-bar-chart > mjml markup > should render the stacked bar chart 1`] 
                 <td
                    style="font-size:0px;word-break:break-word;"
                 >
-                  <table class="mjbc1" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
-  <tr>
-    <td class="mjbc1__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:Arial, sans-serif;font-size:20px;">Sum of Requests by Department</td>
-  </tr>
-  <tr>
-    <td class="mjbc1__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:Arial, sans-serif;font-size:12px;color:#3e3e3e;vertical-align:top;text-decoration:underlined;">
-      <a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <table style="border-collapse:collapse;margin:0 auto;">
-        <tr>
-          <td style="max-height:200px;padding:0;vertical-align:top;">
-            <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
-              <tr>
-                <td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">126</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">94</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">63</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">31</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-            </table>
-          </td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr style="border-bottom:2px solid #d4d4d4">
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:91px;">74</td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0;height:107px;">
-                        <table style="border-collapse:collapse;" class="mjbc1__bar">
-                          <tr>
-                            <td style="padding:0;height:48px;background-color:#ffe5ec;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:20px;background-color:#ffb3c6;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:39px;background-color:#fb6f92;width:30px;"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0;height:182px;">
-                        <table style="border-collapse:collapse;" class="mjbc1__bar">
-                          <tr>
-                            <td style="padding:0;height:26px;background-color:#ffe5ec;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:95px;background-color:#ffb3c6;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:61px;background-color:#fb6f92;width:30px;"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:146px;">36</td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0;height:52px;">
-                        <table style="border-collapse:collapse;" class="mjbc1__bar">
-                          <tr>
-                            <td style="padding:0;height:0px;background-color:#ffe5ec;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:22px;background-color:#ffb3c6;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:30px;background-color:#fb6f92;width:30px;"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:95px;">71</td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0;height:103px;">
-                        <table style="border-collapse:collapse;" class="mjbc1__bar">
-                          <tr>
-                            <td style="padding:0;height:61px;background-color:#ffe5ec;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:26px;background-color:#ffb3c6;width:30px;"></td>
-                          </tr>
-                          <tr>
-                            <td style="padding:0;height:16px;background-color:#fb6f92;width:30px;"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;min-width:40px;max-width:40px;"></td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-                <td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">January</td>
-                <td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">February</td>
-                <td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">March</td>
-                <td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">April</td>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:10px 0 0 0;">
-      <table style="margin:0 auto;">
-        <tr>
-          <td>
-            <p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-              <span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span>
-            </p>
-            <p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-              <span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>
-            </p>
-            <p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;">
-              <span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span>
-            </p>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+                  <table class="mjbc1" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;"><tr><td class="mjbc1__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:Arial, sans-serif;font-size:20px;">Sum of Requests by Department</td></tr><tr><td class="mjbc1__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:Arial, sans-serif;font-size:12px;color:#3e3e3e;vertical-align:top;text-decoration:underlined;"><a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a></td></tr><tr><td><table style="border-collapse:collapse;margin:0 auto;"><tr><td style="max-height:200px;padding:0;vertical-align:top;"><table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;"><tr><td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">126</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">94</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">63</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">31</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc1__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr></table></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #d4d4d4"><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:91px;">74</td></tr><tr><td style="padding:0;height:107px;"><table style="border-collapse:collapse;" class="mjbc1__bar"><tr><td style="padding:0;height:48px;background-color:#ffe5ec;width:30px;"></td></tr><tr><td style="padding:0;height:20px;background-color:#ffb3c6;width:30px;"></td></tr><tr><td style="padding:0;height:39px;background-color:#fb6f92;width:30px;"></td></tr></table></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">126</td></tr><tr><td style="padding:0;height:182px;"><table style="border-collapse:collapse;" class="mjbc1__bar"><tr><td style="padding:0;height:26px;background-color:#ffe5ec;width:30px;"></td></tr><tr><td style="padding:0;height:95px;background-color:#ffb3c6;width:30px;"></td></tr><tr><td style="padding:0;height:61px;background-color:#fb6f92;width:30px;"></td></tr></table></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:146px;">36</td></tr><tr><td style="padding:0;height:52px;"><table style="border-collapse:collapse;" class="mjbc1__bar"><tr><td style="padding:0;height:0px;background-color:#ffe5ec;width:30px;"></td></tr><tr><td style="padding:0;height:22px;background-color:#ffb3c6;width:30px;"></td></tr><tr><td style="padding:0;height:30px;background-color:#fb6f92;width:30px;"></td></tr></table></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:Arial, sans-serif;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:95px;">71</td></tr><tr><td style="padding:0;height:103px;"><table style="border-collapse:collapse;" class="mjbc1__bar"><tr><td style="padding:0;height:61px;background-color:#ffe5ec;width:30px;"></td></tr><tr><td style="padding:0;height:26px;background-color:#ffb3c6;width:30px;"></td></tr><tr><td style="padding:0;height:16px;background-color:#fb6f92;width:30px;"></td></tr></table></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td></tr><tr><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:15px;max-width:15px;"></td><td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">January</td><td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">February</td><td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">March</td><td class="mjbc1__label" style="height:30px;padding:0;font-family:Arial, sans-serif;font-size:14px;text-align:center;min-width:60px;max-width:60px;">April</td><td style="padding:0;min-width:15px;max-width:15px;"></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 0 0 0;"><table style="margin:0 auto;"><tr><td><p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span></p><p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span></p><p style="margin:0;padding:0;max-width:310px;line-height:20px;height:20px;min-width:100%;text-align:left;padding-bottom:5px;"><span class="mjbc1__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:Arial, sans-serif;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span></p></td></tr></table></td></tr></table>
                 </td>
               </tr>
             
@@ -3176,324 +2297,9 @@ exports[`mjml-bar-chart > mjml markup > should render the stacked bar chart 1`] 
   "
 `;
 
-exports[`mjml-bar-chart > render > should render the bar chart as HTML with maximum params 1`] = `
-"<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
-  <tr>
-    <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Some Stats</td>
-  </tr>
-  <tr>
-    <td>
-      <table style="border-collapse:collapse;margin:0 auto;">
-        <tr>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr style="border-bottom:2px solid #e3e3e3">
-                <td style="padding:0;min-width:40px;max-width:40px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:85px;">12</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:13px;background-color:#95d5b2;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;">76</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:82px;background-color:#52b788;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:40px;max-width:40px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;">38</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:41px;background-color:#95d5b2;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;">20</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:22px;background-color:#52b788;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:40px;max-width:40px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:29px;">64</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:69px;background-color:#95d5b2;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:20px;max-width:20px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:56px;">39</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:42px;background-color:#52b788;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:40px;max-width:40px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="padding:0;min-width:20px;max-width:20px;"></td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">September</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">October</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">November</td>
-                <td style="padding:0;min-width:20px;max-width:20px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:10px 0 0 0;">
-      <p style="margin:0;padding:0;max-width:280px;line-height:20px;height:20px;min-width:100%;text-align:center;">
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #95d5b2;margin:0 auto;">legal</span>
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #52b788;margin:0 auto;">hr</span>
-      </p>
-    </td>
-  </tr>
-</table>"
-`;
+exports[`mjml-bar-chart > render > should render the bar chart as HTML with maximum params 1`] = `"<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;"><tr><td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Some Stats</td></tr><tr><td><table style="border-collapse:collapse;margin:0 auto;"><tr><td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #e3e3e3"><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:85px;">12</td></tr><tr><td class="mjbc__bar" style="padding:0;height:13px;background-color:#95d5b2;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:16px;">76</td></tr><tr><td class="mjbc__bar" style="padding:0;height:82px;background-color:#52b788;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:57px;">38</td></tr><tr><td class="mjbc__bar" style="padding:0;height:41px;background-color:#95d5b2;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:76px;">20</td></tr><tr><td class="mjbc__bar" style="padding:0;height:22px;background-color:#52b788;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:29px;">64</td></tr><tr><td class="mjbc__bar" style="padding:0;height:69px;background-color:#95d5b2;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:20px;max-width:20px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:20px;max-width:20px;height:56px;">39</td></tr><tr><td class="mjbc__bar" style="padding:0;height:42px;background-color:#52b788;"></td></tr></table></td><td style="padding:0;min-width:40px;max-width:40px;"></td></tr></table></td></tr><tr><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:20px;max-width:20px;"></td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">September</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">October</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:80px;max-width:80px;">November</td><td style="padding:0;min-width:20px;max-width:20px;"></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 0 0 0;"><p style="margin:0;padding:0;max-width:280px;line-height:20px;height:20px;min-width:100%;text-align:center;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #95d5b2;margin:0 auto;">legal</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:20px solid #52b788;margin:0 auto;">hr</span></p></td></tr></table>"`;
 
-exports[`mjml-bar-chart > render > should render the bar chart as HTML with minimum params 1`] = `
-"<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;">
-  <tr>
-    <td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td>
-  </tr>
-  <tr>
-    <td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;">
-      <a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <table style="border-collapse:collapse;margin:0 auto;">
-        <tr>
-          <td style="max-height:200px;padding:0;vertical-align:top;">
-            <table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;">
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-              <tr>
-                <td colspan="2" style="padding:0;width:38px;height:30px;"></td>
-              </tr>
-              <tr>
-                <td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td>
-                <td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td>
-              </tr>
-            </table>
-          </td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr style="border-bottom:2px solid #d4d4d4">
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0">
-                  <table style="padding:0;min-width:30px;max-width:30px;">
-                    <tr>
-                      <td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td>
-                    </tr>
-                    <tr>
-                      <td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="padding:0;min-width:30px;max-width:30px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;min-width:40px;max-width:40px;"></td>
-          <td style="padding:0;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td>
-                <td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td>
-                <td style="padding:0;min-width:15px;max-width:15px;"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:10px 0 0 0;">
-      <p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;">
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span>
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span>
-        <span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span>
-      </p>
-    </td>
-  </tr>
-</table>"
-`;
+exports[`mjml-bar-chart > render > should render the bar chart as HTML with minimum params 1`] = `"<table class="mjbc" style="max-width:100%;min-width:100%;border-collapse:collapse;margin:0 auto;"><tr><td class="mjbc__title" style="min-width:100%;max-width:100%;padding:0;height:40px;font-weight:bold;text-align:center;font-family:inherit;font-size:20px;">Sum of Requests by Department</td></tr><tr><td class="mjbc__source" style="min-width:100%;max-width:100%;padding:0;height:30px;text-align:center;font-family:inherit;font-size:12px;color:#3e3e3e;vertical-align:top;"><a href="#sources" target="_blank" style="color:inherit;text-decoration:none;">source: wikipedia ↗</a></td></tr><tr><td><table style="border-collapse:collapse;margin:0 auto;"><tr><td style="max-height:200px;padding:0;vertical-align:top;"><table style="height:200px;border-collapse:collapse;border-right:2px solid #d4d4d4;"><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">66</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">49</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">33</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">16</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr><tr><td colspan="2" style="padding:0;width:38px;height:30px;"></td></tr><tr><td class="mjbc__step" style="padding:0;height:14px;line-height:14px;min-width:33px;max-width:33px;vertical-align:bottom;text-align:right;font-family:inherit;font-size:14px;overflow:hidden;white-space:nowrap;color:#d4d4d4;border-bottom:2px solid transparent;">0</td><td style="height:14px;padding:0;min-width:5px;border-bottom:2px solid #d4d4d4;"></td></tr></table></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr style="border-bottom:2px solid #d4d4d4"><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:107px;">33</td></tr><tr><td class="mjbc__bar" style="padding:0;height:91px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:159px;">14</td></tr><tr><td class="mjbc__bar" style="padding:0;height:39px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:124px;">27</td></tr><tr><td class="mjbc__bar" style="padding:0;height:74px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:16px;">66</td></tr><tr><td class="mjbc__bar" style="padding:0;height:182px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:198px;">0</td></tr><tr><td class="mjbc__bar" style="padding:0;height:0px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:157px;">15</td></tr><tr><td class="mjbc__bar" style="padding:0;height:41px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:140px;">21</td></tr><tr><td class="mjbc__bar" style="padding:0;height:58px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:82px;">42</td></tr><tr><td class="mjbc__bar" style="padding:0;height:116px;background-color:#ffe5ec;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:148px;">18</td></tr><tr><td class="mjbc__bar" style="padding:0;height:50px;background-color:#ffb3c6;"></td></tr></table></td><td style="padding:0"><table style="padding:0;min-width:30px;max-width:30px;"><tr><td style="padding:0;font-family:inherit;font-size:12px;vertical-align:bottom;text-align:center;line-height:16px;overflow:hidden;white-space:nowrap;min-width:30px;max-width:30px;height:168px;">11</td></tr><tr><td class="mjbc__bar" style="padding:0;height:30px;background-color:#fb6f92;"></td></tr></table></td><td style="padding:0;min-width:30px;max-width:30px;"></td></tr></table></td></tr><tr><td style="padding:0;min-width:40px;max-width:40px;"></td><td style="padding:0;"><table style="border-collapse:collapse;"><tr><td style="padding:0;min-width:15px;max-width:15px;"></td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">January</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">February</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">March</td><td class="mjbc__label" style="height:30px;padding:0;font-family:inherit;font-size:14px;text-align:center;min-width:120px;max-width:120px;">April</td><td style="padding:0;min-width:15px;max-width:15px;"></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 0 0 0;"><p style="margin:0;padding:0;max-width:550px;line-height:20px;height:20px;min-width:100%;text-align:center;"><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffe5ec;margin:0 auto;">support</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #ffb3c6;margin:0 auto;">sales</span><span class="mjbc__legend" style="display:inline-block;padding:0 10px;height:20px;font-family:inherit;font-size:14px;white-space:nowrap;border-left:30px solid #fb6f92;margin:0 auto;">tech</span></p></td></tr></table>"`;
 
 exports[`mjml-bar-chart > renderJSON > should render the bar chart as JSON with maximum params 1`] = `
 {
