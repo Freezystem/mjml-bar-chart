@@ -15,9 +15,11 @@ const jsonToXML = ({
 
     if (attributes) {
         buffer.push(
-            ...Object.entries(attributes).map(([attr, value]) =>
-                value !== undefined ? ` ${attr}="${value}"` : ` ${attr}`,
-            ),
+            ...Object.entries(attributes)
+                .filter(([, value]) => value !== undefined)
+                .map(([attr, value]) =>
+                    value === "" ? ` ${attr}` : ` ${attr}="${value}"`,
+                ),
         );
     }
 
