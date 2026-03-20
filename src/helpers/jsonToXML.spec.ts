@@ -20,7 +20,7 @@ describe("jsonToXML", () => {
         expect(jsonToXML(json)).toBe('<div id="test"></div>');
     });
 
-    it("should only add attribute if value is an empty string", () => {
+    it("should only add attribute name if value is an empty string", () => {
         const json = {
             tagName: "div",
             attributes: {
@@ -115,12 +115,22 @@ describe("jsonToXML", () => {
             },
         };
 
-        /**
-         * @desc without escaping, generated code would look like this:
-         * "<div class="pre"></div><script>alert("xss");</script><div class="post"></div>"
-         */
         expect(jsonToXML(json)).toBe(
             '<div class="pre&quot;&gt;&lt;/div&gt;&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt;&lt;div class=&quot;post"></div>',
+        );
+    });
+
+    it("should not break URLs or hex colors when escaping", () => {
+        const json = {
+            tagName: "a",
+            attributes: {
+                href: "https://example.com/path?query=1&id=2",
+                style: "color:#ff0000;background:url('img.png');",
+            },
+        };
+
+        expect(jsonToXML(json)).toBe(
+            '<a href="https://example.com/path?query=1&amp;id=2" style="color:#ff0000;background:url(\'img.png\');"></a>',
         );
     });
 });
