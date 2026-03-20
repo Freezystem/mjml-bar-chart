@@ -5,6 +5,16 @@ export interface JsonNode<T extends string = string> {
     content?: string;
 }
 
+const HTML_ENTITIES: Record<string, string> = {
+    "&": "&amp;",
+    '"': "&quot;",
+    "<": "&lt;",
+    ">": "&gt;",
+};
+
+const escapeHTML = (str: string) =>
+    str.replace(/[&"<>]/g, (c) => HTML_ENTITIES[c]);
+
 const jsonToXML = ({
     tagName,
     attributes,
@@ -15,11 +25,11 @@ const jsonToXML = ({
 
     if (attributes) {
         buffer.push(
-            ...Object.entries(attributes)
-                .filter(([, value]) => value !== undefined)
-                .map(([attr, value]) =>
-                    value === "" ? ` ${attr}` : ` ${attr}="${value}"`,
-                ),
+            ...Object.entries(attributes).map(([attr, value]) =>
+                value !== undefined
+                    ? ` ${attr}${value ? `="${escapeHTML(value)}"` : ""}`
+                    : "",
+            ),
         );
     }
 

@@ -63,10 +63,18 @@ describe("jsonToXML", () => {
         const json = {
             tagName: "div",
             content: "this should be ignored",
-            children: [{ tagName: "span", content: "child" }],
+            children: [
+                {
+                    tagName: "span",
+                    content: "child",
+                    attributes: { color: "#333" },
+                },
+            ],
         };
 
-        expect(jsonToXML(json)).toBe("<div><span>child</span></div>");
+        expect(jsonToXML(json)).toBe(
+            '<div><span color="#333">child</span></div>',
+        );
     });
 
     it("should convert a nested structure to XML", () => {
@@ -96,6 +104,23 @@ describe("jsonToXML", () => {
 
         expect(jsonToXML(json)).toBe(
             '<table class="test" style="border-collapse:collapse;"><tr><td>1</td><td>2</td></tr></table>',
+        );
+    });
+
+    it("should escape attribute values to prevent XSS", () => {
+        const json = {
+            tagName: "div",
+            attributes: {
+                class: 'pre"></div><script>alert("xss");</script><div class="post',
+            },
+        };
+
+        /**
+         * @desc without escaping, generated code would look like this:
+         * "<div class="pre"></div><script>alert("xss");</script><div class="post"></div>"
+         */
+        expect(jsonToXML(json)).toBe(
+            '<div class="pre&quot;&gt;&lt;/div&gt;&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt;&lt;div class=&quot;post"></div>',
         );
     });
 });
