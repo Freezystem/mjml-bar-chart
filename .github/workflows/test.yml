@@ -32,7 +32,7 @@ jobs:
                   echo "# What's new ?" > CHANGELOG.md
                   git log --pretty='- %h %s by %aN' --no-merges $(git describe --tags --abbrev=0 @^)..@ >> CHANGELOG.md
             - name: Pre Release
-              uses: softprops/action-gh-release@71d29a04ae7c63895f38299d7a5e05d238f7f445
+              uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe
               if: github.ref_type == 'tag'
               with:
                   body_path: CHANGELOG.md
