@@ -16,26 +16,33 @@ jobs:
               uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
               with:
                   fetch-depth: 0
+                  
             - name: Setup Node and NPM
               uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
               with:
                   node-version: 24
                   cache: "npm"
+                  
             - name: Install and Build
               run: npm ci --ignore-scripts
+              
             - name: Format and Lint
               run: npm run fl:ci
+              
             - name: Tests
               run: npm run test:coverage
+              
             - name: SonarQube
               uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+                
             - name: Generate Changelog
               if: github.ref_type == 'tag'
               run: |
                   echo "# What's new ?" > CHANGELOG.md
                   git log --pretty='- %h %s by %aN' --no-merges $(git describe --tags --abbrev=0 @^)..@ >> CHANGELOG.md
+                  
             - name: Pre Release
               uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe
               if: github.ref_type == 'tag'
