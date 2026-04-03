@@ -8,7 +8,7 @@ jobs:
 
         steps:
             - name: Harden the runner (Audit all outbound calls)
-              uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+              uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
               with:
                 egress-policy: audit
 
@@ -33,7 +33,7 @@ jobs:
               run: npm run test:coverage
               
             - name: SonarQube
-              uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9
+              uses: SonarSource/sonarqube-scan-action@299e4b793aaa83bf2aba7c9c14bedbb485688ec4 # v7.1.0
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                 
@@ -44,7 +44,7 @@ jobs:
                   git log --pretty='- %h %s by %aN' --no-merges $(git describe --tags --abbrev=0 @^)..@ >> CHANGELOG.md
                   
             - name: Pre Release
-              uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe
+              uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe # v2.6.1
               if: github.ref_type == 'tag'
               with:
                   body_path: CHANGELOG.md
