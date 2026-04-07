@@ -60,7 +60,7 @@
         "@biomejs/biome": "^2.4.10",
         "@types/mjml": "^4.7.4",
         "@types/mjml-core": "^4.15.2",
-        "@types/node": "^25.5.1",
+        "@types/node": "^25.5.2",
         "@vitest/coverage-v8": "^4.1.2",
         "npm-check-updates": "^20.0.0",
         "typescript": "^5.9.3",
