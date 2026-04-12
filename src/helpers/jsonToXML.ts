@@ -5,20 +5,45 @@ export interface JsonNode<T extends string = string> {
     content?: string;
 }
 
-const jsonToXML = (
-    { tagName, attributes, children, content }: JsonNode,
-    level = 0,
-): string => {
-    const indent = new Array(level).fill("  ").join("");
-    const subNode = children?.length
-        ? `\n${children.map((n) => jsonToXML(n, level + 1)).join("\n")}\n${indent}`
-        : (content ?? "");
+const HTML_ENTITIES: Record<string, string> = {
+    "&": "&amp;",
+    '"': "&quot;",
+    "<": "&lt;",
+    ">": "&gt;",
+};
 
-    const stringAttrs = Object.keys(attributes ?? {}).reduce(
-        (acc, attr) => `${acc} ${attr}="${attributes?.[attr]}"`,
-        "",
-    );
-    return `${indent}<${tagName}${stringAttrs}>${subNode}</${tagName}>`;
+const escapeHTML = (str: string) =>
+    str.replace(/[&"<>]/g, (c) => HTML_ENTITIES[c]);
+
+const jsonToXML = ({
+    tagName,
+    attributes,
+    children,
+    content,
+}: JsonNode): string => {
+    const buffer: string[] = [`<${tagName}`];
+
+    if (attributes) {
+        buffer.push(
+            ...Object.entries(attributes).map(([attr, value]) =>
+                value !== undefined
+                    ? ` ${attr}${value ? `="${escapeHTML(value)}"` : ""}`
+                    : "",
+            ),
+        );
+    }
+
+    buffer.push(">");
+
+    if (Array.isArray(children) && children.length > 0) {
+        buffer.push(...children.map(jsonToXML));
+    } else if (content !== undefined && content !== null) {
+        buffer.push(content);
+    }
+
+    buffer.push(`</${tagName}>`);
+
+    return buffer.join("");
 };
 
 export default jsonToXML;
