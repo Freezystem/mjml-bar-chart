@@ -67,7 +67,7 @@
         "vitest": "^4.1.4"
     },
     "peerDependencies": {
-        "mjml": "^5.0.0-beta.2",
-        "mjml-core": "^5.0.0-beta.2"
+        "mjml": "^5.0.0",
+        "mjml-core": "^5.0.0"
     }
 }
