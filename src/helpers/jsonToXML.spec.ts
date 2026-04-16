@@ -113,10 +113,11 @@ describe("jsonToXML", () => {
             attributes: {
                 class: 'pre"></div><script>alert("xss");</script><div class="post',
             },
+            content: '<a href="#bad">link</a>',
         };
 
         expect(jsonToXML(json)).toBe(
-            '<div class="pre&quot;&gt;&lt;/div&gt;&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt;&lt;div class=&quot;post"></div>',
+            '<div class="pre&quot;&gt;&lt;/div&gt;&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt;&lt;div class=&quot;post">&lt;a href=&quot;#bad&quot;&gt;link&lt;/a&gt;</div>',
         );
     });
 
@@ -127,10 +128,11 @@ describe("jsonToXML", () => {
                 href: "https://example.com/path?query=1&id=2",
                 style: "color:#ff0000;background:url('img.png');",
             },
+            content: "link",
         };
 
         expect(jsonToXML(json)).toBe(
-            '<a href="https://example.com/path?query=1&amp;id=2" style="color:#ff0000;background:url(\'img.png\');"></a>',
+            '<a href="https://example.com/path?query=1&amp;id=2" style="color:#ff0000;background:url(\'img.png\');">link</a>',
         );
     });
 });

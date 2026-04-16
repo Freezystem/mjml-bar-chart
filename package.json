@@ -21,10 +21,8 @@
     "type": "module",
     "exports": {
         "types": "./build/types/index.d.ts",
-        "browser": "./build/umd/index.js",
         "import": "./build/esm/index.js",
-        "require": "./build/umd/index.js",
-        "default": "./src/index.ts"
+        "require": "./build/cjs/index.js"
     },
     "files": [
         "build/**/*",
@@ -38,6 +36,7 @@
         "watch": "tsc --watch",
         "prebuild": "rm -rf build",
         "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
+        "postbuild": "mkdir -p build/cjs && echo '{\"type\":\"commonjs\"}' > build/cjs/package.json",
         "test": "vitest",
         "test:watch": "vitest --watch",
         "test:coverage": "vitest --coverage",
