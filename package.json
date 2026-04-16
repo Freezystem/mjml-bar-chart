@@ -63,11 +63,11 @@
         "@types/node": "^25.6.0",
         "@vitest/coverage-v8": "^4.1.4",
         "npm-check-updates": "^21.0.1",
-        "typescript": "^5.9.3",
+        "typescript": "^6.0.2",
         "vitest": "^4.1.4"
     },
     "peerDependencies": {
-        "mjml": "^4.18.0",
-        "mjml-core": "^4.18.0"
+        "mjml": "^5.0.0",
+        "mjml-core": "^5.0.0"
     }
 }
