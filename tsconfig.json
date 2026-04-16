@@ -3,10 +3,10 @@
     "compilerOptions": {
         "rootDir": "src",
         "types": ["node", "mjml", "mjml-core"],
-        "outDir": "build/umd",
-        "module": "umd",
+        "outDir": "build/cjs",
+        "module": "commonjs",
         "target": "ESNext",
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "composite": true,
         "pretty": true,
         "esModuleInterop": true,
