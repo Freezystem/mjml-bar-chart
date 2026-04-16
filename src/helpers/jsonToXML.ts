@@ -38,7 +38,7 @@ const jsonToXML = ({
     if (Array.isArray(children) && children.length > 0) {
         buffer.push(...children.map(jsonToXML));
     } else if (content !== undefined && content !== null) {
-        buffer.push(content);
+        buffer.push(escapeHTML(content));
     }
 
     buffer.push(`</${tagName}>`);
