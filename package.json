@@ -58,7 +58,7 @@
     "devDependencies": {
         "@biomejs/biome": "^2.4.12",
         "@types/mjml": "^4.7.4",
-        "@types/mjml-core": "^4.15.2",
+        "@types/mjml-core": "^5.0.0",
         "@types/node": "^25.6.0",
         "@vitest/coverage-v8": "^4.1.4",
         "npm-check-updates": "^21.0.2",
