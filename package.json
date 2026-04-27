@@ -56,9 +56,9 @@
         "tag:delete": "git tag -d ${npm_config_tag} && git push origin :refs/tags/${npm_config_tag}"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.4.12",
-        "@types/mjml": "^4.7.4",
-        "@types/mjml-core": "^4.15.2",
+        "@biomejs/biome": "^2.4.13",
+        "@types/mjml": "^5.0.0",
+        "@types/mjml-core": "^5.0.0",
         "@types/node": "^25.6.0",
         "@vitest/coverage-v8": "^4.1.5",
         "mjml": "^5.0.1",
