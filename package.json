@@ -59,13 +59,13 @@
         "@biomejs/biome": "^2.4.15",
         "@types/mjml": "^5.0.0",
         "@types/mjml-core": "^5.0.0",
-        "@types/node": "^25.8.0",
-        "@vitest/coverage-v8": "^4.1.6",
-        "mjml": "^5.2.1",
-        "mjml-core": "^5.2.1",
+        "@types/node": "^25.9.1",
+        "@vitest/coverage-v8": "^4.1.7",
+        "mjml": "^5.2.2",
+        "mjml-core": "^5.2.2",
         "npm-check-updates": "^22.2.0",
         "typescript": "^6.0.3",
-        "vitest": "^4.1.6"
+        "vitest": "^4.1.7"
     },
     "peerDependencies": {
         "mjml": "^5.0.0",
