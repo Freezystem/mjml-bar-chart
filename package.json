@@ -64,7 +64,7 @@
         "mjml": "^5.4.0",
         "mjml-core": "^5.4.0",
         "npm-check-updates": "^22.2.9",
-        "typescript": "^6.0.3",
+        "typescript": "^7.0.2",
         "vitest": "^4.1.9"
     },
     "peerDependencies": {
