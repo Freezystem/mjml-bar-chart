@@ -6,7 +6,7 @@
         "outDir": "build/cjs",
         "module": "commonjs",
         "target": "ESNext",
-        "moduleResolution": "bundler",
+        "moduleResolution": "node",
         "composite": true,
         "pretty": true,
         "esModuleInterop": true,
