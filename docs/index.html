@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mjml-bar-chart &mdash; bar charts, delivered in your email</title>
+<meta name="description" content="An MJML component that renders static bar charts in HTML emails as pure HTML tables. No JavaScript, no SVG, no images. Every client, Outlook included.">
+<meta name="theme-color" content="#f4f6fb">
+<meta property="og:title" content="mjml-bar-chart &mdash; bar charts, delivered in your email">
+<meta property="og:description" content="Static bar charts in HTML emails, rendered as pure HTML tables. Zero dependencies. Every client, Outlook included.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20x='2'%20y='14'%20width='6'%20height='18'%20rx='2'%20fill='%23adb2d4'/%3E%3Crect%20x='10'%20y='6'%20width='6'%20height='26'%20rx='2'%20fill='%23c7d9dd'/%3E%3Crect%20x='18'%20y='19'%20width='6'%20height='13'%20rx='2'%20fill='%23d5e5d5'/%3E%3Crect%20x='26'%20y='10'%20width='6'%20height='22'%20rx='2'%20fill='%23eef1da'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #f4f6fb;
+    --ink: #272b3a;
+    --slate: #565b6e;
+    --accent: #5c6396;
+    --peri: #adb2d4;
+    --mist: #c7d9dd;
+    --sage: #d5e5d5;
+    --pale: #eef1da;
+    --border: #e3e7f2;
+    --white: #ffffff;
+    --serif: Georgia, 'Times New Roman', serif;
+    --mono: 'Fira Code', ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, 'Courier New', monospace;
+    --shadow: 0 24px 70px rgba(39, 43, 58, 0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); }
+  code { font-family: var(--mono); font-size: 0.88em; color: var(--accent); }
+
+  /* ---------- header ---------- */
+  header { border-bottom: 1px solid var(--border); }
+  .header-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; padding: 22px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .motif { display: inline-flex; align-items: flex-end; gap: 4px; height: 24px; }
+  .motif i { display: block; width: 6px; border-radius: 2px 2px 0 0; }
+  .motif i:nth-child(1) { height: 16px; background: var(--peri); }
+  .motif i:nth-child(2) { height: 24px; background: var(--mist); }
+  .motif i:nth-child(3) { height: 12px; background: var(--sage); }
+  .motif i:nth-child(4) { height: 20px; background: var(--pale); }
+  .wordmark { font-size: 21px; }
+  .npm-chip {
+    font-family: var(--mono); font-size: 13px;
+    background: var(--pale); color: var(--ink);
+    padding: 10px 20px; border-radius: 999px; white-space: nowrap;
+  }
+  .npm-chip:hover { background: #e3e8cc; }
+
+  /* ---------- hero + video ---------- */
+  .hero { padding: 76px 0 0; text-align: center; }
+  .kicker {
+    font-family: var(--mono); font-size: 13px;
+    letter-spacing: 0.35em; color: var(--slate);
+  }
+  h1 {
+    font-weight: normal;
+    font-size: clamp(42px, 6.5vw, 76px);
+    line-height: 1.12;
+    margin: 20px auto 18px;
+    max-width: 900px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .hero .sub {
+    font-size: 20px; color: var(--slate);
+    max-width: 660px; margin: 0 auto 44px;
+  }
+  .player {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 12px;
+  }
+  .player video {
+    display: block; width: 100%; height: auto;
+    border-radius: 8px;
+  }
+  .stat {
+    font-family: var(--mono); font-size: 14px; color: var(--slate);
+    margin-top: 20px;
+  }
+
+  /* ---------- sections ---------- */
+  section { padding: 84px 0 0; }
+  h2 {
+    font-weight: normal;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+    margin: 16px 0 34px;
+  }
+
+  /* ---------- feature cards ---------- */
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 32px 34px;
+  }
+  .card h3 { font-weight: normal; font-size: 25px; margin-bottom: 10px; }
+  .card p { color: var(--slate); font-size: 16.5px; }
+  .panel {
+    display: inline-block;
+    font-family: var(--mono); font-size: 15px;
+    background: var(--pale); border-radius: 12px;
+    padding: 14px 22px; margin: 4px 0 16px;
+  }
+  .panel .key { color: var(--accent); }
+
+  /* ---------- attributes table ---------- */
+  .table-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+  }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; }
+  thead th {
+    font-family: var(--mono); font-weight: normal;
+    font-size: 12px; letter-spacing: 0.14em;
+    color: var(--slate); text-align: left;
+    padding: 20px 22px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td { padding: 13px 22px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafbfe; }
+  td.attr, td.type, td.def { font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+  td.attr { color: var(--accent); }
+  td.type, td.def { color: var(--slate); }
+  td.desc { color: var(--slate); font-size: 15.5px; }
+
+  /* ---------- css class chips ---------- */
+  .classes-sub { color: var(--slate); font-size: 18px; max-width: 720px; margin-bottom: 30px; }
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 14px; }
+  .chips li {
+    font-family: var(--mono); font-size: 15px;
+    padding: 13px 24px; border-radius: 999px;
+  }
+  .chips li:nth-child(4n+1) { background: var(--peri); }
+  .chips li:nth-child(4n+2) { background: var(--mist); }
+  .chips li:nth-child(4n+3) { background: var(--sage); }
+  .chips li:nth-child(4n+4) { background: var(--pale); }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--border); margin-top: 96px; }
+  .footer-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap; padding: 28px 0;
+    font-family: var(--mono); font-size: 13px; color: var(--slate);
+  }
+  .footer-row nav { display: flex; gap: 24px; }
+  .footer-row a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .cards { grid-template-columns: 1fr; }
+    .card { padding: 26px 26px; }
+    section { padding: 64px 0 0; }
+    .hero { padding: 56px 0 0; }
+    .hero .sub { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <span class="motif" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="wordmark">mjml-bar-chart</span>
+    </div>
+    <a class="npm-chip" href="https://www.npmjs.com/package/mjml-bar-chart">npm install mjml-bar-chart</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">MJML COMPONENT</p>
+      <h1>Bar charts, delivered in your <em>email</em>.</h1>
+      <p class="sub">A single MJML component renders static bar charts as pure HTML tables &mdash; one JSON payload in, a complete chart out.</p>
+      <figure class="player">
+        <video controls playsinline preload="metadata" poster="assets/poster.jpg" width="1920" height="1080">
+          <source src="assets/mjml-bar-chart-launch-film.mp4" type="video/mp4">
+          Your browser can&rsquo;t play this video &mdash; <a href="assets/mjml-bar-chart-launch-film.mp4">download it</a> instead.
+        </video>
+      </figure>
+      <p class="stat">21 tables &middot; 73 cells &middot; 101 inline styles</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">UNDER THE HOOD</p>
+      <h2>No JavaScript. No SVG. No images.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Pure HTML tables</h3>
+          <p>One JSON payload renders a complete chart &mdash; axis, scale, values, legends and source link &mdash; as nested tables with inline styles.</p>
+        </div>
+        <div class="card">
+          <h3>Zero dependencies</h3>
+          <div class="panel"><span class="key">"dependencies"</span>: {}</div>
+          <p>Pure HTML output. Nothing to ship, nothing to break.</p>
+        </div>
+        <div class="card">
+          <h3>Every client</h3>
+          <p>Static tables with inline styles render wherever HTML email renders &mdash; Outlook included.</p>
+        </div>
+        <div class="card">
+          <h3>Auto-fit width</h3>
+          <p>When data overflows <code>max-width</code>, bar and separator widths are recomputed to fit &mdash; and the y-axis hides to gain space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">HTML ATTRIBUTES</p>
+      <h2>One component, eleven attributes.</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>attribute</th>
+              <th>type</th>
+              <th>default</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="attr">uid</td>
+              <td class="type">string</td>
+              <td class="def">""</td>
+              <td class="desc">Suffixes chart CSS classes &mdash; style multiple charts in the same email independently</td>
+            </tr>
+            <tr>
+              <td class="attr">stacked</td>
+              <td class="type">boolean</td>
+              <td class="def">"false"</td>
+              <td class="desc">Stack dataset values in a single column</td>
+            </tr>
+            <tr>
+              <td class="attr">font-family</td>
+              <td class="type">string</td>
+              <td class="def">"inherit"</td>
+              <td class="desc">Font family for every text element &mdash; can also be set from &lt;mj-all&gt;</td>
+            </tr>
+            <tr>
+              <td class="attr">axis-color</td>
+              <td class="type">string</td>
+              <td class="def">"#d4d4d4"</td>
+              <td class="desc">CSS color of axis and scale numbers</td>
+            </tr>
+            <tr>
+              <td class="attr">height</td>
+              <td class="type">number</td>
+              <td class="def">"200"</td>
+              <td class="desc">Chart height in pixels</td>
+            </tr>
+            <tr>
+              <td class="attr">bar-width</td>
+              <td class="type">number</td>
+              <td class="def">"30"</td>
+              <td class="desc">Bar width in pixels</td>
+            </tr>
+            <tr>
+              <td class="attr">separator-width</td>
+              <td class="type">number</td>
+              <td class="def">"30"</td>
+              <td class="desc">Datasets separator width in pixels</td>
+            </tr>
+            <tr>
+              <td class="attr">step-count</td>
+              <td class="type">number</td>
+              <td class="def">"5"</td>
+              <td class="desc">Steps on the chart scale &mdash; below 2, no steps are displayed</td>
+            </tr>
+            <tr>
+              <td class="attr">show-values</td>
+              <td class="type">boolean</td>
+              <td class="def">"true"</td>
+              <td class="desc">Display values above each bar</td>
+            </tr>
+            <tr>
+              <td class="attr">align-legends</td>
+              <td class="type">boolean</td>
+              <td class="def">"false"</td>
+              <td class="desc">Vertically align legend labels</td>
+            </tr>
+            <tr>
+              <td class="attr">max-width</td>
+              <td class="type">number</td>
+              <td class="def">"600"</td>
+              <td class="desc">Max chart width &mdash; on overflow, bar and separator widths are recomputed to fit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">CSS CLASSES</p>
+      <h2>Style it with CSS classes.</h2>
+      <p class="classes-sub">Every element is addressable from your own CSS &mdash; pass a <code>uid</code> to style multiple charts independently.</p>
+      <ul class="chips">
+        <li>mjbc</li>
+        <li>mjbc__title</li>
+        <li>mjbc__source</li>
+        <li>mjbc__label</li>
+        <li>mjbc__legend</li>
+        <li>mjbc__step</li>
+        <li>mjbc__bar</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>MIT license &middot; TypeScript types &middot; by Freezystem</p>
+    <nav>
+      <a href="https://github.com/Freezystem/mjml-bar-chart">GitHub</a>
+      <a href="https://www.npmjs.com/package/mjml-bar-chart">npm</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
