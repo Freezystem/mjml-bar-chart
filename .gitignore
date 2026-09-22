@@ -1,5 +1,6 @@
 *.log
-index.html
+/index.html
+brag*/
 build
 node_modules
 .parcel-cache
