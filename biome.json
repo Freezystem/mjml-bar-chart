@@ -30,6 +30,9 @@
             "preset": "recommended",
             "complexity": {
                 "useLiteralKeys": "off"
+            },
+            "a11y": {
+                "useMediaCaption": "off"
             }
         }
     },
