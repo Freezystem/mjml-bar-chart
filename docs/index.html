@@ -10,6 +10,9 @@
 <meta property="og:description" content="Static bar charts in HTML emails, rendered as pure HTML tables. Zero dependencies. Every client, Outlook included.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20x='2'%20y='14'%20width='6'%20height='18'%20rx='2'%20fill='%23adb2d4'/%3E%3Crect%20x='10'%20y='6'%20width='6'%20height='26'%20rx='2'%20fill='%23c7d9dd'/%3E%3Crect%20x='18'%20y='19'%20width='6'%20height='13'%20rx='2'%20fill='%23d5e5d5'/%3E%3Crect%20x='26'%20y='10'%20width='6'%20height='22'%20rx='2'%20fill='%23eef1da'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #f4f6fb;
@@ -39,25 +42,52 @@
   code { font-family: var(--mono); font-size: 0.88em; color: var(--accent); }
 
   /* ---------- header ---------- */
-  header { border-bottom: 1px solid var(--border); }
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(244, 246, 251, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
   .header-row {
     display: flex; align-items: center; justify-content: space-between;
     gap: 16px; flex-wrap: wrap; padding: 22px 0;
   }
-  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 14px; color: inherit; text-decoration: none; }
   .motif { display: inline-flex; align-items: flex-end; gap: 4px; height: 24px; }
   .motif i { display: block; width: 6px; border-radius: 2px 2px 0 0; }
   .motif i:nth-child(1) { height: 16px; background: var(--peri); }
   .motif i:nth-child(2) { height: 24px; background: var(--mist); }
   .motif i:nth-child(3) { height: 12px; background: var(--sage); }
   .motif i:nth-child(4) { height: 20px; background: var(--pale); }
-  .wordmark { font-size: 21px; }
+  .wordmark {
+    font-family: 'Montserrat', var(--serif);
+    font-weight: 600;
+    font-size: 21px;
+  }
+  .mjml-logo {
+    display: inline-flex; align-items: center;
+    vertical-align: middle; transition: opacity 0.15s ease;
+  }
+  .mjml-logo:hover { opacity: 0.8; }
+  .mjml-logo img {
+    display: block; height: 27px; width: auto;
+    padding: 4px 8px;
+    background: #2b2d33;
+    border-radius: 8px;
+  }
+  .gh-link {
+    display: inline-flex; align-items: center;
+    color: var(--ink); transition: opacity 0.15s ease;
+  }
+  .gh-link:hover { opacity: 0.7; }
   .npm-chip {
     font-family: var(--mono); font-size: 13px;
-    background: var(--pale); color: var(--ink);
+    background: var(--mist); color: var(--ink);
     padding: 10px 20px; border-radius: 999px; white-space: nowrap;
   }
-  .npm-chip:hover { background: #e3e8cc; }
+  .npm-chip:hover { background: #b3cbd1; }
+  .header-actions { display: flex; align-items: center; gap: 18px; }
 
   /* ---------- hero + video ---------- */
   .hero { padding: 76px 0 0; text-align: center; }
@@ -180,18 +210,23 @@
 
 <header>
   <div class="wrap header-row">
-    <div class="brand">
+    <a class="brand" href="./" aria-label="mjml-bar-chart — home">
       <span class="motif" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
       <span class="wordmark">mjml-bar-chart</span>
+    </a>
+    <div class="header-actions">
+      <a class="npm-chip" href="https://www.npmjs.com/package/mjml-bar-chart">npm install mjml-bar-chart</a>
+      <a class="gh-link" href="https://github.com/Freezystem/mjml-bar-chart" aria-label="GitHub repository" title="GitHub repository">
+      <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
     </div>
-    <a class="npm-chip" href="https://www.npmjs.com/package/mjml-bar-chart">npm install mjml-bar-chart</a>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="kicker">MJML COMPONENT</p>
+      <p class="kicker"><a class="mjml-logo" href="https://mjml.io" target="_blank" rel="noopener" aria-label="MJML — the official website" title="mjml.io"><img src="assets/mjml_logo.png" alt="MJML"></a> COMPONENT</p>
       <h1>Bar charts, delivered in your <em>email</em>.</h1>
       <p class="sub">A single MJML component renders static bar charts as pure HTML tables &mdash; one JSON payload in, a complete chart out.</p>
       <figure class="player">
@@ -337,7 +372,7 @@
 
 <footer>
   <div class="wrap footer-row">
-    <p>MIT license &middot; TypeScript types &middot; by Freezystem</p>
+    <p>MIT license &middot; TypeScript types &middot; by <a href="https://github.com/Freezystem">Freezystem</a></p>
     <nav>
       <a href="https://github.com/Freezystem/mjml-bar-chart">GitHub</a>
       <a href="https://www.npmjs.com/package/mjml-bar-chart">npm</a>
