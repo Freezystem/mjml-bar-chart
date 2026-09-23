@@ -181,6 +181,21 @@ export default class MjBarChart extends BodyComponent {
         "max-width": "600",
     };
 
+    // when a uid is set, emit both the common and the uid-specific class
+    // so that shared styling keeps applying alongside per-chart overrides
+    private classNames(part: string): string {
+        return this.uid
+            ? `mjbc__${part} mjbc${this.uid}__${part}`
+            : `mjbc__${part}`;
+    }
+
+    private globalStylesFor(part: string): Record<string, string> | undefined {
+        return {
+            ...this.globalClasses[`mjbc__${part}`],
+            ...this.globalClasses[`mjbc${this.uid}__${part}`],
+        };
+    }
+
     private getChartSource(): JsonNode<"tr"> {
         if (!this.source) throw new Error("chart source is undefined");
 
@@ -190,7 +205,7 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "td",
                     attributes: {
-                        class: `mjbc${this.uid}__source`,
+                        class: this.classNames("source"),
                         style: this.styles("chartSource"),
                     },
                     children: [
@@ -216,7 +231,7 @@ export default class MjBarChart extends BodyComponent {
                 {
                     tagName: "td",
                     attributes: {
-                        class: `mjbc${this.uid}__title`,
+                        class: this.classNames("title"),
                         style: this.styles("chartTitle"),
                     },
                     content: this.title,
@@ -262,7 +277,7 @@ export default class MjBarChart extends BodyComponent {
                                 {
                                     tagName: "td",
                                     attributes: {
-                                        class: `mjbc${this.uid}__bar`,
+                                        class: this.classNames("bar"),
                                         style: plainCellStyle,
                                     },
                                 },
@@ -319,7 +334,7 @@ export default class MjBarChart extends BodyComponent {
                                             tagName: "table",
                                             attributes: {
                                                 style: "border-collapse:collapse;",
-                                                class: `mjbc${this.uid}__bar`,
+                                                class: this.classNames("bar"),
                                             },
                                             children: data.map(
                                                 (v, i): JsonNode => ({
@@ -406,7 +421,7 @@ export default class MjBarChart extends BodyComponent {
         return {
             tagName: "td",
             attributes: {
-                class: `mjbc${this.uid}__label`,
+                class: this.classNames("label"),
                 style,
             },
             content: this.datasets[index].label,
@@ -462,7 +477,7 @@ export default class MjBarChart extends BodyComponent {
         return {
             tagName: "span",
             attributes: {
-                class: `mjbc${this.uid}__legend`,
+                class: this.classNames("legend"),
                 style,
             },
             content,
@@ -536,7 +551,7 @@ export default class MjBarChart extends BodyComponent {
                     {
                         tagName: "td",
                         attributes: {
-                            class: `mjbc${this.uid}__step`,
+                            class: this.classNames("step"),
                             style: this.styles("step"),
                         },
                         content: `${value}`,
@@ -625,7 +640,7 @@ export default class MjBarChart extends BodyComponent {
                 "text-align": "center",
                 "font-family": this.fontFamily,
                 "font-size": "20px",
-                ...this.globalClasses[`mjbc${this.uid}__title`],
+                ...this.globalStylesFor("title"),
             },
             chartSource: {
                 "min-width": "100%",
@@ -637,7 +652,7 @@ export default class MjBarChart extends BodyComponent {
                 "font-size": "12px",
                 color: "#3e3e3e",
                 "vertical-align": "top",
-                ...this.globalClasses[`mjbc${this.uid}__source`],
+                ...this.globalStylesFor("source"),
             },
             chartBarSeparator: {
                 padding: "0",
@@ -684,7 +699,7 @@ export default class MjBarChart extends BodyComponent {
                 "font-family": this.fontFamily,
                 "font-size": "14px",
                 "text-align": "center",
-                ...this.globalClasses[`mjbc${this.uid}__label`],
+                ...this.globalStylesFor("label"),
             },
             chartLegend: {
                 margin: "0",
@@ -701,7 +716,7 @@ export default class MjBarChart extends BodyComponent {
                 "font-family": this.fontFamily,
                 "font-size": "14px",
                 "white-space": "nowrap",
-                ...this.globalClasses[`mjbc${this.uid}__legend`],
+                ...this.globalStylesFor("legend"),
             },
             step: {
                 padding: "0",
@@ -717,7 +732,7 @@ export default class MjBarChart extends BodyComponent {
                 "white-space": "nowrap",
                 color: this.axisColor,
                 "border-bottom": "2px solid transparent",
-                ...this.globalClasses[`mjbc${this.uid}__step`],
+                ...this.globalStylesFor("step"),
             },
             stepOffset: {
                 padding: "0",
@@ -748,7 +763,7 @@ export default class MjBarChart extends BodyComponent {
         return {
             tagName: "table",
             attributes: {
-                class: `mjbc${this.uid}`,
+                class: this.uid ? `mjbc mjbc${this.uid}` : "mjbc",
                 style: this.styles("chart"),
             },
             children,

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/logo.svg" alt="MJML Bar Chart logo" width="200">
+</p>
+
 # MJML Bar Chart
 [![Workflow](https://img.shields.io/github/actions/workflow/status/Freezystem/mjml-bar-chart/test.yml?logo=github)](https://github.com/Freezystem/mjml-bar-chart/actions/workflows/test.yml?query=branch%3Amain)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
@@ -157,7 +161,8 @@ With their location in the generated chart:
 ![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/e3b20e94-edc3-45fa-9a9e-09f05085070e)
 
 If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
-Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
+Class `mjbc` will become `mjbc mjbc<uid>`, `mjbc__title` will become `mjbc__title mjbc<uid>__title`, and so on.  
+The common class is kept, so shared styles still apply, and the `mjbc<uid>` classes override them when both are defined.
 
 For example:
 ```mjml
