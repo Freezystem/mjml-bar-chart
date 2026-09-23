@@ -10,7 +10,7 @@
         "tsBuildInfoFile": "node_modules/.cache/tsconfig.tsbuildinfo",
         "pretty": true,
         "esModuleInterop": true,
-        "inlineSourceMap": true,
+        "sourceMap": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "allowUnreachableCode": false,
