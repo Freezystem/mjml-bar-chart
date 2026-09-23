@@ -1,8 +1,8 @@
 import mjml2html from "mjml";
 import { registerComponent } from "mjml-core";
 import { beforeAll, describe, expect, it } from "vitest";
-import jsonToXML from "./helpers/jsonToXML";
-import MjBarChart, { type Chart } from "./index";
+import jsonToXML from "../src/helpers/jsonToXML";
+import MjBarChart, { type Chart } from "../src/index";
 
 async function toHtml(mjml: string) {
     const { html, errors } = await mjml2html(mjml);
