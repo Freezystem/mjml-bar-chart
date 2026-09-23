@@ -67,14 +67,14 @@
     70% { transform: scaleY(1.18); }
     100% { transform: scaleY(1); }
   }
-  .brand:hover .motif i, .brand:focus-visible .motif i {
+  :where(.brand:hover, .brand:focus-visible) .motif i {
     animation: motif-bounce 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
-  .brand:hover .motif i:nth-child(2), .brand:focus-visible .motif i:nth-child(2) { animation-delay: 0.06s; }
-  .brand:hover .motif i:nth-child(3), .brand:focus-visible .motif i:nth-child(3) { animation-delay: 0.12s; }
-  .brand:hover .motif i:nth-child(4), .brand:focus-visible .motif i:nth-child(4) { animation-delay: 0.18s; }
+  :where(.brand:hover, .brand:focus-visible) .motif i:nth-child(2) { animation-delay: 0.06s; }
+  :where(.brand:hover, .brand:focus-visible) .motif i:nth-child(3) { animation-delay: 0.12s; }
+  :where(.brand:hover, .brand:focus-visible) .motif i:nth-child(4) { animation-delay: 0.18s; }
   @media (prefers-reduced-motion: reduce) {
-    .brand:hover .motif i, .brand:focus-visible .motif i { animation: none; }
+    :where(.brand:hover, .brand:focus-visible) .motif i { animation: none; }
   }
   .wordmark {
     font-family: 'Montserrat', var(--serif);

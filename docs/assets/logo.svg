@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" role="img" aria-label="MJML Bar Chart logo">
+  <title>MJML Bar Chart logo</title>
   <rect x="0"  y="8"  width="6" height="16" rx="2" fill="#adb2d4"/>
   <rect x="10" y="0"  width="6" height="24" rx="2" fill="#c7d9dd"/>
   <rect x="20" y="12" width="6" height="12" rx="2" fill="#d5e5d5"/>
