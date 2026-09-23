@@ -191,7 +191,7 @@
   td.type, td.def { color: var(--slate); }
   td.desc { color: var(--slate); font-size: 15.5px; }
 
-  /* ---------- css class chips ---------- */
+  /* ---------- css classes section ---------- */
   .classes-sub { color: var(--slate); font-size: 18px; max-width: 720px; margin-bottom: 30px; }
   .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 14px; }
   .chips li {
@@ -202,6 +202,76 @@
   .chips li:nth-child(4n+2) { background: var(--mist); }
   .chips li:nth-child(4n+3) { background: var(--sage); }
   .chips li:nth-child(4n+4) { background: var(--pale); }
+  .classes-block { margin-top: 56px; }
+  .classes-block h3 { font-weight: normal; font-size: 25px; margin-bottom: 18px; }
+  .classes-block .classes-sub { margin-bottom: 24px; }
+  td.cls { font-family: var(--mono); font-size: 14px; white-space: nowrap; color: var(--accent); }
+  td.el { font-family: var(--mono); font-size: 13.5px; white-space: nowrap; color: var(--slate); }
+  td.defaults { font-family: var(--mono); font-size: 13px; color: var(--slate); }
+
+  /* ---------- layout schema ---------- */
+  .schema {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 34px 34px 28px;
+    margin: 24px 0 8px;
+    overflow-x: auto;
+  }
+  .schema-frame {
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-family: var(--mono); font-size: 13.5px;
+    min-width: 560px;
+  }
+  .schema-row {
+    border: 1px dashed var(--accent);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    color: var(--slate);
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  .schema-row .cls { color: var(--accent); }
+  .schema-row .note { font-size: 12px; color: var(--slate); }
+  .schema-plot { display: flex; gap: 10px; align-items: stretch; }
+  .schema-steps {
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-size: 12px; color: var(--slate); padding: 2px 0;
+  }
+  .schema-bars { display: flex; align-items: flex-end; gap: 8px; height: 110px; flex: 1; }
+  .schema-bars i {
+    display: block; width: 26px; border-radius: 4px 4px 0 0;
+  }
+  .schema-bars i:nth-child(1) { height: 45%; background: var(--peri); }
+  .schema-bars i:nth-child(2) { height: 80%; background: var(--mist); }
+  .schema-bars i:nth-child(3) { height: 60%; background: var(--sage); }
+  .schema-bars i:nth-child(4) { height: 95%; background: var(--pale); }
+  .schema-bars i:nth-child(5) { height: 35%; background: var(--peri); }
+  .schema-bars i:nth-child(6) { height: 70%; background: var(--mist); }
+  .schema-bars i:nth-child(7) { height: 50%; background: var(--sage); }
+  .schema-bars i:nth-child(8) { height: 85%; background: var(--pale); }
+  .schema-legend { display: inline-flex; align-items: center; gap: 8px; }
+  .schema-legend b {
+    display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+  }
+
+  /* ---------- code example ---------- */
+  pre.code {
+    background: #2b2d33; color: #e8eaf2;
+    font-family: var(--mono); font-size: 13.5px; line-height: 1.65;
+    border-radius: 14px;
+    padding: 24px 28px;
+    overflow-x: auto;
+    margin: 0 0 8px;
+  }
+  pre.code .tag { color: #9fd0f5; }
+  pre.code .attr { color: #c7d9dd; }
+  pre.code .str { color: #d5e5d5; }
+  pre.code .cmt { color: #8a8fa3; }
+  .override-note { color: var(--slate); font-size: 15.5px; margin: 18px 0 10px; max-width: 780px; }
 
   /* ---------- footer ---------- */
   footer { border-top: 1px solid var(--border); margin-top: 96px; }
@@ -400,6 +470,104 @@
         <li>mjbc__step</li>
         <li>mjbc__bar</li>
       </ul>
+
+      <div class="classes-block">
+        <h3>What each class targets</h3>
+        <p class="classes-sub">Classes follow the BEM convention: <code>mjbc</code> is the block, <code>__element</code> the part. With a <code>uid</code>, every class becomes <code>mjbc&lt;uid&gt;__element</code>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>class</th>
+                <th>rendered element</th>
+                <th>default styling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cls">mjbc</td>
+                <td class="el">root &lt;table&gt; wrapping the whole chart</td>
+                <td class="defaults">border-collapse:collapse</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__title</td>
+                <td class="el">&lt;td&gt; holding the chart title text</td>
+                <td class="defaults">height:40px &middot; font-size:20px &middot; bold &middot; centered</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__source</td>
+                <td class="el">&lt;td&gt; holding the source link (when set)</td>
+                <td class="defaults">height:30px &middot; font-size:12px &middot; color:#3e3e3e</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__label</td>
+                <td class="el">&lt;td&gt; holding a dataset label, below each bar group</td>
+                <td class="defaults">height:30px &middot; font-size:14px &middot; centered</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__legend</td>
+                <td class="el">&lt;span&gt; holding a legend entry (chip + label)</td>
+                <td class="defaults">inline-block &middot; padding:0 10px &middot; font-size:14px</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__step</td>
+                <td class="el">&lt;td&gt; holding a y-axis step number</td>
+                <td class="defaults">color from axis-color &middot; right-aligned &middot; 33px wide</td>
+              </tr>
+              <tr>
+                <td class="cls">mjbc__bar</td>
+                <td class="el">&lt;td&gt; (or nested &lt;table&gt;) holding a single bar value</td>
+                <td class="defaults">dimensions computed at render time &mdash; style colors, not sizes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="classes-block">
+        <h3>Where each class sits</h3>
+        <div class="schema">
+          <div class="schema-frame">
+            <div class="schema-row"><span class="cls">mjbc__title</span><span class="note">&mdash; &ldquo;Annual offset mix in tCO2&rdquo;</span></div>
+            <div class="schema-row"><span class="cls">mjbc__source</span><span class="note">&mdash; &ldquo;Source: TrustMeBro &#8599;&rdquo;</span></div>
+            <div class="schema-row">
+              <div class="schema-plot">
+                <div class="schema-steps"><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div>
+                <div class="schema-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="note">&#8592; <span class="cls">mjbc__step</span> &middot; <span class="cls">mjbc__bar</span> &#8594;</span>
+            </div>
+            <div class="schema-row"><span class="cls">mjbc__label</span><span class="note">&mdash; &ldquo;2021&rdquo; &middot; &ldquo;2022&rdquo; &middot; &ldquo;2023&rdquo; &middot; &hellip;</span></div>
+            <div class="schema-row">
+              <span class="cls">mjbc__legend</span>
+              <span class="schema-legend"><b style="background:var(--peri)"></b> commute</span>
+              <span class="schema-legend"><b style="background:var(--mist)"></b> travels</span>
+              <span class="schema-legend"><b style="background:var(--sage)"></b> carbon balance</span>
+            </div>
+            <div class="schema-row" style="border-style:solid"><span class="cls">mjbc</span><span class="note">&mdash; root table</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="classes-block">
+        <h3>Two ways to override</h3>
+        <p class="override-note"><code>mj-class</code> (recommended) injects your styles into the generated <code>style</code> attributes &mdash; highest priority. <code>mj-style</code> appends a stylesheet with low priority, best for global tweaks across every chart.</p>
+        <pre class="code"><code><span class="cmt">&lt;!-- global, low priority: every chart --&gt;</span>
+<span class="tag">&lt;mj-style&gt;</span>
+  .mjbc__title { color: lightcoral; }
+  .mjbc__legend { font-size: 12px; }
+<span class="tag">&lt;/mj-style&gt;</span>
+
+<span class="cmt">&lt;!-- per chart, high priority: uid-namespaced --&gt;</span>
+<span class="tag">&lt;mj-attributes&gt;</span>
+  <span class="tag">&lt;mj-class</span> <span class="attr">name</span>=<span class="str">"mjbc1__title"</span> <span class="attr">color</span>=<span class="str">"lightcoral"</span> <span class="attr">font-weight</span>=<span class="str">"bold"</span>/<span class="tag">&gt;</span>
+  <span class="tag">&lt;mj-class</span> <span class="attr">name</span>=<span class="str">"mjbc1__label"</span> <span class="attr">color</span>=<span class="str">"rebeccapurple"</span> <span class="attr">font-family</span>=<span class="str">"Menlo"</span>/<span class="tag">&gt;</span>
+  <span class="tag">&lt;mj-class</span> <span class="attr">name</span>=<span class="str">"mjbc2__legend"</span> <span class="attr">font-size</span>=<span class="str">"12px"</span>/<span class="tag">&gt;</span>
+<span class="tag">&lt;/mj-attributes&gt;</span>
+
+<span class="tag">&lt;mj-bar-chart</span> <span class="attr">uid</span>=<span class="str">"1"</span><span class="tag">&gt;</span>{ JSON payload }<span class="tag">&lt;/mj-bar-chart&gt;</span>
+<span class="tag">&lt;mj-bar-chart</span> <span class="attr">uid</span>=<span class="str">"2"</span> <span class="attr">stacked</span> <span class="attr">align-legends</span><span class="tag">&gt;</span>{ JSON payload }<span class="tag">&lt;/mj-bar-chart&gt;</span></code></pre>
+      </div>
     </div>
   </section>
 </main>

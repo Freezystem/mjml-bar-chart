@@ -157,7 +157,8 @@ With their location in the generated chart:
 ![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/e3b20e94-edc3-45fa-9a9e-09f05085070e)
 
 If you have multiple charts in the same email, you can pass a unique identifier to each one to be able to apply different styles.  
-Class `mjbc` will become `mjbc<uid>`, `mjbc__title` will become `mjbc<uid>__title`, and so on.
+Class `mjbc` will become `mjbc mjbc<uid>`, `mjbc__title` will become `mjbc__title mjbc<uid>__title`, and so on.  
+The common class is kept, so shared styles still apply, and the `mjbc<uid>` classes override them when both are defined.
 
 For example:
 ```mjml
