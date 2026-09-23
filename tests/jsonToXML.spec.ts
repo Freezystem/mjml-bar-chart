@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import jsonToXML from "./jsonToXML";
+import jsonToXML from "../src/helpers/jsonToXML";
 
 describe("jsonToXML", () => {
     it("should convert a simple tag to XML", () => {

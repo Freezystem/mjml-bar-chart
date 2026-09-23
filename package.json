@@ -34,9 +34,9 @@
     },
     "scripts": {
         "watch": "tsc --watch",
-        "prebuild": "rm -rf build",
+        "prebuild": "rm -rf build node_modules/.cache/tsconfig*.tsbuildinfo",
         "build": "tsc -b tsconfig.json tsconfig.esm.json tsconfig.types.json",
-        "postbuild": "mkdir -p build/cjs && echo '{\"type\":\"commonjs\"}' > build/cjs/package.json",
+        "postbuild": "mkdir -p build/cjs && echo '{\"type\":\"commonjs\"}' > build/cjs/package.json && echo '*.js.map' > build/.npmignore",
         "test": "vitest",
         "test:watch": "vitest --watch",
         "test:coverage": "vitest --coverage",

@@ -4,6 +4,7 @@
         "outDir": "build/types",
         "declaration": true,
         "emitDeclarationOnly": true,
-        "declarationMap": true
+        "declarationMap": true,
+        "tsBuildInfoFile": "node_modules/.cache/tsconfig.types.tsbuildinfo"
     }
 }

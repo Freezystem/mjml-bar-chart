@@ -8,7 +8,7 @@ export default defineConfig({
         watch: false,
         fileParallelism: true,
         maxWorkers: "50%",
-        include: ["src/**/*.spec.ts"],
+        include: ["tests/**/*.spec.ts"],
         coverage: {
             provider: "v8",
             reporter: process.env.GITHUB_ACTIONS
@@ -17,7 +17,7 @@ export default defineConfig({
             reportsDirectory: "./coverage",
             reportOnFailure: true,
             include: ["src/**/*.ts"],
-            exclude: ["src/**/*.test.ts", "src/**/*.d.ts"],
+            exclude: ["src/**/*.d.ts"],
             thresholds: {
                 functions: 100,
                 lines: 100,
