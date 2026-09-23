@@ -219,43 +219,104 @@
     margin: 24px 0 8px;
     overflow-x: auto;
   }
-  .schema-frame {
+  .schema-canvas {
+    position: relative;
+    font-family: var(--mono); font-size: 13px;
+    min-width: 620px;
+    padding-top: 30px;
+  }
+  .s-tag {
+    display: inline-block;
+    font-size: 12px; color: var(--accent);
+    background: rgba(92, 99, 150, 0.08);
+    border: 1px solid rgba(92, 99, 150, 0.4);
+    border-radius: 6px;
+    padding: 1px 8px; white-space: nowrap;
+  }
+  .s-dim {
+    font-size: 12px; color: #d9480f; white-space: nowrap;
+  }
+  .s-total {
+    position: absolute; top: 4px; left: 0; right: 0;
+    display: flex; align-items: center; gap: 10px; justify-content: center;
+    font-size: 12px; color: #d9480f;
+  }
+  .s-total::before, .s-total::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.5; }
+  .schema-root {
+    position: relative;
     border: 2px solid var(--accent);
     border-radius: 12px;
-    padding: 18px 22px;
-    font-family: var(--mono); font-size: 13.5px;
-    min-width: 560px;
+    padding: 14px 16px 16px;
   }
-  .schema-row {
-    border: 1px dashed var(--accent);
+  .schema-root > .s-tag {
+    position: absolute; top: -11px; left: 14px;
+    background: var(--white);
+  }
+  .s-row {
+    position: relative;
+    border: 1px dashed var(--peri);
     border-radius: 8px;
-    padding: 12px 16px;
+    padding: 8px 12px;
     margin: 10px 0;
+    display: flex; align-items: center; justify-content: space-around;
     color: var(--slate);
-    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
   }
-  .schema-row .cls { color: var(--accent); }
-  .schema-row .note { font-size: 12px; color: var(--slate); }
-  .schema-plot { display: flex; gap: 10px; align-items: stretch; }
-  .schema-steps {
-    display: flex; flex-direction: column; justify-content: space-between;
-    font-size: 12px; color: var(--slate); padding: 2px 0;
+  .s-row .s-dim {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
   }
-  .schema-bars { display: flex; align-items: flex-end; gap: 8px; height: 110px; flex: 1; }
-  .schema-bars i {
-    display: block; width: 26px; border-radius: 4px 4px 0 0;
+  .s-title { height: 40px; justify-content: center; }
+  .s-source { height: 30px; justify-content: center; }
+  .s-labels, .s-legend-row { height: 30px; }
+  .s-plot { display: flex; gap: 14px; align-items: stretch; margin: 10px 0; }
+  .s-steps-col {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+    width: 30px; padding: 8px 0;
+    border: 1px dashed var(--peri); border-radius: 8px;
   }
-  .schema-bars i:nth-child(1) { height: 45%; background: var(--peri); }
-  .schema-bars i:nth-child(2) { height: 80%; background: var(--mist); }
-  .schema-bars i:nth-child(3) { height: 60%; background: var(--sage); }
-  .schema-bars i:nth-child(4) { height: 95%; background: var(--pale); }
-  .schema-bars i:nth-child(5) { height: 35%; background: var(--peri); }
-  .schema-bars i:nth-child(6) { height: 70%; background: var(--mist); }
-  .schema-bars i:nth-child(7) { height: 50%; background: var(--sage); }
-  .schema-bars i:nth-child(8) { height: 85%; background: var(--pale); }
-  .schema-legend { display: inline-flex; align-items: center; gap: 8px; }
-  .schema-legend b {
-    display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+  .s-steps-col > .s-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    width: 30px; line-height: 28px; text-align: center; padding: 1px 0;
+  }
+  .s-offset {
+    display: flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px;
+    border: 1px dashed #d9480f;
+    border-radius: 6px;
+    font-size: 10px; color: #d9480f;
+  }
+  .s-offset::after { content: "30px"; }
+  .s-labels-wrap { display: flex; gap: 14px; margin: 10px 0; }
+  .s-labels-wrap .s-labels { flex: 1; margin: 0; }
+  .s-bars-col {
+    position: relative; flex: 1;
+    display: flex; align-items: flex-end; justify-content: space-evenly;
+    border: 1px dashed var(--peri); border-radius: 8px;
+    padding: 14px 44px 14px 14px;
+  }
+  .s-bars-col > .s-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    width: 30px; line-height: 28px; text-align: center; padding: 1px 0;
+  }
+  .s-bars-col > .s-tag:nth-of-type(1) { height: 110px; }
+  .s-bars-col > .s-tag:nth-of-type(2) { height: 160px; }
+  .s-bars-col > .s-tag:nth-of-type(3) { height: 100px; }
+  .s-bars-col > .s-dim {
+    position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+  }
+  .s-bars-col > .s-height {
+    position: absolute; top: 0; bottom: 0; right: 8px; left: auto;
+    display: flex; align-items: center; justify-content: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  .s-total-h {
+    position: absolute; top: 0; bottom: 0; left: -36px;
+    display: flex; align-items: center; justify-content: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
   }
 
   /* ---------- code example ---------- */
@@ -527,24 +588,47 @@
       <div class="classes-block">
         <h3>Where each class sits</h3>
         <div class="schema">
-          <div class="schema-frame">
-            <div class="schema-row"><span class="cls">mjbc__title</span><span class="note">&mdash; &ldquo;Annual offset mix in tCO2&rdquo;</span></div>
-            <div class="schema-row"><span class="cls">mjbc__source</span><span class="note">&mdash; &ldquo;Source: TrustMeBro &#8599;&rdquo;</span></div>
-            <div class="schema-row">
-              <div class="schema-plot">
-                <div class="schema-steps"><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div>
-                <div class="schema-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="schema-canvas">
+            <div class="s-total">600px</div>
+            <div class="schema-root">
+              <span class="s-tag">.mjbc</span>
+              <span class="s-dim s-total-h">330px</span>
+              <div class="s-row s-title">
+                <span class="s-tag">.mjbc__title</span>
+                <span class="s-dim">40px</span>
               </div>
-              <span class="note">&#8592; <span class="cls">mjbc__step</span> &middot; <span class="cls">mjbc__bar</span> &#8594;</span>
+              <div class="s-row s-source">
+                <span class="s-tag">.mjbc__source</span>
+                <span class="s-dim">30px</span>
+              </div>
+              <div class="s-plot">
+                <div class="s-steps-col">
+                  <span class="s-tag">.mjbc__step</span>
+                  <span class="s-tag">.mjbc__step</span>
+                </div>
+                <div class="s-bars-col">
+                  <span class="s-tag">.mjbc__bar</span>
+                  <span class="s-tag">.mjbc__bar</span>
+                  <span class="s-tag">.mjbc__bar</span>
+                  <span class="s-dim s-height">200px</span>
+                </div>
+              </div>
+              <div class="s-labels-wrap">
+                <span class="s-offset"></span>
+                <div class="s-row s-labels">
+                  <span class="s-tag">.mjbc__label</span>
+                  <span class="s-tag">.mjbc__label</span>
+                  <span class="s-tag">.mjbc__label</span>
+                  <span class="s-dim">30px</span>
+                </div>
+              </div>
+              <div class="s-row s-legend-row">
+                <span class="s-tag">.mjbc__legend</span>
+                <span class="s-tag">.mjbc__legend</span>
+                <span class="s-tag">.mjbc__legend</span>
+                <span class="s-dim">30px</span>
+              </div>
             </div>
-            <div class="schema-row"><span class="cls">mjbc__label</span><span class="note">&mdash; &ldquo;2021&rdquo; &middot; &ldquo;2022&rdquo; &middot; &ldquo;2023&rdquo; &middot; &hellip;</span></div>
-            <div class="schema-row">
-              <span class="cls">mjbc__legend</span>
-              <span class="schema-legend"><b style="background:var(--peri)"></b> commute</span>
-              <span class="schema-legend"><b style="background:var(--mist)"></b> travels</span>
-              <span class="schema-legend"><b style="background:var(--sage)"></b> carbon balance</span>
-            </div>
-            <div class="schema-row" style="border-style:solid"><span class="cls">mjbc</span><span class="note">&mdash; root table</span></div>
           </div>
         </div>
       </div>
