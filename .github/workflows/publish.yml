@@ -2,34 +2,34 @@ name: MJBarChart Publish
 
 on:
     release:
-        types: [released]
+        types: [ released ]
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
         permissions:
             contents: read
-            id-token: write  # Required for OIDC
+            id-token: write # Required for OIDC
         steps:
             - name: Harden the runner (Audit all outbound calls)
               uses: step-security/harden-runner@dc2769abcc0fcfbadfc1df54081c1608579ef6b2 # v2.22.2
               with:
-                egress-policy: audit
+                  egress-policy: audit
 
             - name: Checkout
               uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-              
+
             - name: Setup Node and NPM
               uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
               with:
                   node-version: 24
                   registry-url: "https://registry.npmjs.org"
-                  
+
             - name: Install and Build
               run: npm ci --ignore-scripts && npm run build
-              
+
             - name: Publish to NPM
               run: npm publish --access public

@@ -3,6 +3,7 @@
 </p>
 
 # MJML Bar Chart
+
 [![Workflow](https://img.shields.io/github/actions/workflow/status/Freezystem/mjml-bar-chart/test.yml?logo=github)](https://github.com/Freezystem/mjml-bar-chart/actions/workflows/test.yml?query=branch%3Amain)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Freezystem_mjml-bar-chart&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Freezystem_mjml-bar-chart)
@@ -73,34 +74,34 @@ Yay, you're all set!
 The `<mj-bar-chart>` content must be a valid JSON string with the following structure:
 ```json
 {
-  "title": "Annual offset mix in tCO2",
-  "source": {
-    "url": "#trustmebro",
-    "label": "Source: TrustMeBro ↗"
-  },
-  "datasets": ["2021", "2022", "2023", "2024", "2025"],
-  "series": [
-    {
-      "label": "commute",
-      "color": "#adb2d4",
-      "data": [3.7,7.5,4.3,15,6.9]
+    "title": "Annual offset mix in tCO2",
+    "source": {
+        "url": "#trustmebro",
+        "label": "Source: TrustMeBro ↗"
     },
-    {
-      "label": "travels",
-      "color": "#c7d9dd",
-      "data": [13.4,7.2,11,20.4,13.2]
-    },
-    {
-      "label": "carbon balance",
-      "color": "#d5e5d5",
-      "data": [23.4,12.1,40.5,38.1,4]
-    },
-    {
-      "label": "others",
-      "color": "#eef1da",
-      "data": [4.9,15.2,-4.5,18.8,7]
-    }
-  ]
+    "datasets": ["2021", "2022", "2023", "2024", "2025"],
+    "series": [
+        {
+            "label": "commute",
+            "color": "#adb2d4",
+            "data": [3.7, 7.5, 4.3, 15, 6.9]
+        },
+        {
+            "label": "travels",
+            "color": "#c7d9dd",
+            "data": [13.4, 7.2, 11, 20.4, 13.2]
+        },
+        {
+            "label": "carbon balance",
+            "color": "#d5e5d5",
+            "data": [23.4, 12.1, 40.5, 38.1, 4]
+        },
+        {
+            "label": "others",
+            "color": "#eef1da",
+            "data": [4.9, 15.2, -4.5, 18.8, 7]
+        }
+    ]
 }
 ```
 Note that all negative values will be floored to zero.
@@ -120,7 +121,7 @@ const chart: Chart = {...}
 All the following attributes are optional
 
 | attribute         | coerced type | default value | description                                                                                                                 |
-|:------------------|:------------:|:-------------:|:----------------------------------------------------------------------------------------------------------------------------|
+| :---------------- | :----------: | :-----------: | :-------------------------------------------------------------------------------------------------------------------------- |
 | `uid`             |   `string`   |     `""`      | Applies a suffix to chart CSS classes. Useful when styling multiple charts in the same email                                |
 | `stacked`         |  `boolean`   |   `"false"`   | Whether to stack dataset values in a single column                                                                          |
 | `font-family`     |   `string`   |  `"inherit"`  | Font family to apply to every text element. Can also be set from `<mj-all>` markup                                          |
@@ -135,27 +136,27 @@ All the following attributes are optional
 
 ### Dynamic resizing when data overflows
 
-Providing the chart attribute `max-width` is strongly advised as the graph will automatically resize to fit when data 
-require expanding beyond this threshold.  
-  
-When the limit is overreached the graph will automatically set the `step-count` to `0` to hide the y-axis to gain space 
+Providing the chart attribute `max-width` is strongly advised as the graph will automatically resize to fit when data
+require expanding beyond this threshold.
+
+When the limit is overreached the graph will automatically set the `step-count` to `0` to hide the y-axis to gain space
 and will dynamically recompute the `bar-width` and `separator-width` to fit the limited width.
 
 ### Styling through CSS classes
 
 Bar charts are generated with predefined classes that you can use for styling with custom CSS.  
 There are two ways of providing CSS overrides for your email charts:
- - [`mj-class`](https://documentation.mjml.io/#mj-attributes): (**recommended**) style will be dynamically retrieved and injected into the `style` attribute for high-priority override.
- - [`mj-style`](https://documentation.mjml.io/#mj-style): to provide a custom CSS declaration that will be applied with a low priority (will not override the CSS set from `style` attributes).
+- [`mj-class`](https://documentation.mjml.io/#mj-attributes): (**recommended**) style will be dynamically retrieved and injected into the `style` attribute for high-priority override.
+- [`mj-style`](https://documentation.mjml.io/#mj-style): to provide a custom CSS declaration that will be applied with a low priority (will not override the CSS set from `style` attributes).
 
 These are all the generated classes that you can use:
- - `mjbc`: the class of the chart root element.
- - `mjbc__title`: the class of the chart title text.
- - `mjbc__source`: the class of the chart source link.
- - `mjbc__label`: the class of the chart labels.
- - `mjbc__legend`: the class of the chart legends.
- - `mjbc__step`: the class of the chart steps.
- - `mjbc__bar`: the class of the chart bars.
+- `mjbc`: the class of the chart root element.
+- `mjbc__title`: the class of the chart title text.
+- `mjbc__source`: the class of the chart source link.
+- `mjbc__label`: the class of the chart labels.
+- `mjbc__legend`: the class of the chart legends.
+- `mjbc__step`: the class of the chart steps.
+- `mjbc__bar`: the class of the chart bars.
 
 With their location in the generated chart:
 ![Schema of the chart layout with dimensions](https://github.com/user-attachments/assets/e3b20e94-edc3-45fa-9a9e-09f05085070e)

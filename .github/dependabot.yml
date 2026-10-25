@@ -11,7 +11,7 @@ updates:
           interval: "weekly"
       ignore:
           - dependency-name: "@types/node"
-            update-types: ["version-update:semver-major"]
+            update-types: [ "version-update:semver-major" ]
 
     - package-ecosystem: "github-actions"
       directory: "/"
