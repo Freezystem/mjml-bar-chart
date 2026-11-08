@@ -72,6 +72,7 @@ Yay, you're all set!
 ### Content
 
 The `<mj-bar-chart>` content must be a valid JSON string with the following structure:
+
 ```json
 {
     "title": "Annual offset mix in tCO2",
@@ -146,10 +147,12 @@ and will dynamically recompute the `bar-width` and `separator-width` to fit the 
 
 Bar charts are generated with predefined classes that you can use for styling with custom CSS.  
 There are two ways of providing CSS overrides for your email charts:
+
 - [`mj-class`](https://documentation.mjml.io/#mj-attributes): (**recommended**) style will be dynamically retrieved and injected into the `style` attribute for high-priority override.
 - [`mj-style`](https://documentation.mjml.io/#mj-style): to provide a custom CSS declaration that will be applied with a low priority (will not override the CSS set from `style` attributes).
 
 These are all the generated classes that you can use:
+
 - `mjbc`: the class of the chart root element.
 - `mjbc__title`: the class of the chart title text.
 - `mjbc__source`: the class of the chart source link.
@@ -166,6 +169,7 @@ Class `mjbc` will become `mjbc mjbc<uid>`, `mjbc__title` will become `mjbc__titl
 The common class is kept, so shared styles still apply, and the `mjbc<uid>` classes override them when both are defined.
 
 For example:
+
 ```mjml
 <mjml>
   <mj-head>
